@@ -104,9 +104,21 @@ const outputUsfmDir = './usfm/ugnt'
 
       // build apparatus data verse-by-verse
       for(let loc in dataByLoc) {
+        if(!usfmByLoc[loc]) continue
         // const criticalOrAncient = /\/0G[^\/]*\.txt$/.test(path) ? `critical` : `ancient`
+        let variantWords = []
+        const ugntWords = dataByLoc[loc].wordsBySource.UGNT || []
+        for(let version in dataByLoc[loc].wordsBySource) {
+          if(version === 'UGNT') continue
+
+          const wordsInThisVersion = dataByLoc[loc].wordsBySource[version]
+          variantWords.push(...wordsInThisVersion.filter(word => !ugntWords.includes(word)))
+        }
+
+        variantWords = [ ...new Set(variantWords) ]
+
         const apparatusJson = {
-          words: [],
+          words: variantWords,
           critical: [],
           ancient: [],
         }
@@ -120,7 +132,7 @@ const outputUsfmDir = './usfm/ugnt'
         // insert apparatus tags into USFM
         let verseUsfmPieces = usfmByLoc[loc].split(/(\\w .*?\\w\*.*?\n)/g)
         if(verseUsfmPieces.length > 1) {
-          // verseUsfmPieces[verseUsfmPieces.length - 2] += `\\zApparatusJson ${JSON.stringify(dataByLoc[loc])}\\zApparatusJson*\n`
+          verseUsfmPieces[verseUsfmPieces.length - 2] += `\\zApparatusJson ${JSON.stringify(dataByLoc[loc])}\\zApparatusJson*\n`
         }
 
         // add x-id attribute into USFM, updating id dictionary and outputting issues when relevant
