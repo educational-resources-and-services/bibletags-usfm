@@ -24,6 +24,60 @@ For more information on this project, see the [Bible Tags website](https://bible
 * Please first check if your bug report / feature request already exists before submitting a new issue.
 * For bug reports, please provide a clear description of the problem and step-by-step explanation of how to reproduce it.
 
-# bibletags-ui-usfm
+# bibletags-usfm
 
 This repo includes the usfm files used in [bibletags-data](https://github.com/educational-resources-and-services/bibletags-data) and [bibletags-react-native-app](https://github.com/educational-resources-and-services/bibletags-react-native-app).
+
+These USFM 3.0 files are derived from [unfoldingword.org/uhb](https://unfoldingword.org/uhb) and [unfoldingword.org/ugnt](https://unfoldingword.org/ugnt).
+
+The following changes have been made via the import scripts:
+
+* A unique `x-id` has been added to each word.
+* Variant information has been added to the end of all relevant verses using the custom `\zApparatusJson` tag.
+
+### Expanded `\zApparatusJson` example
+
+```json
+  {
+    "words": [
+      {
+        "w": "=ιυ",
+        "id": "?????"
+      },
+      {
+        "w": "=χυ",
+        "id": "?????"
+      },
+      {
+        "w": "=υυ",
+        "id": "?????"
+      },
+      {
+        "w": "δαυιδ",
+        "id": "?????"
+      },
+      {
+        "w": "δαυετ",
+        "id": "?????"
+      },
+      {
+        "w": "=δαδ",
+        "id": "?????"
+      },
+      {
+        "w": "=υυ",
+        "id": "?????"
+      }
+    ],
+    "critical": [
+      "NA,SBL,RP,ST,TR:1-5,+4,7-8",
+    ],
+    "ancient": [
+      "𝔓1:1-2,+1-4,7-8",
+      "61617:1-5,+5,7-8",
+      "64853:1-2,+1-3,+6-7,8",
+      "01:1-2,+1-2,5,+6,7-8",
+      "03,032:1-2,+1-2,6-8",
+    ]
+  }
+```
