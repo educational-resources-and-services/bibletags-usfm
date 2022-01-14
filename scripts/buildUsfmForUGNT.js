@@ -21,9 +21,12 @@ const outputUsfmDir = './usfm/ugnt'
 
     if(ugntPaths.length !== 27) throw `Invalid ugntDir parameter.`
 
-    const transcriptionPaths = (await fs.readdir(transcriptionsDir)).filter(path => path.match(/^[0-9]G.*\.txt$/)).map(file => `${transcriptionsDir}/${file}`)
-    const addedTranscriptionPaths = addedTranscriptionsDir ? (await fs.readdir(transcriptionsDir)).map(file => `${transcriptionsDir}/${file}`) : []
-    const allTranscriptionPaths = [ ...transcriptionPaths, ...addedTranscriptionPaths ]
+    const getPaths = async dir => dir ? (await fs.readdir(dir)).filter(file => file.match(/^[0-9]G.*\.txt$/)).map(file => `${dir}/${file}`) : []
+
+    const allTranscriptionPaths = [
+      ...await getPaths(transcriptionsDir),
+      ...await getPaths(addedTranscriptionsDir),
+    ]
 
     const dataByLoc = {}
 
@@ -34,6 +37,7 @@ const outputUsfmDir = './usfm/ugnt'
       const lines = transcriptions.split(/\n/g)
 
       lines.forEach(line => {
+        const numOccurrencesByForm = {}
         const [ x, loc, content ] = line.match(/^(.*?) (.*)$/) || []
         if(!x) {
           if(line) console.log(`Bad line: ${line}`)
@@ -41,10 +45,22 @@ const outputUsfmDir = './usfm/ugnt'
         }
         const words = normalizeGreek(content).split(" ")
         const source = path.match(/\/([0-9]G[^\/]*)\.txt$/)[1]
+        const wordObjs = words.map(w => {
+          numOccurrencesByForm[w] = numOccurrencesByForm[w] || 0
+          return {
+            w,
+            occurrenceInVerse: ++numOccurrencesByForm[w],
+            getTotalHitsInVerse: () => numOccurrencesByForm[w],
+          }
+        })
+        wordObjs.forEach(wordObj => {
+          wordObj.totalHitsInVerse = wordObj.getTotalHitsInVerse()
+          delete wordObj.getTotalHitsInVerse
+        })
         dataByLoc[loc] = {
-          wordsBySource: {
-            ...((dataByLoc[loc] || {}).wordsBySource || {}),
-            [source]: words,
+          wordObjsBySource: {
+            ...((dataByLoc[loc] || {}).wordObjsBySource || {}),
+            [source]: wordObjs,
           },
         }
       })
@@ -88,55 +104,14 @@ const outputUsfmDir = './usfm/ugnt'
       const sourceUsfm = await fs.readFile(path, { encoding: `utf8` })
       const usfmByLoc = getUsfmByLoc(sourceUsfm)
 
-      // add ugnt words array to dataByLoc
       for(let loc in usfmByLoc) {
 
-        const words = (usfmByLoc[loc].match(/\\w .*?\\w\*/g) || []).map(w => normalizeGreek(w.match(/\\w ([^|\\]*)/)[1]))
-        if(words.length === 0 && loc !== '0') throw `Invalid verse in source USFM: ${loc} // ${usfmByLoc[loc]}`
-
-        dataByLoc[loc] = {
-          wordsBySource: {
-            ...((dataByLoc[loc] || {}).wordsBySource || {}),
-            UGNT: words,
-          },
-        }
-      }
-
-      // build apparatus data verse-by-verse
-      for(let loc in dataByLoc) {
-        if(!usfmByLoc[loc]) continue
-        // const criticalOrAncient = /\/0G[^\/]*\.txt$/.test(path) ? `critical` : `ancient`
-        let variantWords = []
-        const ugntWords = dataByLoc[loc].wordsBySource.UGNT || []
-        for(let version in dataByLoc[loc].wordsBySource) {
-          if(version === 'UGNT') continue
-
-          const wordsInThisVersion = dataByLoc[loc].wordsBySource[version]
-          variantWords.push(...wordsInThisVersion.filter(word => !ugntWords.includes(word)))
-        }
-
-        variantWords = [ ...new Set(variantWords) ]
-
-        const apparatusJson = {
-          words: variantWords,
-          critical: [],
-          ancient: [],
-        }
-        dataByLoc[loc] = apparatusJson
-      }
-
-      let outputUsfm = ``
-
-      Object.keys(usfmByLoc).sort().forEach(loc => {
-
-        // insert apparatus tags into USFM
-        let verseUsfmPieces = usfmByLoc[loc].split(/(\\w .*?\\w\*.*?\n)/g)
-        if(verseUsfmPieces.length > 1) {
-          verseUsfmPieces[verseUsfmPieces.length - 2] += `\\zApparatusJson ${JSON.stringify(dataByLoc[loc])}\\zApparatusJson*\n`
-        }
+        let verseUsfmPieces = usfmByLoc[loc].split(/(\\w .*?\\w\*)/g)
+        const wordObjs = []
 
         // add x-id attribute into USFM, updating id dictionary and outputting issues when relevant
         let wordNum = 1
+        const numOccurrencesByForm = {}
         verseUsfmPieces = verseUsfmPieces.map(piece => {
 
           const [ wordUsfm ] = piece.match(/\\w .*?\\w\*/) || []
@@ -160,17 +135,182 @@ const outputUsfmDir = './usfm/ugnt'
             }
 
             piece = piece.replace(/\\w\*/, ` x-id="${id}"\\w*`)
+
+            const w = normalizeGreek(wordUsfm.match(/\\w ([^|\\]*)/)[1])
+            numOccurrencesByForm[w] = numOccurrencesByForm[w] || 0
+            wordObjs.push({
+              id,
+              w,
+              occurrenceInVerse: ++numOccurrencesByForm[w],
+              getTotalHitsInVerse: () => numOccurrencesByForm[w],
+            })
+
           }
 
           return piece
         })
 
-        outputUsfm += verseUsfmPieces.join('')
-      })
+        usfmByLoc[loc] = verseUsfmPieces.join('')
+
+        wordObjs.forEach(wordObj => {
+          wordObj.totalHitsInVerse = wordObj.getTotalHitsInVerse()
+          delete wordObj.getTotalHitsInVerse
+        })
+
+        // add ugnt wordObjs array to dataByLoc
+        dataByLoc[loc] = {
+          wordObjsBySource: {
+            ...((dataByLoc[loc] || {}).wordObjsBySource || {}),
+            UGNT: wordObjs,
+          },
+        }
+
+      }
 
       // double-check that id's are unique
       const idValues = Object.values(idDictionary)
       if(idValues.length !== [ ...new Set(idValues) ].length) throw `Multiple words have the same id!`
+
+      // build apparatus data verse-by-verse
+      for(let loc in dataByLoc) {
+        if(!usfmByLoc[loc]) continue
+
+        let variantWords = []
+        const criticalVersionsByReading = {}
+        const ancientVersionsByReading = {}
+
+        const ugntWordObjs = dataByLoc[loc].wordObjsBySource.UGNT || []
+        for(let source in dataByLoc[loc].wordObjsBySource) {
+          if(source === 'UGNT') continue
+
+          const isCriticalText = /^0G/.test(source)
+
+          const wordObjsInThisVersion = dataByLoc[loc].wordObjsBySource[source]
+
+          // critical must match w + occurrenceInVerse && totalHitsInVerse
+          // ancient must just match w
+
+          const readingRaw = []
+          wordObjsInThisVersion.forEach(wordObj => {
+            const { w, occurrenceInVerse, totalHitsInVerse } = wordObj
+            const ugntWordIndex = ugntWordObjs.findIndex(ugntWordObj => (
+              ugntWordObj.w === w
+              && (
+                !isCriticalText
+                || (
+                  ugntWordObj.occurrenceInVerse === occurrenceInVerse
+                  && ugntWordObj.totalHitsInVerse === totalHitsInVerse
+                )
+              )
+            ))
+            if(ugntWordIndex !== -1) {
+              readingRaw.push(`${ugntWordIndex+1}`)
+            } else {
+              let variantIndex = variantWords.findIndex(variantWordObj => (
+                variantWordObj.w === w
+                && (
+                  !isCriticalText
+                  || (
+                    variantWordObj.occurrenceInVerse === occurrenceInVerse
+                    && variantWordObj.totalHitsInVerse === totalHitsInVerse
+                  )
+                )
+              ))
+              if(variantIndex === -1) {
+                if(isCriticalText) {
+                  // TODO:
+                    // add in id
+                    // think movable nu, final letters, etc
+                    // add notes to README
+                  wordObj.id = '?????'
+                }
+                variantWords.push(wordObj)
+                variantIndex = variantWords.length - 1
+              }
+              readingRaw.push(`+${variantIndex+1}`)
+            }
+          })
+
+          const ranges = []
+          readingRaw.forEach(wordNum => {
+            const lastRange = ranges[ranges.length - 1] || ``
+            const lastWordIsVariant = /^\+/.test(lastRange)
+            const lastWordInt = parseInt(lastRange.split('-').pop().replace("+", ""), 10)
+            const wordIsVariant = /^\+/.test(wordNum)
+            const wordInt = parseInt(wordNum.replace("+", ""), 10)
+
+            if(wordIsVariant === lastWordIsVariant && wordInt === lastWordInt+1) {
+              ranges[ranges.length - 1] = lastRange.replace(/(?:-.*)?$/, `-${wordInt}`)
+            } else {
+              ranges.push(wordNum)
+            }
+          })
+          let reading = ranges.join(',')
+          if(reading === `1-${ugntWordObjs.length}`) {
+            reading = ``
+          }
+
+          if(isCriticalText) {  // critical text
+            const version = source.substring(3)
+            criticalVersionsByReading[reading] = criticalVersionsByReading[reading] || []
+            criticalVersionsByReading[reading].push(version)
+          } else {  // ancient text
+            let version
+            if(/^1G0/.test(source)) {
+              version = `O${parseInt(source.substring(4), 10)}`
+            } else if(/^1G1/.test(source)) {
+              version = `𝔓${parseInt(source.substring(4), 10)}`
+            } else if(/^1G2/.test(source)) {
+              version = `0${parseInt(source.substring(4), 10)}`
+            } else if(/^2G/.test(source)) {
+              version = `${parseInt(source.substring(3), 10)}`
+            } else {
+              throw `Unknown version: ${source}`
+            }
+            ancientVersionsByReading[reading] = ancientVersionsByReading[reading] || []
+            ancientVersionsByReading[reading].push(version)
+          }
+
+        }
+
+        variantWords = variantWords.map(({ id, w }) => {
+          if(id) {
+            return { id, w }
+          }
+          return w
+        })
+
+        if(variantWords.length !== [ ...new Set(variantWords) ].length) throw `Duplicate variant word for manuscripts: ${JSON.stringify(variantWords)}`
+
+        const getVersionRangesString = versionsByReading => (
+          Object.keys(versionsByReading)
+            .map(reading => (
+              [ versionsByReading[reading].join(','), reading ]
+                .filter(Boolean)
+                .join(`:`)
+            ))
+        )
+
+        const apparatusJson = {
+          words: variantWords,
+          critical: getVersionRangesString(criticalVersionsByReading),
+          ancient: getVersionRangesString(ancientVersionsByReading),
+        }
+        dataByLoc[loc] = apparatusJson
+      }
+
+      let outputUsfm = ``
+
+      Object.keys(usfmByLoc).sort().forEach(loc => {
+
+        // insert apparatus tags into USFM
+        let verseUsfmPieces = usfmByLoc[loc].split(/(\\w .*?\\w\*.*?\n)/g)
+        if(verseUsfmPieces.length > 1) {
+          verseUsfmPieces[verseUsfmPieces.length - 2] += `\\zApparatusJson ${JSON.stringify(dataByLoc[loc])}\\zApparatusJson*\n`
+        }
+
+        outputUsfm += verseUsfmPieces.join('')
+      })
 
       // write the file
       const outputFilename = path.split('/').pop()
