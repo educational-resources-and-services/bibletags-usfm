@@ -2,7 +2,7 @@ const fs = require('fs').promises
 const { normalizeGreek } = require('./utils')
 
 const transcriptionsDir = './cntr/transcriptions'
-const outputUsfmDir = './usfm'
+const outputUsfmDir = './usfm/ugnt'
 
 ;(async () => {
 
@@ -58,7 +58,7 @@ const outputUsfmDir = './usfm'
       const idDictionary = {}
 
       try {
-        const oldOutputUsfm = await fs.readFile(`${outputUsfmDir}/${path.split('/').at(-1)}`, { encoding: `utf8` })
+        const oldOutputUsfm = await fs.readFile(`${outputUsfmDir}/${path.split('/').pop()}`, { encoding: `utf8` })
 
         // TODO
 
@@ -71,7 +71,7 @@ const outputUsfmDir = './usfm'
       const usfmByLoc = {}
       const book = parseInt(path.match(/\/([0-9]{2})-\w{3}.usfm$/)[1], 10) - 1
       let chapter
-      let loc = 'beginning'
+      let loc = '0'  // loc of `0` for content prior to verse 1
 
       usfmPieces.forEach(piece => {
         if(/^\\c [0-9]+$/.test(piece)) {
@@ -80,14 +80,14 @@ const outputUsfmDir = './usfm'
           const verse = `00${piece.match(/^\\v ([0-9]+)$/)[1]}`.slice(-3)
           loc = `${book}${chapter}${verse}`
         }
-        usfmByLoc[loc] += piece
+        usfmByLoc[loc] = (usfmByLoc[loc] || ``) + piece
       })
 
       // add ugnt words array to dataByLoc
       for(let loc in usfmByLoc) {
 
         const words = (usfmByLoc[loc].match(/\\w .*?\\w\*/g) || []).map(w => normalizeGreek(w.match(/\\w ([^|\\]*)/)[1]))
-        if(words.length === 0 && loc !== 'beginning') throw `Invalid verse in source USFM: ${loc} // ${usfmByLoc[loc]}`
+        if(words.length === 0 && loc !== '0') throw `Invalid verse in source USFM: ${loc} // ${usfmByLoc[loc]}`
 
         dataByLoc[loc] = {
           wordsBySource: {
@@ -97,15 +97,42 @@ const outputUsfmDir = './usfm'
         }
       }
 
-    }
-
-    console.log(dataByLoc[`40001001`])
-
       // build apparatus data verse-by-verse
+      for(let loc in dataByLoc) {
         // const criticalOrAncient = /\/0G[^\/]*\.txt$/.test(path) ? `critical` : `ancient`
-      // insert apparatus tags into USFM
-      // add x-id attribute into USFM, updating id dictionary and outputting issues when relevant
+        const apparatusJson = {
+          words: [],
+          critical: [],
+          ancient: [],
+        }
+        dataByLoc[loc] = apparatusJson
+      }
+
+      let outputUsfm = ``
+
+      Object.keys(usfmByLoc).sort().forEach(loc => {
+
+        // insert apparatus tags into USFM
+        let verseUsfmPieces = usfmByLoc[loc].split(/(\\w\*.*?\n)/g)
+        if(verseUsfmPieces.length > 1) {
+          verseUsfmPieces[verseUsfmPieces.length - 2] += `\\zApparatusJson ${JSON.stringify(dataByLoc[loc])}\\zApparatusJson*\n`
+        }
+
+        // add x-id attribute into USFM, updating id dictionary and outputting issues when relevant
+        verseUsfmPieces = verseUsfmPieces.map(piece => {
+          const id = `${loc.slice(0, 2)}${`???`}`
+          return piece.replace(/\\w\*/, ` x-id="${id}"\\w*`)
+        })
+
+        outputUsfm += verseUsfmPieces.join('')
+      })
+
       // write the file
+      const outputFilename = path.split('/').pop()
+      console.log(`Writing ${outputFilename}...`)
+      await fs.writeFile(`${outputUsfmDir}/${outputFilename}`, outputUsfm)
+
+    }
         
     console.log(`\nCOMPLETED.\n`)
 
