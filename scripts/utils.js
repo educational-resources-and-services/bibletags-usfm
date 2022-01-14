@@ -1,6 +1,6 @@
 const utils = {
 
-  stripGreekAccents: str => {
+  normalizeGreek: str => {
     const mappings = {
       "α": /[ἀἁἂἃἄἅἆἇάὰάᾀᾁᾂᾃᾄᾅᾆᾇᾰᾱᾲᾳᾴᾶᾷ]/g,
       "Α": /[ἈἉἊἋἌἍἎἏΆᾈᾉᾊᾋᾌᾍᾎᾏᾸᾹᾺΆᾼ]/g,
@@ -24,6 +24,9 @@ const utils = {
     Object.keys(mappings).forEach(char => {
       str = str.replace(mappings[char], char)
     })
+
+    str = str.toLowerCase()
+    str = str.replace(/[,.·]/g, '')
 
     return str
   },
