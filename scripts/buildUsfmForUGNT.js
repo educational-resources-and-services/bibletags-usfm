@@ -1,5 +1,5 @@
 const fs = require('fs').promises
-const { normalizeGreek } = require('./utils')
+const { normalizeGreek, getWordKey, getRandomId, getUsfmByLoc } = require('./utils')
 
 const transcriptionsDir = './cntr/transcriptions'
 const outputUsfmDir = './usfm/ugnt'
@@ -56,32 +56,37 @@ const outputUsfmDir = './usfm/ugnt'
 
       // build id dictionary from existing file in outputUsfmDir to ensure continuity of id's
       const idDictionary = {}
+      const idTakenMap = {}
+      let isUpdateOfExistingFiles = false
 
       try {
         const oldOutputUsfm = await fs.readFile(`${outputUsfmDir}/${path.split('/').pop()}`, { encoding: `utf8` })
+        const oldUsfmByLoc = getUsfmByLoc(oldOutputUsfm)
 
-        // TODO
+        for(let loc in oldUsfmByLoc) {
+          let wordNum = 1
+          ;(oldUsfmByLoc[loc].match(/\\w .*?\\w\*/g) || []).forEach(wordUsfm => {
+            const [ x, id ] = wordUsfm.match(/x-id="([^"]*)"/) || []
+            if(id) {
+              const wordKey = getWordKey({ wordUsfm, loc, wordNum, version: `UGNT` })
+              wordNum++
+              idDictionary[wordKey] = id
+              isUpdateOfExistingFiles = true
+            }
+          })
+        }
 
-      } catch(e) {}
+        Object.values(idDictionary).forEach(id => {
+          idTakenMap[id] = true
+        })
+
+      } catch(e) {
+        if(!/^ENOENT: no such file or directory/.test(e.message)) throw e
+      }
 
       // load and slice up source usfm
       const sourceUsfm = await fs.readFile(path, { encoding: `utf8` })
-      const usfmPieces = sourceUsfm.split(/(\\[cv] [0-9]+)/g)
-      
-      const usfmByLoc = {}
-      const book = parseInt(path.match(/\/([0-9]{2})-\w{3}.usfm$/)[1], 10) - 1
-      let chapter
-      let loc = '0'  // loc of `0` for content prior to verse 1
-
-      usfmPieces.forEach(piece => {
-        if(/^\\c [0-9]+$/.test(piece)) {
-          chapter = `00${piece.match(/^\\c ([0-9]+)$/)[1]}`.slice(-3)
-        } else if(/\\v [0-9]+/.test(piece)) {
-          const verse = `00${piece.match(/^\\v ([0-9]+)$/)[1]}`.slice(-3)
-          loc = `${book}${chapter}${verse}`
-        }
-        usfmByLoc[loc] = (usfmByLoc[loc] || ``) + piece
-      })
+      const usfmByLoc = getUsfmByLoc(sourceUsfm)
 
       // add ugnt words array to dataByLoc
       for(let loc in usfmByLoc) {
@@ -113,19 +118,47 @@ const outputUsfmDir = './usfm/ugnt'
       Object.keys(usfmByLoc).sort().forEach(loc => {
 
         // insert apparatus tags into USFM
-        let verseUsfmPieces = usfmByLoc[loc].split(/(\\w\*.*?\n)/g)
+        let verseUsfmPieces = usfmByLoc[loc].split(/(\\w .*?\\w\*.*?\n)/g)
         if(verseUsfmPieces.length > 1) {
-          verseUsfmPieces[verseUsfmPieces.length - 2] += `\\zApparatusJson ${JSON.stringify(dataByLoc[loc])}\\zApparatusJson*\n`
+          // verseUsfmPieces[verseUsfmPieces.length - 2] += `\\zApparatusJson ${JSON.stringify(dataByLoc[loc])}\\zApparatusJson*\n`
         }
 
         // add x-id attribute into USFM, updating id dictionary and outputting issues when relevant
+        let wordNum = 1
         verseUsfmPieces = verseUsfmPieces.map(piece => {
-          const id = `${loc.slice(0, 2)}${`???`}`
-          return piece.replace(/\\w\*/, ` x-id="${id}"\\w*`)
+
+          const [ wordUsfm ] = piece.match(/\\w .*?\\w\*/) || []
+
+          if(wordUsfm) {
+
+            const wordKey = getWordKey({ wordUsfm, loc, wordNum, version: `UGNT` })
+            wordNum++
+
+            let id = idDictionary[wordKey]
+
+            if(!id) {
+              while(!id || idTakenMap[id]) {
+                id = `${loc.slice(0, 2)}${getRandomId()}`
+              }
+              idTakenMap[id] = true
+              idDictionary[wordKey] = id
+              if(isUpdateOfExistingFiles) {
+                console.log(`New id created: ${id} => ${wordKey}`)
+              }
+            }
+
+            piece = piece.replace(/\\w\*/, ` x-id="${id}"\\w*`)
+          }
+
+          return piece
         })
 
         outputUsfm += verseUsfmPieces.join('')
       })
+
+      // double-check that id's are unique
+      const idValues = Object.values(idDictionary)
+      if(idValues.length !== [ ...new Set(idValues) ].length) throw `Multiple words have the same id!`
 
       // write the file
       const outputFilename = path.split('/').pop()
@@ -152,6 +185,8 @@ const outputUsfmDir = './usfm/ugnt'
     console.log(`Note #1: \`ugntDir\` should point to your local clone of the unfoldingword.org/uhb repo.`)
     console.log(`Note #2: \`addedTranscriptionsDir\` (if included) should contain TXT files like those in /cntr/transcriptions.`)
     console.log(``)
+
+    if(typeof err !== 'string') throw err
 
   }
 
