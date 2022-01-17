@@ -83,7 +83,7 @@ const utils = {
       "Ε": /[ἘἙἚἛἜἝῈΈΈ]/g,
       "η": /[ἠἡἢἣἤἥἦἧὴήᾐᾑᾒᾓᾔᾕᾖᾗῂῃῄῆῇή]/g,
       "Η": /[ἨἩἪἫἬἭἮἯᾘᾙᾚᾛᾜᾝᾞᾟῊΉῌΉ]/g,
-      "ι": /[ἰἱἲἳἴἵἶἷὶίῐῑῒΐῖῗΐίϊ]/g,
+      "ι": /[ἰἱἲἳἴἵἶἷὶίῐῑῒΐῖῗΐίϊΐί]/g,
       "Ι": /[ἸἹἺἻἼἽἾἿῚΊῘῙΊΪ]/g,
       "ο": /[ὀὁὂὃὄὅὸόό]/g,
       "Ο": /[ὈὉὊὋὌὍῸΌΌ]/g,
@@ -101,7 +101,7 @@ const utils = {
     })
 
     str = str.toLowerCase()
-    str = str.replace(/[,.·()’ʼ•:]/g, '')
+    str = str.replace(/[,.·()’ʼ•:;?⋄–!⸁—⸅;⸄]/g, '')
 
     // get rid of irrelevant CNTR annotations (see /cntr/transcriptions/#README.txt)
     str = str.replace(/[\\|\/][0-9]*/g, '')
@@ -123,7 +123,7 @@ const utils = {
 
   overNormalizeGreek: w => {
 
-    w = w.replace(/[\[\]]/g, '')
+    w = w.replace(/[\[\]⟦⟧〚〛]/g, '')
 
     // TODO:
       // Ideally, meaningless spelling difference of a single word would also get normalized here so that they do not receive different id's.

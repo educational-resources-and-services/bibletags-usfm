@@ -247,6 +247,8 @@ const outputUsfmDir = './usfm/ugnt'
                   return isMatch
                 }
 
+                if(isCriticalText && /[^α-ω\[\]⟦⟧〚〛$]/.test(wordObj2.w + w)) throw `Unexpected character: ${wordObj2.w} ${w}`
+
                 if(isInexactMatch(wordObj2.w, w)) {
                   if(isCriticalText) {
                     if(
