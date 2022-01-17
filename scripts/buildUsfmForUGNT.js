@@ -344,17 +344,6 @@ const outputUsfmDir = './usfm/ugnt'
                     })
                   )
 
-
-                  // TODO: HERE!
-                    // add in id
-                    // same id
-                      // elision (e.g., ἀλλʼ for ἀλλά)
-                      // movable ν
-                      // spelling (δαυιδ vs δαυειδ)
-                    // different ids, but not significant
-                      // interchange between first aorist and second aorist verb endings
-                      // crasis (e.g., κἀγώ for καὶ ἐγώ)
-                    // add notes to README
                 }
                 variantWords.push(wordObj)
                 variantIndex = variantWords.length - 1

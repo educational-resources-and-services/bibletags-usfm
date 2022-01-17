@@ -20,7 +20,7 @@ For more information on this project, see the [Bible Tags website](https://bible
 
 ## Bugs
 
-* See [here](https://github.com/educational-resources-and-services/bibletags-ui-data/issues).
+* See [here](https://github.com/educational-resources-and-services/bibletags-data/issues).
 * Please first check if your bug report / feature request already exists before submitting a new issue.
 * For bug reports, please provide a clear description of the problem and step-by-step explanation of how to reproduce it.
 
@@ -32,52 +32,49 @@ These USFM 3.0 files are derived from [unfoldingword.org/uhb](https://unfoldingw
 
 The following changes have been made via the import scripts:
 
-* A unique `x-id` has been added to each word.
-* Variant information has been added to the end of all relevant verses using the custom `\zApparatusJson` tag.
+1. Variant information has been added to the end of all relevant verses using the custom `\zApparatusJson` tag. For critical texts, punctuation, accents, breathing marks, and capitalization are ignored, since these things are not present in the originals and thus do not represent a different reading or the ancient manuscripts. Also, refer to CNTR's [README](/cntr/transcriptions/%23README.txt) for information regarding the following special characters used to represent the reading quality of manuscripts: `%^=${}xab`.
 
-### Expanded `\zApparatusJson` example
+##### Expanded and annotated `\zApparatusJson` example from Matthew 1:1
 
 ```json
-  {
-    "words": [
-      {
-        "w": "=ιυ",
-        "id": "?????"
-      },
-      {
-        "w": "=χυ",
-        "id": "?????"
-      },
-      {
-        "w": "=υυ",
-        "id": "?????"
-      },
-      {
-        "w": "δαυιδ",
-        "id": "?????"
-      },
-      {
-        "w": "δαυετ",
-        "id": "?????"
-      },
-      {
-        "w": "=δαδ",
-        "id": "?????"
-      },
-      {
-        "w": "=υυ",
-        "id": "?????"
-      }
-    ],
-    "critical": [
-      "NA,SBL,RP,ST,TR:1-5,+4,7-8",
-    ],
-    "ancient": [
-      "𝔓1:1-2,+1-4,7-8",
-      "61617:1-5,+5,7-8",
-      "64853:1-2,+1-3,+6-7,8",
-      "01:1-2,+1-2,5,+6,7-8",
-      "03,032:1-2,+1-2,6-8",
-    ]
-  }
+{
+  "words": [
+    // Any time a plus character proceeds a single word or word range below, it means these words come from this `words` array.
+    // Without the plus character, the word or word range comes from the UGNT.
+    {
+      "id": "40HX3",
+      "w": "δαυιδ"
+    },
+    {
+      "id": "404KI",
+      "w": "δαβιδ"
+    },
+    "βιβλοσ",
+    "γενεσεωσ",
+    "=ιυ",
+    "=χυ",
+    "=υυ",
+    "…",  // Ellipsis are used in place of supplied words.
+    "=δαδ",
+    "δα%υ^ε^ι%δ",
+    "δαυετ",
+    "γενεσενσ",
+    "αβρα^α^μ^"
+  ],
+  "critical": [
+    "WH",  // No colon indicates this text's reading matches the UGNT.
+    "RP,KJTR,NA,SBL:1-5,+1,7-8",  // These text read the same as the UGNT for words 1-5 and 7-8. The sixth word is replaced with δαυιδ from the `words` array above.
+    "ST:1-5,+2,7-8"  // The ST also has an alternate reading with the sixth word, but uses δαβιδ.
+  ],
+  "ancient": [
+    "𝔓1:+3-7,+1,+8,8",
+    "01:+3-6,5,+9,5,8",
+    "03:+3-6,5-6,5,8",
+    "032:+3-6,5,+10,5,8",
+    "61617:+3-4,3-5,+11,5,8",
+    "64853:+3,+12,+5-7,+9,+7,+13"
+  ]
+}
 ```
+
+2. A unique `x-id` has been added to each word in the UGNT and each variant word represented in a critical text. Where the difference in a variant is merely the addition of brackets (to indicate uncertaintly), the `x-id` of that variant matches its counterpart in the UGNT.

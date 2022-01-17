@@ -24,6 +24,7 @@
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,CC,,,,,,,," x-id="57Wgd"\w*
 \w συνεργῷ|lemma="συνεργός" strong="G49040" x-morph="Gr,NS,,,,DMS," x-id="57By7"\w*
 \w ἡμῶν|lemma="ἐγώ" strong="G14730" x-morph="Gr,RP,,,1G,P," x-id="57EpE"\w*,
+\zApparatusJson {"words":[{"id":"57oGQ","w":"παυλοσ"},"δεσμιοσ","=χυ","=ιυ","τιμοθεοσ","αδελφοσ","π^α^υ^λ^ο^σ","τιμοθ^ε^ο^σ^","ο%","…","α^γ^α%πητω","ημω¯"],"critical":["WH,RP,KJTR,NA,SBL","ST:+1,2-14"],"ancient":["01:+1-4,5,+5,7,+6,9-11,5,13-14","02:+7,+2-4,5,+8-9,+6,9,+10-11,5,13,+12"]}\zApparatusJson*
 
 \v 2
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,CC,,,,,,,," x-id="57do6"\w*
@@ -41,6 +42,7 @@
 \w οἶκόν|lemma="οἶκος" strong="G36240" x-morph="Gr,N,,,,,AMS," x-id="57OFc"\w*
 \w σου|lemma="σύ" strong="G47710" x-morph="Gr,RP,,,2G,S," x-id="57nlu"\w*
 \w ἐκκλησίᾳ|lemma="ἐκκλησία" strong="G15770" x-morph="Gr,N,,,,,DFS," x-id="57pcm"\w*:
+\zApparatusJson {"words":[{"id":"577Xu","w":"αγαπητη"},{"id":"57ZW2","w":"συστρατιωτη"},"συ¯στρατιωτη","ημω¯","…","α^π^φια","αρχιππ^ω^","τ^ω","τ^η"],"critical":["WH","RP,ST,KJTR:1-3,+1,5-7,+2,9-15","NA,SBL:1-7,+2,9-15"],"ancient":["01:1-4,1,6-7,+3-4,1,3,12-15","02:+5-6,3-4,1,+7-8,8-9,+5,+9,12-15"]}\zApparatusJson*
 
 \v 3
 \w χάρις|lemma="χάρις" strong="G54850" x-morph="Gr,N,,,,,NFS," x-id="57uLq"\w*
@@ -56,6 +58,7 @@
 \w ἡμῶν|lemma="ἐγώ" strong="G14730" x-morph="Gr,RP,,,1G,P," x-id="57jO9"\w*
 \w Ἰησοῦ|lemma="Ἰησοῦς" strong="G24240" x-morph="Gr,N,,,,,GMS," x-id="57ZDF"\w*
 \w Χριστοῦ|lemma="χριστός" strong="G55470" x-morph="Gr,N,,,,,GMS," x-id="57PQ0"\w*.
+\zApparatusJson {"words":["χαρισ","=θυ","=πρσ","=κυ","=ιυ","=χυ","…","η^μ^ω%ν"],"critical":["WH,RP,ST,KJTR,NA,SBL:1-10,12-13"],"ancient":["01:+1,2-5,+2-3,3,+4-6","02:+7,2-5,+2-3,+8,3,+4-6","04:+1,2-5,+2-3,8,3,+4-6"]}\zApparatusJson*
 
 \p
 \v 4
@@ -71,6 +74,7 @@
 \w τῶν|lemma="ὁ" strong="G35880" x-morph="Gr,EA,,,,GFP," x-id="57ktx"\w*
 \w προσευχῶν|lemma="προσευχή" strong="G43350" x-morph="Gr,N,,,,,GFP," x-id="57sCr"\w*
 \w μου|lemma="ἐγώ" strong="G14730" x-morph="Gr,RP,,,1G,S," x-id="57Xis"\w*,
+\zApparatusJson {"words":["=θω","μνιαν","ποιουμενοσ","ε^υ^χ^αριστω","μ^ν^ειαν","τω¯","π^ρ^οσευχων"],"critical":["WH,RP,ST,KJTR,NA,SBL"],"ancient":["01:1-2,+1,4-5,+2,7,+3,9-11,4","02:+4,2,+1,4-5,+5,7,+3,9,+6-7,4","04:1-2,+1,4-7,+3,9-11,4"]}\zApparatusJson*
 
 \v 5
 \w ἀκούων|lemma="ἀκούω" strong="G01910" x-morph="Gr,V,PPA,NMS," x-id="57hjx"\w*
@@ -91,6 +95,7 @@
 \w πάντας|lemma="πᾶς" strong="G39560" x-morph="Gr,EQ,,,,AMP," x-id="57u6M"\w*
 \w τοὺς|lemma="ὁ" strong="G35880" x-morph="Gr,EA,,,,AMP," x-id="57eMG"\w*
 \w ἁγίους|lemma="ἅγιος" strong="G00400" x-morph="Gr,NS,,,,AMP," x-id="57e61"\w*,
+\zApparatusJson {"words":[{"id":"578hS","w":"εις"},"εχεισ","προσ","=κν","=ιν","εισ","παντασ","τουσ","αγιουσ","τ^η%ν","ε^χεισ","παντ%ασ"],"critical":["WH:1-9,+1,11-18","RP,ST,KJTR,NA,SBL"],"ancient":["01:1-5,3,7-8,+2-3,11,+4-5,5,+6-9","02:1-2,+10,4-5,3,7-8,+11,+6,11,+4-5,5,+6,+12,+8-9","04:1-5,3,7-8,+2,+6,11,+4-5,5,+6-9"]}\zApparatusJson*
 
 \v 6
 \w ὅπως|lemma="ὅπως" strong="G37040" x-morph="Gr,CS,,,,,,,," x-id="57K5r"\w*
@@ -110,6 +115,7 @@
 \w ἡμῖν|lemma="ἐγώ" strong="G14730" x-morph="Gr,RP,,,1D,P," x-id="57woI"\w*
 \w εἰς|lemma="εἰς" strong="G15190" x-morph="Gr,P,,,,,A,,," x-id="57owH"\w*
 \w Χριστόν|lemma="χριστός" strong="G55470" x-morph="Gr,N,,,,,AMS," x-id="57rBk"\w*.
+\zApparatusJson {"words":[{"id":"57S1b","w":"[του]"},{"id":"575kE","w":"ιησουν"},{"id":"57Wul","w":"υμιν"},"π%αν%τ^ο^σ^","…","υ%μ%ε%ιν","ε^ι%σ%","=χ%ν%","οπωσ","τησ","πιστεωσ","ενεργησ","επιγνωσι","παντοσ","εισ","=χν"],"critical":["WH:1-12,+1,14-17","RP:1-17,+2","ST,KJTR:1-14,+3,16-17,+2","NA,SBL"],"ancient":["𝔓139:+4-8","01:+9,2-3,+10-11,6,+12,8-9,+13-14,12-13,9,+3,+15-16","02,04:+9,2-3,+10-11,6,+12,8-10,+14,12,9,15,+15-16"]}\zApparatusJson*
 
 \v 7
 \w χαρὰν|lemma="χαρά" strong="G54790" x-morph="Gr,N,,,,,AFS," x-id="572EK"\w*
@@ -131,6 +137,7 @@
 \w διὰ|lemma="διά" strong="G12230" x-morph="Gr,P,,,,,G,,," x-id="57KFc"\w*
 \w σοῦ|lemma="σύ" strong="G47710" x-morph="Gr,RP,,,2G,S," x-id="57qp6"\w*,
 \w ἀδελφέ|lemma="ἀδελφός" strong="G00800" x-morph="Gr,N,,,,,VMS," x-id="57KDx"\w*.
+\zApparatusJson {"words":[{"id":"57X76","w":"χαριν"},{"id":"57JkG","w":"εχομεν"},"…","π^ο^λ%λην","π^α^ρ^α^κ^λ%ησιν","σ^ου","τ%ων","α^ν^α^π^ε^π^α^υ%ται"],"critical":["WH,NA,SBL","RP,ST:+1,2,+2,3,5-19","KJTR:1-2,+2,3,5-19"],"ancient":["𝔓139:+3-4,4-5,+5,7,+3,+6,11-12,+3,+7,15,+8,17,10,+3","01:1-4,7-17,10,19","02,04:1-17,10,19"]}\zApparatusJson*
 
 \p
 \v 8
@@ -144,6 +151,7 @@
 \w σοι|lemma="σύ" strong="G47710" x-morph="Gr,RP,,,2D,S," x-id="57kBR"\w*
 \w τὸ|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,ANS," x-id="57lRn"\w*
 \w ἀνῆκον|lemma="ἀνήκω" strong="G04330" x-morph="Gr,V,PPA,ANS," x-id="578l6"\w*,
+\zApparatusJson {"words":["δ^ι%ο","πο%λλην","…","επ^ι^τ^α^σ^σ^ε^ι^ν^","α^ν%ηκ^ο^ν^","=χω","εχω¯","επιτασσιν"],"critical":["WH,RP,ST,KJTR,NA,SBL"],"ancient":["𝔓139:+1-2,3,+3,6,+4,+3,+5","01:1-3,+6,5,+7-8,8-10","02,04:1-3,+6,5-10"]}\zApparatusJson*
 
 \v 9
 \w διὰ|lemma="διά" strong="G12230" x-morph="Gr,P,,,,,A,,," x-id="57aTj"\w*
@@ -162,6 +170,7 @@
 \w δέσμιος|lemma="δέσμιος" strong="G11980" x-morph="Gr,N,,,,,NMS," x-id="57E0s"\w*
 \w Χριστοῦ|lemma="χριστός" strong="G55470" x-morph="Gr,N,,,,,GMS," x-id="57eSp"\w*
 \w Ἰησοῦ|lemma="Ἰησοῦς" strong="G24240" x-morph="Gr,N,,,,,GMS," x-id="57QXu"\w*),
+\zApparatusJson {"words":["τοιουτοσ","ωσ","παυλοσ","πρεσβυτησ","δεσμιοσ","=χυ","=ιυ","αναγκην","νυν"],"critical":["WH,NA,SBL","RP,ST,KJTR:1-14,16,15"],"ancient":["01,04:1-5,+1,7,+2-4,11-13,+5-7","02:1-2,+8,4-5,+1,7,+2-4,+9,12-13,+5-7"]}\zApparatusJson*
 
 \v 10
 \w παρακαλῶ|lemma="παρακαλέω" strong="G38700" x-morph="Gr,V,IPA1,,S," x-id="570zW"\w*
@@ -176,6 +185,7 @@
 \w τοῖς|lemma="ὁ" strong="G35880" x-morph="Gr,EP,,,,DMP," x-id="57tmK"\w*
 \w δεσμοῖς|lemma="δεσμός" strong="G11990" x-morph="Gr,N,,,,,DMP," x-id="57Uc5"\w*,
 \w Ὀνήσιμον|lemma="Ὀνήσιμος" strong="G36820" x-morph="Gr,N,,,,,AMS," x-id="57KM3"\w*;
+\zApparatusJson {"words":[{"id":"57ySn","w":"μου"},"τοισ","δεσμοισ","εγω"],"critical":["WH,NA,SBL","RP,ST,KJTR:1-11,+1,12"],"ancient":["01:1-9,+2-3,12","02:1-7,+4,8-9,+2-3,12","04:1-9,+2-3,+1,12"]}\zApparatusJson*
 
 \v 11
 \w τόν|lemma="ὁ" strong="G35880" x-morph="Gr,RD,,,,AMS," x-id="57QAo"\w*
@@ -189,6 +199,7 @@
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,CO,,,,,,,," x-id="576dT"\w*
 \w ἐμοὶ|lemma="ἐγώ" strong="G14730" x-morph="Gr,RP,,,1D,S," x-id="578ew"\w*
 \w εὔχρηστον|lemma="εὔχρηστος" strong="G21730" x-morph="Gr,NS,,,,AMS," x-id="57KVS"\w*;
+\zApparatusJson {"words":[{"id":"57cJl","w":"[και]"},"x{τ��}","{τον}","σο%ι","νυ¯νι","αχρηστο¯"],"critical":["WH,RP,ST,KJTR,SBL:1-6,8,7,10-11","NA:1-6,+1,8-11"],"ancient":["01:+2-3,2,+4,4,+5,6-7,3,7,10-11","02:1-6,3,7,10-11","04:1-3,+6,5-6,3,7,10-11"]}\zApparatusJson*
 
 \v 12
 \w ὃν|lemma="ὅς" strong="G37390" x-morph="Gr,RR,,,,AMS," x-id="57jjR"\w*
@@ -200,6 +211,7 @@
 \w τὰ|lemma="ὁ" strong="G35880" x-morph="Gr,EA,,,,NNP," x-id="57k9c"\w*
 \w ἐμὰ|lemma="ἐμός" strong="G16990" x-morph="Gr,EP,,,1NNP," x-id="57I5O"\w*
 \w σπλάγχνα|lemma="σπλάγχνον" strong="G46980" x-morph="Gr,N,,,,,NNP," x-id="57D12"\w*;
+\zApparatusJson {"words":[{"id":"575AP","w":"συ"},{"id":"57UUN","w":"δε"},{"id":"57e2Y","w":"προσλαβου"},{"id":"57k2j","w":"τουτεστι"},"εστι¯","αυ^τον","εστι"],"critical":["WH,NA,SBL","RP,KJTR:1-2,+1-2,4-9,+3","ST:1-2,+1-2,4,+4,7-9,+3"],"ancient":["01:1-5,+5,7-9","02","04:1-3,+6,5,+7,7-9,+3"]}\zApparatusJson*
 
 \v 13
 \w ὃν|lemma="ὅς" strong="G37390" x-morph="Gr,RR,,,,AMS," x-id="570cn"\w*
@@ -218,6 +230,7 @@
 \w δεσμοῖς|lemma="δεσμός" strong="G11990" x-morph="Gr,N,,,,,DMP," x-id="57qB0"\w*
 \w τοῦ|lemma="ὁ" strong="G35880" x-morph="Gr,EA,,,,GNS," x-id="57EdN"\w*
 \w εὐαγγελίου|lemma="εὐαγγέλιον" strong="G20980" x-morph="Gr,N,,,,,GNS," x-id="57ebL"\w*;
+\zApparatusJson {"words":["ι^να","υ%περ","μο^ι^","…","τοισ","δεσμο^ι^σ^","ηβουλομην","προσ","κατεχιν","δεσμοισ"],"critical":["WH,NA,SBL","RP,ST,KJTR:1-9,11,10,12-16"],"ancient":["𝔓87:+1-2,9,+3,11,+4-6,+4","01:1-2,+7-8,5,+9,7-12,+5,+10,15-16","02,04:1-3,+8,5-12,+5,+10,15-16"]}\zApparatusJson*
 
 \v 14
 \w χωρὶς|lemma="χωρίς" strong="G55650" x-morph="Gr,PI,,,,G,,," x-id="57k8o"\w*
@@ -240,6 +253,7 @@
 \w ἀλλὰ|lemma="ἀλλά" strong="G02350" x-morph="Gr,CO,,,,,,,," x-id="575TT"\w*
 \w κατὰ|lemma="κατά" strong="G25960" x-morph="Gr,P,,,,,A,,," x-id="57Ndf"\w*
 \w ἑκούσιον|lemma="ἑκούσιος" strong="G15950" x-morph="Gr,NS,,,,ANS," x-id="57p6R"\w*.
+\zApparatusJson {"words":["χωρισ","τησ^","…","ο^υδεν","ηθελησ^α^","ι^ν^α%","ωσ","α^γ^α^θον","αλλ^α^","τησ","σησ","γνωμησ","χωρεισ","σησ^","εκουσιο¯"],"critical":["WH,RP,ST,KJTR,NA,SBL"],"ancient":["𝔓87:+1,2,+2-5,+3,+6,10,+7,12,+3,+8,16-17,+9,+3","01,04:+1,2,+10-12,6-10,+7,12-18,12,20","02:+13,2,+10,+14,+12,6-10,+7,12-18,12,+15"]}\zApparatusJson*
 
 \v 15
 \w τάχα|lemma="τάχα" strong="G50290" x-morph="Gr,D,,,,,,,,," x-id="57Pc1"\w*
@@ -253,6 +267,7 @@
 \w αἰώνιον|lemma="αἰώνιος" strong="G01660" x-morph="Gr,NS,,,,AMS," x-id="57oxT"\w*
 \w αὐτὸν|lemma="αὐτός" strong="G08460" x-morph="Gr,RP,,,3AMS," x-id="57qjN"\w*
 \w ἀπέχῃς|lemma="ἀπέχω" strong="G05680" x-morph="Gr,V,SAA2,,S," x-id="57WsI"\w*,
+\zApparatusJson {"words":["…","τουτο^","ω^ρ^αν","ιν^α^","προσ","απεχησ","ε^χ^ρισθη"],"critical":["WH,RP,ST,KJTR,NA,SBL"],"ancient":["𝔓87:+1,3,+2,+1,+3-4","01,02:1-5,+5,7-10,+6","04:1-3,+2,+7,+5,7-10,+6"]}\zApparatusJson*
 
 \v 16
 \w οὐκέτι|lemma="οὐκέτι" strong="G37650" x-morph="Gr,D,,,,,,,,," x-id="57tmk"\w*
@@ -275,6 +290,7 @@
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,CO,,,,,,,," x-id="57reQ"\w*
 \w ἐν|lemma="ἐν" strong="G17220" x-morph="Gr,P,,,,,D,,," x-id="57dhP"\w*
 \w Κυρίῳ|lemma="κύριος" strong="G29620" x-morph="Gr,N,,,,,DMS," x-id="57lkU"\w*.
+\zApparatusJson {"words":[{"id":"57ZNd","w":"αλλ"},"ωσ","ε¯","=κω","μαλλο¯","δουλο¯"],"critical":["WH,SBL","RP,ST,KJTR,NA:1-3,+1,5-20"],"ancient":["01:1,+2,3-5,3,8-15,+3,17,15-16,+4","02:1,+2,3,+1,5,3,7-12,+5,14-17,15-16,+4","04:1,+2,3,+1,5,+6,7-17,15-16,+4"]}\zApparatusJson*
 
 \p
 \v 17
@@ -287,6 +303,7 @@
 \w αὐτὸν|lemma="αὐτός" strong="G08460" x-morph="Gr,RP,,,3AMS," x-id="57h7M"\w*
 \w ὡς|lemma="ὡς" strong="G56130" x-morph="Gr,CS,,,,,,,," x-id="57IfQ"\w*
 \w ἐμέ|lemma="ἐγώ" strong="G14730" x-morph="Gr,RP,,,1A,S," x-id="57WwH"\w*.
+\zApparatusJson {"words":[{"id":"57bsL","w":"εμε"},"εχεισ","ωσ","κοινωνο¯","με^"],"critical":["WH,RP,NA,SBL","ST,KJTR:1-2,+1,4-9"],"ancient":["01:1-3,+2,5-7,+3,9","02:1-3,+2,+4,6-7,+3,9","04:1-3,+2,5-7,+3,+5"]}\zApparatusJson*
 
 \v 18
 \w εἰ|lemma="εἰ" strong="G14870" x-morph="Gr,CS,,,,,,,," x-id="5788d"\w*
@@ -299,6 +316,7 @@
 \w τοῦτο|lemma="οὗτος" strong="G37780" x-morph="Gr,RD,,,,ANS," x-id="57hOa"\w*
 \w ἐμοὶ|lemma="ἐγώ" strong="G14730" x-morph="Gr,RP,,,1D,S," x-id="57fcm"\w*
 \w ἐλλόγα|lemma="ἐλλογάω" strong="G16770" x-morph="Gr,V,MPA2,,S," x-id="57mgb"\w*.
+\zApparatusJson {"words":[{"id":"57R8k","w":"ελλογει"},{"id":"57scE","w":"ηδικησε"},"η^δ^ι^κ%η%σ^ε^ν^","…","ο^φ^ε^ι^λ^ε^το","τ^ουτο","ε%μ^ο^ι^","οφιλει"],"critical":["WH,NA,SBL","RP,KJTR:1-9,+1","ST:1-3,+2,5-9,+1"],"ancient":["𝔓139:+3-7,+4","01,02:1-6,+8,8-10","04"]}\zApparatusJson*
 
 \v 19
 \w ἐγὼ|lemma="ἐγώ" strong="G14730" x-morph="Gr,RP,,,1N,S," x-id="57SaT"\w*
@@ -318,6 +336,7 @@
 \w σεαυτόν|lemma="σεαυτοῦ" strong="G45720" x-morph="Gr,RE,,,2AMS," x-id="57Agy"\w*
 \w μοι|lemma="ἐγώ" strong="G14730" x-morph="Gr,RP,,,1D,S," x-id="575Tb"\w*
 \w προσοφείλεις|lemma="προσοφείλω" strong="G43590" x-morph="Gr,V,IPA2,,S," x-id="5744X"\w*.
+\zApparatusJson {"words":["παυλο^σ^","…","χε%ιρε%ι^","α^π^ο^τ^ι^σω","μη%","ο^τι","x{αυτο%ν^}","{εαυτο%ν^}","παυλοσ","ϗ","προσοφιλεισ","προσοφειλεισ"],"critical":["WH,RP,ST,KJTR,NA,SBL"],"ancient":["𝔓139:1,+1-2,5,+3,+2,+4,9,+5,+2,+6,14,+7-8,+2","01:1,+9,3-6,1,8-13,+10,15-16,+11","02:1,+9,3-6,1,8-16,+11","04:1,+9,3-6,1,8-16,+12"]}\zApparatusJson*
 
 \v 20
 \w ναί|lemma="ναί" strong="G34830" x-morph="Gr,IR,,,,,,,," x-id="57C30"\w*,
@@ -333,6 +352,7 @@
 \w σπλάγχνα|lemma="σπλάγχνον" strong="G46980" x-morph="Gr,N,,,,,ANP," x-id="57wfR"\w*
 \w ἐν|lemma="ἐν" strong="G17220" x-morph="Gr,P,,,,,D,,," x-id="575dY"\w*
 \w Χριστῷ|lemma="χριστός" strong="G55470" x-morph="Gr,N,,,,,DMS," x-id="57KSB"\w*.
+\zApparatusJson {"words":[{"id":"570Pm","w":"κυριω"},"να^ι^","…","εγω%","=χρ%ω%","=κω","=χω","οναιμη¯"],"critical":["WH,NA,SBL","RP,ST,KJTR:1-12,+1"],"ancient":["𝔓139:+2-4,4,+3,+5","01,04:1-6,+6,8-11,6,+7","02:1-4,+8,6,+6,8-11,6,+7"]}\zApparatusJson*
 
 \v 21
 \w πεποιθὼς|lemma="πείθω" strong="G39820" x-morph="Gr,V,PEA,NMS," x-id="57DM0"\w*
@@ -348,6 +368,7 @@
 \w ἃ|lemma="ὅς" strong="G37390" x-morph="Gr,RR,,,,ANP," x-id="57gor"\w*
 \w λέγω|lemma="λέγω" strong="G30040" x-morph="Gr,V,IPA1,,S," x-id="57HN9"\w*,
 \w ποιήσεις|lemma="ποιέω" strong="G41600" x-morph="Gr,V,IFA2,,S," x-id="57jkj"\w*.
+\zApparatusJson {"words":[{"id":"57uDn","w":"ο"},"πεποιθωσ","ειδωσ","ποιησεισ"],"critical":["WH,NA,SBL","RP,ST,KJTR:1-10,+1,12-13"],"ancient":["01,02,04:+2,2-6,+3,8-12,+4"]}\zApparatusJson*
 
 \v 22
 \w ἅμα|lemma="ἅμα" strong="G02600" x-morph="Gr,D,,,,,,,,," x-id="57XOQ"\w*
@@ -365,6 +386,7 @@
 \w ὑμῶν|lemma="σύ" strong="G47710" x-morph="Gr,RP,,,2G,P," x-id="57KyZ"\w*,
 \w χαρισθήσομαι|lemma="χαρίζομαι" strong="G54830" x-morph="Gr,V,IFP1,,S," x-id="5710O"\w*
 \w ὑμῖν|lemma="σύ" strong="G47710" x-morph="Gr,RP,,,2D,P," x-id="571Sd"\w*.
+\zApparatusJson {"words":["προσευχω¯"],"critical":["WH,RP,ST,KJTR,NA,SBL"],"ancient":["01:1-11,+1,13-15","02,04"]}\zApparatusJson*
 
 \p
 \v 23
@@ -377,6 +399,7 @@
 \w ἐν|lemma="ἐν" strong="G17220" x-morph="Gr,P,,,,,D,,," x-id="57WWa"\w*
 \w Χριστῷ|lemma="χριστός" strong="G55470" x-morph="Gr,N,,,,,DMS," x-id="57fLV"\w*
 \w Ἰησοῦ|lemma="Ἰησοῦς" strong="G24240" x-morph="Gr,N,,,,,DMS," x-id="573AV"\w*,
+\zApparatusJson {"words":[{"id":"57SWH","w":"ασπαζονται"},"επαφρασ","συναιχμαλωτοσ","=χω","=ιυ","ε¯"],"critical":["WH,NA,SBL","RP,ST,KJTR:+1,2-9"],"ancient":["01,02:1-2,+2,4,+3,6-7,+4-5","04:1-2,+2,4,+3,6,+6,+4-5"]}\zApparatusJson*
 
 \v 24
 \w Μᾶρκος|lemma="Μᾶρκος" strong="G31380" x-morph="Gr,N,,,,,NMS," x-id="572BP"\w*,
@@ -386,6 +409,7 @@
 \w οἱ|lemma="ὁ" strong="G35880" x-morph="Gr,EA,,,,NMP," x-id="57W3b"\w*
 \w συνεργοί|lemma="συνεργός" strong="G49040" x-morph="Gr,NS,,,,NMP," x-id="57OHr"\w*
 \w μου|lemma="ἐγώ" strong="G14730" x-morph="Gr,RP,,,1G,S," x-id="57OYP"\w*.
+\zApparatusJson {"words":["λ^ο^υ^κ^ασ","συνεργ%ο^ι^","…","μαρκοσ","αρισταρχοσ","δημασ","λουκασ"],"critical":["WH,RP,ST,KJTR,NA,SBL"],"ancient":["𝔓87:+1,5,+2-3","01,02,04:+4-7,5-7"]}\zApparatusJson*
 
 \p
 \v 25
@@ -401,3 +425,4 @@
 \w πνεύματος|lemma="πνεῦμα" strong="G41510" x-morph="Gr,N,,,,,GNS," x-id="57OwM"\w*
 \w ὑμῶν|lemma="σύ" strong="G47710" x-morph="Gr,RP,,,2G,P," x-id="57jAH"\w*.
 \w ἀμήν|lemma="ἀμήν" strong="G02810" x-morph="Gr,IE,,,,,,,," x-id="57QSX"\w*!
+\zApparatusJson {"words":["…","μ^εθ","χαρισ","=κυ","=ιυ","=χυ","=πνσ","αμη¯"],"critical":["WH,NA,SBL:1-4,6-11","RP,ST,KJTR"],"ancient":["𝔓87:+1-2,11","01:1,+3,3,+4-6,8,3,+7,11-12","02:1,+3,3,+4,5,+5-6,8,3,+7,11","04:1,+3,3,+4,5,+5-6,8,3,+7,11,+8"]}\zApparatusJson*

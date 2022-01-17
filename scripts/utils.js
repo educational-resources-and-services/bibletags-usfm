@@ -125,14 +125,13 @@ const utils = {
 
     w = w.replace(/[\[\]⟦⟧〚〛]/g, '')
 
-    // TODO:
-      // Ideally, meaningless spelling difference of a single word would also get normalized here so that they do not receive different id's.
-      // However, there is not a safe way to distinguish between a meaningless and meaningful difference at this point.
-      // Types of meaningless spelling differences:
-        // movable ν
-          // However, there are some instances where a difference of only a final ν is NOT due to a movable nu.
-        // final α replaced with ’
-        // spelling of proper names like δαυιδ vs δαυειδ
+    // Ideally, meaningless spelling difference of a single word would also get normalized here so that they do not receive different id's.
+    // However, there is not a safe way to distinguish between a meaningless and meaningful difference at this point.
+    // Types of meaningless spelling differences:
+      // movable ν
+        // However, there are some instances where a difference of only a final ν is NOT due to a movable nu.
+      // final α replaced with ’ (e.g., ἀλλʼ for ἀλλά)
+      // spelling of proper names like δαυιδ vs δαυειδ
 
     return w
   },
