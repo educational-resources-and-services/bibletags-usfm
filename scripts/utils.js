@@ -106,6 +106,7 @@ const utils = {
     // get rid of irrelevant CNTR annotations (see /cntr/transcriptions/#README.txt)
     str = str.replace(/[\\|\/][0-9]*/g, '')
     str = str.replace(/[&*_+\-"'`]/g, '')
+    str = str.replace(/  +/g, ' ').trim()
 
     // swap out supplied words with … (see /cntr/transcriptions/#README.txt)
     str = str.replace(/[~+][^\s]+/g, "…").replace(/…(?: …)+/g, "…")
@@ -137,6 +138,16 @@ const utils = {
       loc,
       wordNum,
       version,
+    ].join(' ')
+
+    return wordKey
+  },
+
+  getVariantWordKey: ({ w, loc, occurrenceInVariants }) => {
+    const wordKey = [
+      w,
+      loc,
+      occurrenceInVariants,
     ].join(' ')
 
     return wordKey

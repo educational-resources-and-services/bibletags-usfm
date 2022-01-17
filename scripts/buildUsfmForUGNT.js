@@ -1,5 +1,5 @@
 const fs = require('fs').promises
-const { normalizeGreek, getWordKey, getRandomId, getUsfmByLoc } = require('./utils')
+const { normalizeGreek, getWordKey, getVariantWordKey, getRandomId, getUsfmByLoc } = require('./utils')
 
 const transcriptionsDir = './cntr/transcriptions'
 const outputUsfmDir = './usfm/ugnt'
@@ -28,6 +28,8 @@ const outputUsfmDir = './usfm/ugnt'
       ...await getPaths(addedTranscriptionsDir),
     ]
 
+    allTranscriptionPaths.sort((p1, p2) => p1.split('/').pop() > p2.split('/').pop() ? 1 : -1)
+
     const dataByLoc = {}
 
     // load transcriptions words array into JSON obj keyed to loc
@@ -44,6 +46,7 @@ const outputUsfmDir = './usfm/ugnt'
           return
         }
         const words = normalizeGreek(content).split(" ")
+        if(words.length === 1 && !words[0]) words.pop()
         const source = path.match(/\/([0-9]G[^\/]*)\.txt$/)[1]
         const wordObjs = words.map(w => {
           numOccurrencesByForm[w] = numOccurrencesByForm[w] || 0
@@ -90,6 +93,21 @@ const outputUsfmDir = './usfm/ugnt'
               isUpdateOfExistingFiles = true
             }
           })
+          const apparatusJson = JSON.parse((oldUsfmByLoc[loc].match(/\\zApparatusJson (.*?)\\zApparatusJson\*/) || [])[1] || "null")
+          if(apparatusJson) {
+            apparatusJson.words.forEach(({ w, id }, idx) => {
+              if(id) {
+                const wordKey = getVariantWordKey({
+                  w,
+                  loc,
+                  occurrenceInVariants: apparatusJson.words.slice(0, idx).filter(variantWord => variantWord.w === w).length + 1,
+                })
+                wordNum++
+                idDictionary[wordKey] = id
+                isUpdateOfExistingFiles = true
+              }
+            })
+          }
         }
 
         Object.values(idDictionary).forEach(id => {
@@ -103,6 +121,25 @@ const outputUsfmDir = './usfm/ugnt'
       // load and slice up source usfm
       const sourceUsfm = await fs.readFile(path, { encoding: `utf8` })
       const usfmByLoc = getUsfmByLoc(sourceUsfm)
+
+      const getId = params => {
+        const wordKey = (params.w ? getVariantWordKey : getWordKey)(params)
+
+        let id = idDictionary[wordKey]
+
+        if(!id) {
+          while(!id || idTakenMap[id]) {
+            id = `${params.loc.slice(0, 2)}${getRandomId()}`
+          }
+          idTakenMap[id] = true
+          idDictionary[wordKey] = id
+          if(isUpdateOfExistingFiles) {
+            console.log(`New id created: ${id} => ${wordKey}`)
+          }
+        }
+
+        return id
+      }
 
       for(let loc in usfmByLoc) {
 
@@ -118,21 +155,8 @@ const outputUsfmDir = './usfm/ugnt'
 
           if(wordUsfm) {
 
-            const wordKey = getWordKey({ wordUsfm, loc, wordNum, version: `UGNT` })
+            const id = getId({ wordUsfm, loc, wordNum, version: `UGNT` })
             wordNum++
-
-            let id = idDictionary[wordKey]
-
-            if(!id) {
-              while(!id || idTakenMap[id]) {
-                id = `${loc.slice(0, 2)}${getRandomId()}`
-              }
-              idTakenMap[id] = true
-              idDictionary[wordKey] = id
-              if(isUpdateOfExistingFiles) {
-                console.log(`New id created: ${id} => ${wordKey}`)
-              }
-            }
 
             piece = piece.replace(/\\w\*/, ` x-id="${id}"\\w*`)
 
@@ -191,38 +215,55 @@ const outputUsfmDir = './usfm/ugnt'
           // ancient must just match w
 
           const readingRaw = []
-          wordObjsInThisVersion.forEach(wordObj => {
+          wordObjsInThisVersion.forEach((wordObj, wordIdx) => {
             const { w, occurrenceInVerse, totalHitsInVerse } = wordObj
-            const ugntWordIndex = ugntWordObjs.findIndex(ugntWordObj => (
-              ugntWordObj.w === w
+
+            const getWordIndex = words => words.findIndex(wordObj => (
+              wordObj.w === w
               && (
                 !isCriticalText
                 || (
-                  ugntWordObj.occurrenceInVerse === occurrenceInVerse
-                  && ugntWordObj.totalHitsInVerse === totalHitsInVerse
+                  wordObj.occurrenceInVerse === occurrenceInVerse
+                  && wordObj.totalHitsInVerse === totalHitsInVerse
                 )
               )
             ))
+
+            const ugntWordIndex = getWordIndex(ugntWordObjs)
             if(ugntWordIndex !== -1) {
               readingRaw.push(`${ugntWordIndex+1}`)
             } else {
-              let variantIndex = variantWords.findIndex(variantWordObj => (
-                variantWordObj.w === w
-                && (
-                  !isCriticalText
-                  || (
-                    variantWordObj.occurrenceInVerse === occurrenceInVerse
-                    && variantWordObj.totalHitsInVerse === totalHitsInVerse
-                  )
-                )
-              ))
+              let variantIndex = getWordIndex(variantWords)
               if(variantIndex === -1) {
                 if(isCriticalText) {
-                  // TODO:
+                  wordObj.id = getId({
+                    w,
+                    loc,
+                    occurrenceInVariants: variantWords.filter(variantWord => variantWord.w === w).length + 1,
+                  })
+
+                  // variant options
+                    // extra in one source
+                      // if totalHitsInVerse is off, still match Math.abs(ugntWordObj.totalHitsInVerse - totalHitsInVerse), using those closest to one another in word num
+                      // create exceptions var for when this assumption proves wrong
+                      // have these manually checked, if possible, since it will be tough to spot where there is an issue in the app
+                      // PROBLEM - eg. Matt 1:22
+                    // meaningless spelling difference of a single word
+                      // if final ν or α is only difference, consider meaningless spelling diff (print out unique set to confirm)
+                      // if w is 66% the same, print out in order to make variableSpellings var
+                    // transposed
+                      // taken care of by occurrenceInVerse and totalHitsInVerse
+
+                  // TODO: HERE!
                     // add in id
-                    // think movable nu, final letters, etc
+                    // same id
+                      // elision (e.g., ἀλλʼ for ἀλλά)
+                      // movable ν
+                      // spelling (δαυιδ vs δαυειδ)
+                    // different ids, but not significant
+                      // interchange between first aorist and second aorist verb endings
+                      // crasis (e.g., κἀγώ for καὶ ἐγώ)
                     // add notes to README
-                  wordObj.id = '?????'
                 }
                 variantWords.push(wordObj)
                 variantIndex = variantWords.length - 1
