@@ -1,5 +1,5 @@
 const fs = require('fs').promises
-const { normalizeGreek, getWordKey, getVariantWordKey, getRandomId, getUsfmByLoc } = require('./utils')
+const { normalizeGreek, getWordKey, getVariantWordKey, getRandomId, getUsfmByLoc, overNormalizeGreek } = require('./utils')
 
 const transcriptionsDir = './cntr/transcriptions'
 const outputUsfmDir = './usfm/ugnt'
@@ -49,11 +49,11 @@ const outputUsfmDir = './usfm/ugnt'
         if(words.length === 1 && !words[0]) words.pop()
         const source = path.match(/\/([0-9]G[^\/]*)\.txt$/)[1]
         const wordObjs = words.map(w => {
-          numOccurrencesByForm[w] = numOccurrencesByForm[w] || 0
+          numOccurrencesByForm[overNormalizeGreek(w)] = numOccurrencesByForm[overNormalizeGreek(w)] || 0
           return {
             w,
-            occurrenceInVerse: ++numOccurrencesByForm[w],
-            getTotalHitsInVerse: () => numOccurrencesByForm[w],
+            occurrenceInVerse: ++numOccurrencesByForm[overNormalizeGreek(w)],
+            getTotalHitsInVerse: () => numOccurrencesByForm[overNormalizeGreek(w)],
           }
         })
         wordObjs.forEach(wordObj => {
@@ -84,12 +84,16 @@ const outputUsfmDir = './usfm/ugnt'
 
         for(let loc in oldUsfmByLoc) {
           let wordNum = 1
+          const idsInThisVerse = []
           ;(oldUsfmByLoc[loc].match(/\\w .*?\\w\*/g) || []).forEach(wordUsfm => {
             const [ x, id ] = wordUsfm.match(/x-id="([^"]*)"/) || []
             if(id) {
               const wordKey = getWordKey({ wordUsfm, loc, wordNum, version: `UGNT` })
               wordNum++
-              idDictionary[wordKey] = id
+              if(!idsInThisVerse.includes(id)) {
+                idDictionary[wordKey] = id
+                idsInThisVerse.push(id)
+              }
               isUpdateOfExistingFiles = true
             }
           })
@@ -103,7 +107,10 @@ const outputUsfmDir = './usfm/ugnt'
                   occurrenceInVariants: apparatusJson.words.slice(0, idx).filter(variantWord => variantWord.w === w).length + 1,
                 })
                 wordNum++
-                idDictionary[wordKey] = id
+                if(!idsInThisVerse.includes(id)) {
+                  idDictionary[wordKey] = id
+                  idsInThisVerse.push(id)
+                }
                 isUpdateOfExistingFiles = true
               }
             })
@@ -161,12 +168,12 @@ const outputUsfmDir = './usfm/ugnt'
             piece = piece.replace(/\\w\*/, ` x-id="${id}"\\w*`)
 
             const w = normalizeGreek(wordUsfm.match(/\\w ([^|\\]*)/)[1])
-            numOccurrencesByForm[w] = numOccurrencesByForm[w] || 0
+            numOccurrencesByForm[overNormalizeGreek(w)] = numOccurrencesByForm[overNormalizeGreek(w)] || 0
             wordObjs.push({
               id,
               w,
-              occurrenceInVerse: ++numOccurrencesByForm[w],
-              getTotalHitsInVerse: () => numOccurrencesByForm[w],
+              occurrenceInVerse: ++numOccurrencesByForm[overNormalizeGreek(w)],
+              getTotalHitsInVerse: () => numOccurrencesByForm[overNormalizeGreek(w)],
             })
 
           }
@@ -212,94 +219,112 @@ const outputUsfmDir = './usfm/ugnt'
           const wordObjsInThisVersion = dataByLoc[loc].wordObjsBySource[source]
 
           const readingRaw = []
-          const thisVersionToWordsIdxMaps = {}
           wordObjsInThisVersion.forEach((wordObj, wordIdx) => {
             const { w, occurrenceInVerse, totalHitsInVerse } = wordObj
 
-            const getWordIndex = words => words.findIndex((wordObj2, wordIdx2) => {
+            const getWordIndex = words => {
 
-              if(wordObj2.w === w) {
-                if(isCriticalText) {
-                  if(
-                    wordObj2.occurrenceInVerse === occurrenceInVerse
-                    && wordObj2.totalHitsInVerse === totalHitsInVerse
-                  ) {
-                    // critical matches w + occurrenceInVerse && totalHitsInVerse
-                    // this takes care of transposed words and phrases
-                    return true
+              const thisVersionToWordsIdxMaps = {}
+              let inexactId
 
-                  } else if(wordObj2.totalHitsInVerse !== totalHitsInVerse) {
+              const index = words.findIndex((wordObj2, wordIdx2) => {
 
-                    // extra in one source
-                      // if totalHitsInVerse is off, still match Math.min(ugntWordObj.totalHitsInVerse, totalHitsInVerse), using those closest to one another in word num
-                      // TODO: create exceptions var for when this assumption proves wrong
-                      // TODO: have these manually checked, if possible, since it will be tough to spot where there is an issue in the app
+                const isInexactMatch = (w1, w2) => overNormalizeGreek(w1) === overNormalizeGreek(w2)
 
-                    if(!thisVersionToWordsIdxMaps[w]) {
+                if(isInexactMatch(wordObj2.w, w)) {
+                  if(isCriticalText) {
+                    if(
+                      wordObj2.occurrenceInVerse === occurrenceInVerse
+                      && wordObj2.totalHitsInVerse === totalHitsInVerse
+                    ) {
+                      // critical matches w + occurrenceInVerse && totalHitsInVerse
+                      // this takes care of transposed words and phrases
+                      if(wordObj2.w !== w) {
+                        inexactId = wordObj2.id
+                      }
+                      return true
 
-                      const numToMatch = Math.min(wordObj2.totalHitsInVerse, totalHitsInVerse)
-                      const wordArrayWithMoreHits = wordObj2.totalHitsInVerse > totalHitsInVerse ? wordObjsInThisVersion : words
-                      const wordArrayWithFewerHits = wordObj2.totalHitsInVerse < totalHitsInVerse ? wordObjsInThisVersion : words
-  
-                      const wordsProximityInfo = wordArrayWithMoreHits.map((wObj, wIdx) => {
-                        const info = { numWordsAwayToClosest: Infinity }
-  
-                        if(wObj.w === w) {
-  
-                          wordArrayWithFewerHits.some((wObj2, wIdx2) => {
-                            if(wObj2.w === w) {
-                              info.numWordsAwayToClosest = Math.abs(wIdx - wIdx2)
-                              info.thisVersionIdx = wordObj2.totalHitsInVerse > totalHitsInVerse ? wIdx : wIdx2
-                              info.wordsIdx = wordObj2.totalHitsInVerse < totalHitsInVerse ? wIdx : wIdx2
-                            }
-  
-                            if(info && wIdx2 >= wIdx + info.numWordsAwayToClosest - 1) return true  // any beyond this will be further away
-                          })
-  
+                    } else if(wordObj2.totalHitsInVerse !== totalHitsInVerse) {
+
+                      // extra in one source
+                        // if totalHitsInVerse is off, still match Math.min(ugntWordObj.totalHitsInVerse, totalHitsInVerse), using those closest to one another in word num
+                        // TODO: create exceptions var for when this assumption proves wrong
+                        // TODO: have these manually checked, if possible, since it will be tough to spot where there is an issue in the app
+                      
+                      const overNormalizeW = overNormalizeGreek(w)
+
+                      if(!thisVersionToWordsIdxMaps[overNormalizeW]) {
+
+                        const numToMatch = Math.min(wordObj2.totalHitsInVerse, totalHitsInVerse)
+                        const wordArrayWithMoreHits = wordObj2.totalHitsInVerse > totalHitsInVerse ? wordObjsInThisVersion : words
+                        const wordArrayWithFewerHits = wordObj2.totalHitsInVerse < totalHitsInVerse ? wordObjsInThisVersion : words
+    
+                        const wordsProximityInfo = wordArrayWithMoreHits.map((wObj, wIdx) => {
+                          const info = { numWordsAwayToClosest: Infinity }
+    
+                          if(isInexactMatch(wObj.w, w)) {
+
+                            wordArrayWithFewerHits.some((wObj2, wIdx2) => {
+                              if(isInexactMatch(wObj2.w, w)) {
+                                info.numWordsAwayToClosest = Math.abs(wIdx - wIdx2)
+                                info.thisVersionIdx = wordObj2.totalHitsInVerse > totalHitsInVerse ? wIdx : wIdx2
+                                info.wordsIdx = wordObj2.totalHitsInVerse < totalHitsInVerse ? wIdx : wIdx2
+                              }
+    
+                              if(info && wIdx2 >= wIdx + info.numWordsAwayToClosest - 1) return true  // any beyond this will be further away
+                            })
+    
+                          }
+    
+                          return info
+                        })
+    
+                        thisVersionToWordsIdxMaps[overNormalizeW] = {}
+                        wordsProximityInfo.sort((a, b) => a.numWordsAwayToClosest > b.numWordsAwayToClosest ? 1 : -1).slice(0, numToMatch).forEach(({ thisVersionIdx, wordsIdx }) => {
+                          thisVersionToWordsIdxMaps[overNormalizeW][thisVersionIdx] = wordsIdx
+                        })
+
+                      }
+
+                      if(thisVersionToWordsIdxMaps[overNormalizeW][wordIdx] === wordIdx2) {
+                        if(wordObj2.w !== w) {
+                          inexactId = wordObj2.id
                         }
-  
-                        return info
-                      })
-  
-                      thisVersionToWordsIdxMaps[w] = {}
-                      wordsProximityInfo.sort((a, b) => a.numWordsAwayToClosest > b.numWordsAwayToClosest ? 1 : -1).slice(0, numToMatch).forEach(({ thisVersionIdx, wordsIdx }) => {
-                        thisVersionToWordsIdxMaps[w][thisVersionIdx] = wordsIdx
-                      })
-
+                        return true
+                      }
+                      return false
                     }
 
-                    return thisVersionToWordsIdxMaps[w][wordIdx] === wordIdx2
+                  } else if(wordObj2.w === w) {
+                    // ancient matches w
+                    return true
                   }
-
-                } else {
-                  // ancient matches w
-                  return true
                 }
+                
+              })
 
-              } else {
-                // w doesn't match
+              return [
+                inexactId ? -1 : index,
+                inexactId,
+              ]
+            }
 
-                // meaningless spelling difference of a single word
-                  // if final ν or α is only difference, consider meaningless spelling diff (print out unique set to confirm)
-                  // if w is 66% the same, print out in order to make variableSpellings var
-                  // [ or ]
-
-              }
-
-            })
-
-            const ugntWordIndex = getWordIndex(ugntWordObjs)
+            const [ ugntWordIndex, ugntInexactId ] = getWordIndex(ugntWordObjs)
             if(ugntWordIndex !== -1) {
               readingRaw.push(`${ugntWordIndex+1}`)
             } else {
-              let variantIndex = getWordIndex(variantWords)
+              let [ variantIndex, variantInexactId ] = getWordIndex(variantWords)
               if(variantIndex === -1) {
                 if(isCriticalText) {
-                  wordObj.id = getId({
-                    w,
-                    loc,
-                    occurrenceInVariants: variantWords.filter(variantWord => variantWord.w === w).length + 1,
-                  })
+                  wordObj.id = (
+                    ugntInexactId
+                    || variantInexactId
+                    || getId({
+                      w,
+                      loc,
+                      occurrenceInVariants: variantWords.filter(variantWord => variantWord.w === w).length + 1,
+                    })
+                  )
 
 
                   // TODO: HERE!

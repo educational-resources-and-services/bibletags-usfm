@@ -101,7 +101,7 @@ const utils = {
     })
 
     str = str.toLowerCase()
-    str = str.replace(/[,.·()’ʼ•]/g, '')
+    str = str.replace(/[,.·()’ʼ•:]/g, '')
 
     // get rid of irrelevant CNTR annotations (see /cntr/transcriptions/#README.txt)
     str = str.replace(/[\\|\/][0-9]*/g, '')
@@ -120,6 +120,16 @@ const utils = {
       .replace(/[\u0591-\u05AF\u05A5\u05BD\u05BF\u05C5\u05C7]/g,'')  // cantilation
       .replace(/\u200D/g,'')  // invalid character
   ),
+
+  overNormalizeGreek: w => {
+    w = w.replace(/[\[\]]/g, '')
+    return w
+    // meaningless spelling difference of a single word
+      // [ or ]
+      // if final ν or α is only difference, consider meaningless spelling diff 
+        // TODO print out unique set to confirm
+      // TODO: if w is 66% the same, print out in order to make variableSpellings var
+  },
 
   getRandomId: () => {
     const getChar = () => alphaChar[parseInt(Math.random() * alphaChar.length, 10)]
