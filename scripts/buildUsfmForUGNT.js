@@ -211,23 +211,82 @@ const outputUsfmDir = './usfm/ugnt'
 
           const wordObjsInThisVersion = dataByLoc[loc].wordObjsBySource[source]
 
-          // critical must match w + occurrenceInVerse && totalHitsInVerse
-          // ancient must just match w
-
           const readingRaw = []
+          const thisVersionToWordsIdxMaps = {}
           wordObjsInThisVersion.forEach((wordObj, wordIdx) => {
             const { w, occurrenceInVerse, totalHitsInVerse } = wordObj
 
-            const getWordIndex = words => words.findIndex(wordObj => (
-              wordObj.w === w
-              && (
-                !isCriticalText
-                || (
-                  wordObj.occurrenceInVerse === occurrenceInVerse
-                  && wordObj.totalHitsInVerse === totalHitsInVerse
-                )
-              )
-            ))
+            const getWordIndex = words => words.findIndex((wordObj2, wordIdx2) => {
+
+              if(wordObj2.w === w) {
+                if(isCriticalText) {
+                  if(
+                    wordObj2.occurrenceInVerse === occurrenceInVerse
+                    && wordObj2.totalHitsInVerse === totalHitsInVerse
+                  ) {
+                    // critical matches w + occurrenceInVerse && totalHitsInVerse
+                    // this takes care of transposed words and phrases
+                    return true
+
+                  } else if(wordObj2.totalHitsInVerse !== totalHitsInVerse) {
+
+                    // extra in one source
+                      // if totalHitsInVerse is off, still match Math.min(ugntWordObj.totalHitsInVerse, totalHitsInVerse), using those closest to one another in word num
+                      // TODO: create exceptions var for when this assumption proves wrong
+                      // TODO: have these manually checked, if possible, since it will be tough to spot where there is an issue in the app
+
+                    if(!thisVersionToWordsIdxMaps[w]) {
+
+                      const numToMatch = Math.min(wordObj2.totalHitsInVerse, totalHitsInVerse)
+                      const wordArrayWithMoreHits = wordObj2.totalHitsInVerse > totalHitsInVerse ? wordObjsInThisVersion : words
+                      const wordArrayWithFewerHits = wordObj2.totalHitsInVerse < totalHitsInVerse ? wordObjsInThisVersion : words
+  
+                      const wordsProximityInfo = wordArrayWithMoreHits.map((wObj, wIdx) => {
+                        const info = { numWordsAwayToClosest: Infinity }
+  
+                        if(wObj.w === w) {
+  
+                          wordArrayWithFewerHits.some((wObj2, wIdx2) => {
+                            if(wObj2.w === w) {
+                              info.numWordsAwayToClosest = Math.abs(wIdx - wIdx2)
+                              info.thisVersionIdx = wordObj2.totalHitsInVerse > totalHitsInVerse ? wIdx : wIdx2
+                              info.wordsIdx = wordObj2.totalHitsInVerse < totalHitsInVerse ? wIdx : wIdx2
+                            }
+  
+                            if(info && wIdx2 >= wIdx + info.numWordsAwayToClosest - 1) return true  // any beyond this will be further away
+                          })
+  
+                        }
+  
+                        return info
+                      })
+  
+                      thisVersionToWordsIdxMaps[w] = {}
+                      wordsProximityInfo.sort((a, b) => a.numWordsAwayToClosest > b.numWordsAwayToClosest ? 1 : -1).slice(0, numToMatch).forEach(({ thisVersionIdx, wordsIdx }) => {
+                        thisVersionToWordsIdxMaps[w][thisVersionIdx] = wordsIdx
+                      })
+
+                    }
+
+                    return thisVersionToWordsIdxMaps[w][wordIdx] === wordIdx2
+                  }
+
+                } else {
+                  // ancient matches w
+                  return true
+                }
+
+              } else {
+                // w doesn't match
+
+                // meaningless spelling difference of a single word
+                  // if final ν or α is only difference, consider meaningless spelling diff (print out unique set to confirm)
+                  // if w is 66% the same, print out in order to make variableSpellings var
+                  // [ or ]
+
+              }
+
+            })
 
             const ugntWordIndex = getWordIndex(ugntWordObjs)
             if(ugntWordIndex !== -1) {
@@ -242,17 +301,6 @@ const outputUsfmDir = './usfm/ugnt'
                     occurrenceInVariants: variantWords.filter(variantWord => variantWord.w === w).length + 1,
                   })
 
-                  // variant options
-                    // extra in one source
-                      // if totalHitsInVerse is off, still match Math.abs(ugntWordObj.totalHitsInVerse - totalHitsInVerse), using those closest to one another in word num
-                      // create exceptions var for when this assumption proves wrong
-                      // have these manually checked, if possible, since it will be tough to spot where there is an issue in the app
-                      // PROBLEM - eg. Matt 1:22
-                    // meaningless spelling difference of a single word
-                      // if final ν or α is only difference, consider meaningless spelling diff (print out unique set to confirm)
-                      // if w is 66% the same, print out in order to make variableSpellings var
-                    // transposed
-                      // taken care of by occurrenceInVerse and totalHitsInVerse
 
                   // TODO: HERE!
                     // add in id

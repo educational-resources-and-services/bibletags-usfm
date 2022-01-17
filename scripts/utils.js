@@ -101,7 +101,7 @@ const utils = {
     })
 
     str = str.toLowerCase()
-    str = str.replace(/[,.·()’ʼ]/g, '')
+    str = str.replace(/[,.·()’ʼ•]/g, '')
 
     // get rid of irrelevant CNTR annotations (see /cntr/transcriptions/#README.txt)
     str = str.replace(/[\\|\/][0-9]*/g, '')
