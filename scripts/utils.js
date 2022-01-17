@@ -122,13 +122,19 @@ const utils = {
   ),
 
   overNormalizeGreek: w => {
+
     w = w.replace(/[\[\]]/g, '')
+
+    // TODO:
+      // Ideally, meaningless spelling difference of a single word would also get normalized here so that they do not receive different id's.
+      // However, there is not a safe way to distinguish between a meaningless and meaningful difference at this point.
+      // Types of meaningless spelling differences:
+        // movable ν
+          // However, there are some instances where a difference of only a final ν is NOT due to a movable nu.
+        // final α replaced with ’
+        // spelling of proper names like δαυιδ vs δαυειδ
+
     return w
-    // meaningless spelling difference of a single word
-      // [ or ]
-      // if final ν or α is only difference, consider meaningless spelling diff 
-        // TODO print out unique set to confirm
-      // TODO: if w is 66% the same, print out in order to make variableSpellings var
   },
 
   getRandomId: () => {

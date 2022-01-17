@@ -15,7 +15,9 @@ const outputUsfmDir = './usfm/ugnt'
 
     if(!ugntDir) throw `Missing ugntDir parameter.`
 
-    console.log(`\nSTARTING...\n`)
+    console.log(``)
+    console.log(`STARTING...`)
+    console.log(``)
 
     const ugntPaths = (await fs.readdir(ugntDir)).filter(file => file.match(/^[0-9]{2}-\w{3}\.usfm$/)).map(file => `${ugntDir}/${file}`)
 
@@ -31,6 +33,7 @@ const outputUsfmDir = './usfm/ugnt'
     allTranscriptionPaths.sort((p1, p2) => p1.split('/').pop() > p2.split('/').pop() ? 1 : -1)
 
     const dataByLoc = {}
+    // const movableNuPairs = []
 
     // load transcriptions words array into JSON obj keyed to loc
     for(let path of allTranscriptionPaths) {
@@ -229,7 +232,20 @@ const outputUsfmDir = './usfm/ugnt'
 
               const index = words.findIndex((wordObj2, wordIdx2) => {
 
-                const isInexactMatch = (w1, w2) => overNormalizeGreek(w1) === overNormalizeGreek(w2)
+                const isInexactMatch = (w1, w2) => {
+                  const isMatch = overNormalizeGreek(w1) === overNormalizeGreek(w2)
+
+                  // if(w1 !== w2 && isMatch) {
+                  //   if(w1.replace(/ν$/, '') === w2.replace(/ν$/, '')) {
+                  //     const pair = [ w1, w2 ].sort().join(',')
+                  //     if(!movableNuPairs.includes(pair)) {
+                  //       movableNuPairs.push(pair)
+                  //     }
+                  //   }
+                  // }
+
+                  return isMatch
+                }
 
                 if(isInexactMatch(wordObj2.w, w)) {
                   if(isCriticalText) {
@@ -433,7 +449,15 @@ const outputUsfmDir = './usfm/ugnt'
 
     }
         
-    console.log(`\nCOMPLETED.\n`)
+    // console.log(``)
+    // console.log(`==============`)
+    // console.log(`Movable ν pairs`)
+    // console.log(`==============`)
+    // console.log(movableNuPairs.join("\n"))
+
+    console.log(``)
+    console.log(`COMPLETED.`)
+    console.log(``)
 
   } catch(err) {
 
