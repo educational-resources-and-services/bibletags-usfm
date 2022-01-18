@@ -32,7 +32,41 @@ These USFM 3.0 files are derived from [unfoldingword.org/uhb](https://unfoldingw
 
 The following changes have been made via the import scripts:
 
-1. Variant information has been added to the end of all relevant verses using the custom `\zApparatusJson` tag. For critical texts, punctuation, accents, breathing marks, and capitalization are ignored, since these things are not present in the originals and thus do not represent a different reading or the ancient manuscripts. Also, refer to CNTR's [README](/cntr/transcriptions/%23README.txt) for information regarding the following special characters used to represent the reading quality of manuscripts: `%^=${}xab`.
+#### 1. Variant information has been added to the end of all relevant verses using the custom `\zApparatusJson` tag.
+
+  - UHB
+    - usfm footnotes with Qere and Ketiv readings have been replaced with the same info in `\zApparatusJson` tags.
+  - UGNT
+    - For critical texts, punctuation, accents, breathing marks, and capitalization are ignored, since these things are not present in the originals and thus do not represent a different reading or the ancient manuscripts.
+    - Refer to CNTR's [README](/cntr/transcriptions/%23README.txt) for information regarding the following special characters used to represent the reading quality of manuscripts: `%^=${}xab`.
+
+##### Expanded and annotated `\zApparatusJson` example from Joshua 9:7
+
+```json
+{
+  "words": [
+    {
+      "w": "וַיֹּ֥אמֶר",
+      "id": "06zXI",
+      "lemma": "אָמַר",
+      "strong": "c:H0559",
+      "morph": "He,C:Vqw3ms"
+    },
+    {
+      "w": "אכרות",
+      "id": "06iwU",
+      "lemma": "כָּרַת",
+      "strong": "H3772",
+      "morph": "He,Vqi1cs"
+    }
+  ],
+  "ancient": [],
+  "critical": [
+    "Q:+1,2-13",
+    "K:1-10,+2,12-13"
+  ]
+}
+```
 
 ##### Expanded and annotated `\zApparatusJson` example from Matthew 1:1
 
@@ -77,4 +111,9 @@ The following changes have been made via the import scripts:
 }
 ```
 
-2. A unique `x-id` has been added to each word in the UGNT and each variant word represented in a critical text. Where the difference in a variant is merely the addition of brackets (to indicate uncertaintly), the `x-id` of that variant matches its counterpart in the UGNT.
+#### 2. A unique `x-id` has been added to each word in the UHB and UGNT and each variant word represented in a critical text.
+
+  - UHB
+    - Where the alternative reading possesses the same lemma, strong, and morph values, the `x-id` matches the selected reading.
+  - UGNT
+    - Where the difference in a variant is merely the addition of brackets (to indicate uncertaintly), the `x-id` of that variant matches its counterpart in the UGNT.
