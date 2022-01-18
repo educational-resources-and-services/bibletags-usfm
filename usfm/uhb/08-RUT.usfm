@@ -901,7 +901,7 @@
 \w גֹּאֵ֖ל|lemma="גָּאַל" strong="H1350a" x-morph="He,Vqrmsa" x-id="08m2a"\w*
 \w קָר֥וֹב|lemma="קָרוֹב" strong="H7138" x-morph="He,Aamsa" x-id="08CrK"\w*
 \w מִמֶּֽ⁠נִּי|lemma="מִן" strong="H4480a" x-morph="He,R:Sp1cs" x-id="089W3"\w*׃
-\zApparatusJson {"words":[{"w":"כי","id":"08zjX","lemma":"כִּי","strong":"H3588a","morph":"He,C"}],"ancient":[],"critical":["Q","K:1-3,+1,5-11"]}\zApparatusJson*
+\zApparatusJson {"words":[{"w":"כי","id":"08mF2","lemma":"כִּי","strong":"H3588a","morph":"He,C"},{"w":"אם","id":"08kXR","lemma":"אִם","strong":"H0518a","morph":"He,C"}],"ancient":[],"critical":["Q","K:1-3,+1-2,5-11"]}\zApparatusJson*
 
 \v 13
 \w לִ֣ינִי|lemma="לוּן" strong="H3885a" x-morph="He,Vqv2fs" x-id="085uf"\w* ׀
@@ -1102,7 +1102,7 @@
 \w כִּ֥י|lemma="כִּי" strong="H3588a" x-morph="He,C" x-id="08Q36"\w*
 \w לֹא|lemma="לֹא" strong="H3808" x-morph="He,Tn" x-id="08b4E"\w*־\w אוּכַ֖ל|lemma="יָכֹל" strong="H3201" x-morph="He,Vqi1cs" x-id="089jA"\w*
 \w לִ⁠גְאֹֽל|lemma="גָּאַל" strong="l:H1350a" x-morph="He,R:Vqc" x-id="08YYU"\w*׃
-\zApparatusJson {"words":[{"w":"לִגְאָל","id":"08vfo","lemma":"גָּאַל","strong":"l:H1350a","morph":"He,R:Vqc"}],"ancient":[],"critical":["Q:1-5,+1,7-19","K"]}\zApparatusJson*
+\zApparatusJson {"words":[{"w":"לִגְאָל","id":"08vfo","lemma":"גָּאַל","strong":"l:H1350a","morph":"He,R:Vqc"}],"ancient":[],"critical":["Q:1-4,+1,6-19","K"]}\zApparatusJson*
 
 \v 7
 \w וְ⁠זֹאת֩|lemma="זֹאת" strong="c:H2063" x-morph="He,C:Pdxfs" x-id="08f7b"\w*

@@ -1,5 +1,6 @@
 const fs = require('fs').promises
 const { getWordKey, getVariantWordKey, getRandomId, getUsfmByLoc, getReading } = require('./utils')
+const manualReadingCorrectionsByLoc = require('./manualReadingCorrectionsByLoc')
 
 const outputUsfmDir = './usfm/uhb'
 
@@ -108,54 +109,61 @@ const outputUsfmDir = './usfm/uhb'
       for(let loc in usfmByLoc) {
 
         let verseUsfmPieces = usfmByLoc[loc].split(/(\\w .*?\\w\*|\\f .*?\\f\*\n?)/g)
-        const wordObjs = []
 
         // add x-id attribute into USFM, updating id dictionary and outputting issues when relevant
         let wordNum = 0
+        const words = []
         verseUsfmPieces = verseUsfmPieces.map(piece => {
 
           const [ wordUsfm ] = piece.match(/\\w .*?\\w\*/) || []
           const [ footnoteUsfm ] = piece.match(/\\f .*?\\f\*/) || []
-          const [ wordFootnoteUsfm, qOrK ] = piece.match(/\\f \+ \\ft ([QK]) \\\+w .*?\\\+w\*\\f\*\n?/) || []
-          
-          if(wordFootnoteUsfm) {
+          const [ wordsFootnoteUsfm, qOrK ] = piece.match(/\\f \+ \\ft ([QK]) \\\+w .*?\\\+w\*\\f\*\n?/) || []
 
-            const [ x0, w ] = wordFootnoteUsfm.match(/\\\+w (.*?)\|/) || []
-            const [ x1, lemma ] = wordFootnoteUsfm.match(/lemma="([^"]*)"/) || []
-            const [ x2, strong ] = wordFootnoteUsfm.match(/strong="([^"]*)"/) || []
-            const [ x3, morph ] = wordFootnoteUsfm.match(/x-morph="([^"]*)"/) || []
-            const id = getId({
-              loc,
-              wordUsfm: wordFootnoteUsfm,
-              wordNum,
-              version: `UHB`,
-              w,
-              lemma,
-              strong,
-              morph,
-              occurrenceInVariants: ((dataByLoc[loc] || {}).words || []).filter(variantWord => variantWord.w === w).length + 1,
-            })
+          if(wordsFootnoteUsfm) {
 
-            if(!dataByLoc[loc]) {
-              dataByLoc[loc] = {
-                words: [],
-                altReadingsForQ: [],
-                altReadingsForK: [],
-                ancient: [],
+            const wordsUsfm = wordsFootnoteUsfm.match(/\\\+w .*?\\\+w/g)
+            wordsUsfm.forEach((wordFootnoteUsfm, idx) => {
+
+              const thisWordNum = wordNum - (wordsUsfm.length - idx - 1)
+
+              const [ x0, w ] = wordFootnoteUsfm.match(/\\\+w (.*?)\|/) || []
+              const [ x1, lemma ] = wordFootnoteUsfm.match(/lemma="([^"]*)"/) || []
+              const [ x2, strong ] = wordFootnoteUsfm.match(/strong="([^"]*)"/) || []
+              const [ x3, morph ] = wordFootnoteUsfm.match(/x-morph="([^"]*)"/) || []
+              const id = getId({
+                loc,
+                wordUsfm: wordFootnoteUsfm,
+                wordNum: thisWordNum,
+                version: `UHB`,
+                w,
+                lemma,
+                strong,
+                morph,
+                occurrenceInVariants: ((dataByLoc[loc] || {}).words || []).filter(variantWord => variantWord.w === w).length + 1,
+              })
+
+              if(!dataByLoc[loc]) {
+                dataByLoc[loc] = {
+                  words: [],
+                  altReadingsForQ: [],
+                  altReadingsForK: [],
+                  ancient: [],
+                }
               }
-            }
 
-            if(dataByLoc[loc][`altReadingsFor${qOrK}`].some(altReading => altReading.wordNum === wordNum)) throw `Two word footnotes in a row: ${loc}`
+              if(dataByLoc[loc][`altReadingsFor${qOrK}`].some(altReading => altReading.wordNum === thisWordNum)) throw `Two word footnotes in a row: ${loc}`
 
-            dataByLoc[loc].words.push({
-              w,
-              id,
-              lemma,
-              strong,
-              morph,
+              dataByLoc[loc].words.push({
+                w,
+                id,
+                lemma,
+                strong,
+                morph,
+              })
+
+              dataByLoc[loc][`altReadingsFor${qOrK}`].push({ wordNum: thisWordNum, altWordNum: dataByLoc[loc].words.length })
+
             })
-
-            dataByLoc[loc][`altReadingsFor${qOrK}`].push({ wordNum, altWordNum: dataByLoc[loc].words.length })
 
             piece = ``
 
@@ -163,6 +171,13 @@ const outputUsfmDir = './usfm/uhb'
 
             wordNum++
             const id = getId({ wordUsfm, loc, wordNum, version: `UHB` })
+            const w = wordUsfm.match(/\\w (.*?)\|/)[1]
+            words.push(w)
+
+            if(/\//.test(w)) {
+              console.log(`** Replaced slash with word joiner: ${loc} // ${w}`)
+              piece = piece.replace(w, w.replace(/\//g, '\u2060'))  // should have word joiner, not slash
+            }
 
             piece = piece.replace(/(\\w\*)/, ` x-id="${id}"$1`)
 
@@ -186,6 +201,15 @@ const outputUsfmDir = './usfm/uhb'
             dataByLoc[loc].critical.push(reading ? `${qOrK}:${reading}` : qOrK)
             delete dataByLoc[loc][`altReadingsFor${qOrK}`]
           })
+
+          if(manualReadingCorrectionsByLoc[loc]) {
+            if(JSON.stringify(dataByLoc[loc].critical) !== JSON.stringify(manualReadingCorrectionsByLoc[loc].computed)) {
+              console.log(JSON.stringify(manualReadingCorrectionsByLoc[loc].computed))
+              console.log(JSON.stringify(dataByLoc[loc].critical))
+              throw `Expected computed value not found on manual reading correction loc: ${loc}`
+            }
+            dataByLoc[loc].critical = manualReadingCorrectionsByLoc[loc].corrected
+          }
         }
   
         usfmByLoc[loc] = verseUsfmPieces.join('')
@@ -256,3 +280,6 @@ const outputUsfmDir = './usfm/uhb'
   // \f + \ft Or perhaps \+w אֶחָ֗ד|lemma="אֶחָד" strong="H0259" x-morph="He,Acmsa" x-id="13lVO"\+w* (see above)\f*
   // \f + \ft or perhaps Niphal \+w הֲ⁠נִשְׁמַ֗ע|lemma="שָׁמַע" strong="i:H8085" x-morph="He,Ti:VNp3ms" x-id="166gR"\+w*\f*
   // \f + \ft or perhaps \fqa \+w לֹה|lemma="לֹא" strong="H3808" x-morph="He,Tn" x-id="18VPu"\+w* \ft (BHS)\f*
+
+// באר שווע and the like
+// versification!!
