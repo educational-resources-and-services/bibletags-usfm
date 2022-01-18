@@ -158,10 +158,13 @@ const utils = {
     return wordKey
   },
 
-  getVariantWordKey: ({ w, loc, occurrenceInVariants }) => {
+  getVariantWordKey: ({ w, loc, occurrenceInVariants, lemma, strong, morph }) => {
     const wordKey = [
       w,
       loc,
+      lemma,
+      strong,
+      morph,
       occurrenceInVariants,
     ].join(' ')
 
@@ -189,6 +192,29 @@ const utils = {
     return usfmByLoc
   },
 
+  getReading: ({ readingRaw, lastWordNum }) => {
+
+    const ranges = []
+    readingRaw.forEach(wordNum => {
+      const lastRange = ranges[ranges.length - 1] || ``
+      const lastWordIsVariant = /^\+/.test(lastRange)
+      const lastWordInt = parseInt(lastRange.split('-').pop().replace("+", ""), 10)
+      const wordIsVariant = /^\+/.test(wordNum)
+      const wordInt = parseInt(wordNum.replace("+", ""), 10)
+
+      if(wordIsVariant === lastWordIsVariant && wordInt === lastWordInt+1) {
+        ranges[ranges.length - 1] = lastRange.replace(/(?:-.*)?$/, `-${wordInt}`)
+      } else {
+        ranges.push(wordNum)
+      }
+    })
+    let reading = ranges.join(',')
+    if(reading === `1-${lastWordNum}`) {
+      reading = ``
+    }
+
+    return reading
+  },
 }
   
 module.exports = utils

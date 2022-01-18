@@ -1,5 +1,5 @@
 const fs = require('fs').promises
-const { normalizeGreek, getWordKey, getVariantWordKey, getRandomId, getUsfmByLoc, overNormalizeGreek } = require('./utils')
+const { normalizeGreek, getWordKey, getVariantWordKey, getRandomId, getUsfmByLoc, overNormalizeGreek, getReading } = require('./utils')
 
 const transcriptionsDir = './cntr/transcriptions'
 const outputUsfmDir = './usfm/ugnt'
@@ -352,24 +352,7 @@ const outputUsfmDir = './usfm/ugnt'
             }
           })
 
-          const ranges = []
-          readingRaw.forEach(wordNum => {
-            const lastRange = ranges[ranges.length - 1] || ``
-            const lastWordIsVariant = /^\+/.test(lastRange)
-            const lastWordInt = parseInt(lastRange.split('-').pop().replace("+", ""), 10)
-            const wordIsVariant = /^\+/.test(wordNum)
-            const wordInt = parseInt(wordNum.replace("+", ""), 10)
-
-            if(wordIsVariant === lastWordIsVariant && wordInt === lastWordInt+1) {
-              ranges[ranges.length - 1] = lastRange.replace(/(?:-.*)?$/, `-${wordInt}`)
-            } else {
-              ranges.push(wordNum)
-            }
-          })
-          let reading = ranges.join(',')
-          if(reading === `1-${ugntWordObjs.length}`) {
-            reading = ``
-          }
+          const reading = getReading({ readingRaw, lastWordNum: ugntWordObjs.length })
 
           if(isCriticalText) {  // critical text
             const version = source.substring(3)
@@ -463,7 +446,7 @@ const outputUsfmDir = './usfm/ugnt'
     console.log(`Example #1: \`npm run build-usfm-for-ugnt ../el-x-koine_ugnt\``)
     console.log(`Example #2: \`npm run build-usfm-for-ugnt ../el-x-koine_ugnt ../other/transcriptions\``)
     console.log(``)
-    console.log(`Note #1: \`ugntDir\` should point to your local clone of the unfoldingword.org/uhb repo.`)
+    console.log(`Note #1: \`ugntDir\` should point to your local clone of the unfoldingword.org/ugnt repo.`)
     console.log(`Note #2: \`addedTranscriptionsDir\` (if included) should contain TXT files like those in /cntr/transcriptions.`)
     console.log(``)
 
