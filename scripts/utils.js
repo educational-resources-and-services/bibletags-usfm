@@ -179,12 +179,17 @@ const utils = {
     let chapter
     let loc = '0'  // loc of `0` for content prior to verse 1
 
-    usfmPieces.forEach(piece => {
+    usfmPieces.forEach((piece, idx) => {
       if(/^\\c [0-9]+$/.test(piece)) {
         chapter = `00${piece.match(/^\\c ([0-9]+)$/)[1]}`.slice(-3)
       } else if(/\\v [0-9]+/.test(piece)) {
         const verse = `00${piece.match(/^\\v ([0-9]+)$/)[1]}`.slice(-3)
         loc = `${book}${chapter}${verse}`
+        if(usfmByLoc[loc]) {
+          console.log(usfmByLoc[loc])
+          console.log(usfmPieces.slice(Math.max(0, idx - 20), idx + 20))
+          throw `Hit same verse twice: ${loc}`
+        }
       }
       usfmByLoc[loc] = (usfmByLoc[loc] || ``) + piece
     })

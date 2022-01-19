@@ -83,8 +83,54 @@ const outputUsfmDir = './usfm/uhb'
       }
 
       // load and slice up source usfm
-      const sourceUsfm = await fs.readFile(path, { encoding: `utf8` })
+      let sourceUsfm = await fs.readFile(path, { encoding: `utf8` })
+
+      // change the versification to be original
+      sourceUsfm = sourceUsfm.replace(/\\v 69\n\\va 68\\va\*\n/g, '')  // Ezra 7:68 does not exist in Hebrew
+      sourceUsfm = sourceUsfm.replace("The best Hebrew manuscripts do not include this verse.", "The best Hebrew manuscripts do not include the previous portions of this verse.")
+      sourceUsfm = sourceUsfm.replace(/\\v 6\n\\w אָשִׁ֥ירָה/g, '\\w אָשִׁ֥ירָה')  // Ps 13:6 in Hebrew contains two verses in KJV
+      sourceUsfm = sourceUsfm.replace(/\\c 64\n\\p\n\\v 1\n\\va 63:19b\\va\*/g, '\\p')  // Is 63:19 in Hebrew split across two verses in KJV
+      sourceUsfm = sourceUsfm.replace(/\\c 4\n\\p\n\\v 1\n\\va 3:19\\va\*/g, '\\p\n\\v 1\n\\va 3:19\\va*')  // Is 63:19 in Hebrew split across two verses in KJV
+
+      sourceUsfm = sourceUsfm.replace(/(?:\\v [0-9]+|\\d)\n\\va (?:[0-9]+:)?([0-9]+)\\va\*/g, '\\v $1')
+      ;(sourceUsfm.match(/\\ca [0-9]+\\ca\*/g) || []).forEach(ca => {
+        const ch = ca.match(/\\ca ([0-9]+)\\ca\*/)[1]
+        sourceUsfm = sourceUsfm.replace(`\\c ${ch}\n`, ``)
+        sourceUsfm = sourceUsfm.replace(`\\ca ${ch}\\ca*`, `\\c ${ch}`)
+      })
+      sourceUsfm = sourceUsfm
+        .split(/(\\c [0-9]+)/g)
+        .map(piece => {
+          ;(piece.match(/\\va (?:[0-9]+:)?[0-9]+\\va\*/g) || []).forEach(va => {
+            const vs = va.match(/\\va ((?:[0-9]+:)?[0-9]+)\\va\*/)[1]
+            piece = piece.replace(`\\v ${vs.split(':').pop()}\n`, ``)
+            piece = piece.replace(`\\va ${vs}\\va*`, `\\v ${vs.split(':').pop()}`)
+          })
+          return piece
+        })
+        .join("")
+
+      if(/\\ca/.test(sourceUsfm)) throw `Still has \\ca tag: ${(sourceUsfm.replace(/\n/g, '\\n').match(/.{10}\\ca.{10}/) || {})[0]}`
+      if(/\\va/.test(sourceUsfm)) throw `Still has \\va tag: ${(sourceUsfm.replace(/\n/g, '\\n').match(/.{10}\\va.{10}/) || {})[0]}`
+
       const usfmByLoc = getUsfmByLoc(sourceUsfm)
+
+      // confirm that versification is continguous
+      let lastChapter = 0
+      let lastVerse = 0
+      const sortedLocs = Object.keys(usfmByLoc).sort()
+      sortedLocs.forEach((loc, idx) => {
+        if(loc === '0') return
+        const [ book, chapter, verse ] = loc.match(/([0-9]{2})([0-9]{3})([0-9]{3})/).slice(1).map(n => parseInt(n, 10))
+        if(chapter === lastChapter) {
+          if(verse !== lastVerse + 1) throw `Noncontinguous verses: ${loc} // ${sortedLocs.slice(Math.max(0, idx - 5), idx + 5).join("\n")}`
+        } else {
+          if(chapter !== lastChapter + 1) throw `Noncontinguous chapters: ${loc} // ${sortedLocs.slice(Math.max(0, idx - 5), idx + 5).join("\n")}`
+          if(verse !== 1) throw `Chapter starts with verse other than 1: ${loc} // ${sortedLocs.slice(Math.max(0, idx - 5), idx + 5).join("\n")}`
+        }
+        lastChapter = chapter
+        lastVerse = verse
+      })
 
       const getId = params => {
         const wordKey = getWordKey(params)
@@ -268,7 +314,7 @@ const outputUsfmDir = './usfm/uhb'
 })()
 
 
-// check 06009007, Ez 45:14
+// check 06009007, Ez 45:14, Num 26 (versification), Mal 4 (extra chapter in English), ps titles, Ps 13:6, Ezra 7:68
 // multiple words per footnote
   // \f + \ft Or perhaps \+w כל|lemma="כֹּל" strong="H3605" x-morph="He,Ncmsc" x-id="12Evk"\+w*־\+w נביא|lemma="נָבִיא" strong="H5030" x-morph="He,Ncmsa"\+w* \+w וכל|lemma="כֹּל" strong="c:H3605" x-morph="He,C:Ncmsc"\+w*־\+w חזה|lemma="חֹזֶה" strong="H2374" x-morph="He,Ncmsa"\+w*\f*
 
