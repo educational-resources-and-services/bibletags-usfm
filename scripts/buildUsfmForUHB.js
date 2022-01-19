@@ -354,18 +354,8 @@ const outputUsfmDir = './usfm/uhb'
 })()
 
 
-// check Ez 48:14
-// multiple words per footnote
-  // \f + \ft Or perhaps \+w כל|lemma="כֹּל" strong="H3605" x-morph="He,Ncmsc" x-id="12Evk"\+w*־\+w נביא|lemma="נָבִיא" strong="H5030" x-morph="He,Ncmsa"\+w* \+w וכל|lemma="כֹּל" strong="c:H3605" x-morph="He,C:Ncmsc"\+w*־\+w חזה|lemma="חֹזֶה" strong="H2374" x-morph="He,Ncmsa"\+w*\f*
-
-// example of "Or perhaps" and the like
-  // \f + \ft Or perhaps \+w וַתָּבֹא|lemma="בּוֹא" strong="c:H0935" x-morph="He,C:Vqw3fs" x-id="08Ua4"\+w*\f*
-  // \f + \ft \+w ו⁠תתגעש|lemma="גָּעַשׁ" strong="c:H1607" x-morph="He,C:Vtw3fs" x-id="10YfK"\+w* some manuscripts read\f*
-  // \f + \ft Some manuscripts read \+w ו⁠יבאו|lemma="בּוֹא" strong="c:H0935" x-morph="He,C:Vqw3mp" x-id="114RS"\+w*\f*
-  // \f + \ft or perhaps \+w אִתּוֹ|lemma="אֵת" strong="H0854" x-morph="He,R:Sp3ms" x-id="12KMd"\+w* \ft (some Hebrew manuscripts)\f*
-  // \f + \ft Or perhaps \+w אֶחָ֗ד|lemma="אֶחָד" strong="H0259" x-morph="He,Acmsa" x-id="13lVO"\+w* (see above)\f*
-  // \f + \ft or perhaps Niphal \+w הֲ⁠נִשְׁמַ֗ע|lemma="שָׁמַע" strong="i:H8085" x-morph="He,Ti:VNp3ms" x-id="166gR"\+w*\f*
-  // \f + \ft or perhaps \fqa \+w לֹה|lemma="לֹא" strong="H3808" x-morph="He,Tn" x-id="18VPu"\+w* \ft (BHS)\f*
-
-// באר שווע and the like
-// versification!!
+// TODOs:
+  // Deal with two word lexemes: Eg. באר שבע
+  // Change יָלַךְ/H3212 lemma to הָלַךְ/H1980
+  // change strongs to five-digit, zero-padded, no a/b/c.
+  // see (and fix) hbo_uhb Issues

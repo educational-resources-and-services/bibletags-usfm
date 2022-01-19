@@ -35,7 +35,10 @@ The following changes have been made via the import scripts:
 #### 1. Variant information has been added to the end of all relevant verses using the custom `\zApparatusJson` tag.
 
   - UHB
-    - usfm footnotes with Qere and Ketiv readings have been replaced with the same info in `\zApparatusJson` tags.
+    - usfm footnotes with Qere and Ketiv readings have been replaced with the same info in `\zApparatusJson` tags, with `K` and `Q` listed as the source.
+    - usfm footnotes indicating "some manuscripts read" (or the like) are have also been replaced with the same info in `\zApparatusJson` tags, with `M` listed as the source.
+    - usfm footnotes indicating a BHS reading have also been replaced with the same info in `\zApparatusJson` tags, with `BHS` listed as the source.
+    - When a verse does not have Qere and Ketiv readings but does have a `M` or `BHS` reading, the `\zApparatusJson` compares this reading with a source of `WLC`.
   - UGNT
     - For critical texts, punctuation, accents, breathing marks, and capitalization are ignored, since these things are not present in the originals and thus do not represent a different reading or the ancient manuscripts.
     - Refer to CNTR's [README](/cntr/transcriptions/%23README.txt) for information regarding the following special characters used to represent the reading quality of manuscripts: `%^=${}xab`.
@@ -117,3 +120,5 @@ The following changes have been made via the import scripts:
     - Where the alternative reading possesses the same lemma, strong, and morph values, the `x-id` matches the selected reading.
   - UGNT
     - Where the difference in a variant is merely the addition of brackets (to indicate uncertaintly), the `x-id` of that variant matches its counterpart in the UGNT.
+
+#### 3. Alternative versification (indicated by `\va` and `\ca` tags) has been made the standard versification (using `\v` and `\c` tags).
