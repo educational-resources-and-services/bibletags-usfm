@@ -2949,9 +2949,8 @@
 \w לֹֽא|lemma="לֹא" strong="H3808" x-morph="He,Tn" x-id="38Rtm"\w*־\w יִהְיֶ֣ה|lemma="הָיָה" strong="H1961" x-morph="He,Vqi3ms" x-id="38EvQ"\w*
 \w א֔וֹר|lemma="אוֹר" strong="H0216" x-morph="He,Ncbsa" x-id="38wq6"\w*
 \w יְקָר֖וֹת|lemma="יָקָר" strong="H3368" x-morph="He,Aafpa" x-id="38RoD"\w*
-\f + \ft Or perhaps \+w וְקָרוֹת|lemma="קָרָה" strong="H7135" x-morph="He,C:Ncfpa"\+w*\f*
 \w יקפאו⁠ן|lemma="קָפָא" strong="H7087b" x-morph="He,Vqi3mp:Sn" x-id="381KR"\w*׃
-\zApparatusJson {"words":[{"w":"וְקִפָּאֽוֹן","id":"38lBL","lemma":"קָפָא","strong":"H7087b","morph":"He,Td:Ncmsa"}],"ancient":[],"critical":["Q:1-7,+1","K"]}\zApparatusJson*
+\zApparatusJson {"words":[{"w":"וְקָרוֹת","id":"38Vlt","lemma":"קָרָה","strong":"H7135","morph":"He,C:Ncfpa"},{"w":"וְקִפָּאֽוֹן","id":"38lBL","lemma":"קָפָא","strong":"H7087b","morph":"He,Td:Ncmsa"}],"ancient":[],"critical":["Q:1-7,+2","K","M:1-6,+1,8"]}\zApparatusJson*
 
 \v 7
 \w וְ⁠הָיָ֣ה|lemma="הָיָה" strong="c:H1961" x-morph="He,C:Vqq3ms" x-id="38GVq"\w*

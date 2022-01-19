@@ -7021,7 +7021,6 @@
 
 \v 12
 \w ו⁠יבו|lemma="בּוֹא" strong="c:H0935" x-morph="He,C:Vqw3mx" x-id="11Are"\w*
-\f + \ft Some manuscripts read \+w ו⁠יבאו|lemma="בּוֹא" strong="c:H0935" x-morph="He,C:Vqw3mp"\+w*\f*
 \w יָרָבְעָ֧ם|lemma="יָרׇבְעָם" strong="H3379" x-morph="He,Np" x-id="11ZMy"\w*
 \w וְ⁠כָל|lemma="כֹּל" strong="c:H3605" x-morph="He,C:Ncmsc" x-id="11SKi"\w*־\w הָ⁠עָ֛ם|lemma="עַם" strong="d:H5971a" x-morph="He,Td:Ncmsa" x-id="11bs8"\w*
 \w אֶל|lemma="אֵל" strong="H0413" x-morph="He,R" x-id="11BlV"\w*־\w רְחַבְעָ֖ם|lemma="רְחַבְעָם" strong="H7346" x-morph="He,Np" x-id="11Weq"\w*
@@ -7035,7 +7034,7 @@
 \w אֵלַ֖⁠י|lemma="אֵל" strong="H0413" x-morph="He,R:Sp1cs" x-id="110u0"\w*
 \w בַּ⁠יּ֥וֹם|lemma="יוֹם" strong="b:H3117" x-morph="He,Rd:Ncmsa" x-id="11lQm"\w*
 \w הַ⁠שְּׁלִישִֽׁי|lemma="שְׁלִישִׁי" strong="d:H7992" x-morph="He,Td:Aomsa" x-id="11ESY"\w*׃
-\zApparatusJson {"words":[{"w":"וַיָּב֨וֹא","id":"11MBy","lemma":"בּוֹא","strong":"c:H0935","morph":"He,C:Vqw3ms"}],"ancient":[],"critical":["Q:+1,2-16","K"]}\zApparatusJson*
+\zApparatusJson {"words":[{"w":"וַיָּב֨וֹא","id":"11MBy","lemma":"בּוֹא","strong":"c:H0935","morph":"He,C:Vqw3ms"},{"w":"ו⁠יבאו","id":"11yTd","lemma":"בּוֹא","strong":"c:H0935","morph":"He,C:Vqw3mp"}],"ancient":[],"critical":["Q:+1,2-16","K","M:+2,2-16"]}\zApparatusJson*
 
 \v 13
 \w וַ⁠יַּ֧עַן|lemma="עָנָה" strong="c:H6030b" x-morph="He,C:Vqw3ms" x-id="11Szj"\w*

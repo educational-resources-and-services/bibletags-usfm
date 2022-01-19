@@ -172,9 +172,16 @@ const outputUsfmDir = './usfm/uhb'
 
           const [ wordUsfm ] = piece.match(/\\w .*?\\w\*/) || []
           const [ footnoteUsfm ] = piece.match(/\\f .*?\\f\*/) || []
-          const [ wordsFootnoteUsfm, qOrK ] = piece.match(/\\f \+ \\ft ([QK]) \\\+w .*?\\\+w\*\\f\*\n?/) || []
+          let [ wordsFootnoteUsfm, qOrK, someManuscripts, someManuscripts2, isBHSReading ] = piece.match(/\\f \+ \\ft ([QK])?(.*?)? ?\\\+w .*?\\\+w\*( some manuscripts read| \\ft \(some Hebrew manuscripts\)| \(see above\))?( \\ft \(BHS\))?\\f\*\n?/) || []
 
-          if(wordsFootnoteUsfm) {
+          // discount any where we are not actually dealing with a reading variant
+          if([ "or perhaps Niphal" ].includes(someManuscripts)) {
+            wordsFootnoteUsfm = null
+          }
+
+          const source = qOrK || (isBHSReading && "BHS") || ((someManuscripts || someManuscripts2) && "M")
+
+          if(wordsFootnoteUsfm && source) {
 
             const wordsUsfm = wordsFootnoteUsfm.match(/\\\+w .*?\\\+w/g)
             wordsUsfm.forEach((wordFootnoteUsfm, idx) => {
@@ -202,11 +209,13 @@ const outputUsfmDir = './usfm/uhb'
                   words: [],
                   altReadingsForQ: [],
                   altReadingsForK: [],
+                  altReadingsForM: [],
+                  altReadingsForBHS: [],
                   ancient: [],
                 }
               }
 
-              if(dataByLoc[loc][`altReadingsFor${qOrK}`].some(altReading => altReading.wordNum === thisWordNum)) throw `Two word footnotes in a row: ${loc}`
+              if(dataByLoc[loc][`altReadingsFor${source}`].some(altReading => altReading.wordNum === thisWordNum)) throw `Two word footnotes in a row: ${loc}`
 
               dataByLoc[loc].words.push({
                 w,
@@ -216,7 +225,7 @@ const outputUsfmDir = './usfm/uhb'
                 morph,
               })
 
-              dataByLoc[loc][`altReadingsFor${qOrK}`].push({ wordNum: thisWordNum, altWordNum: dataByLoc[loc].words.length })
+              dataByLoc[loc][`altReadingsFor${source}`].push({ wordNum: thisWordNum, altWordNum: dataByLoc[loc].words.length })
 
               checkWordJoiners({ w, morph })
   
@@ -257,20 +266,32 @@ const outputUsfmDir = './usfm/uhb'
 
         if(dataByLoc[loc]) {
           dataByLoc[loc].critical = []
-          ;[ 'Q', 'K' ].forEach(qOrK => {
+          const hasQOrK = dataByLoc[loc][`altReadingsForQ`].length + dataByLoc[loc][`altReadingsForK`].length > 0
+          const sources = [ 'Q', 'K', 'M', 'BHS' ]
+          sources.forEach(source => {
+
+            if([ 'M', 'BHS' ].includes(source) && dataByLoc[loc][`altReadingsFor${source}`].length === 0) return
+            if([ 'Q', 'K' ].includes(source) && !hasQOrK) return
+
             const readingRaw = Array(wordNum).fill().map((x, idx) => {
-              const { altWordNum } = dataByLoc[loc][`altReadingsFor${qOrK}`].find(altReading => altReading.wordNum === idx+1) || {}
+              const { altWordNum } = dataByLoc[loc][`altReadingsFor${source}`].find(altReading => altReading.wordNum === idx+1) || {}
               return altWordNum ? `+${altWordNum}` : `${idx+1}`
             })
             const reading = getReading({ readingRaw, lastWordNum: wordNum })
-            dataByLoc[loc].critical.push(reading ? `${qOrK}:${reading}` : qOrK)
-            delete dataByLoc[loc][`altReadingsFor${qOrK}`]
+            dataByLoc[loc].critical.push(reading ? `${source}:${reading}` : source)
+          })
+          if(!hasQOrK) {
+            dataByLoc[loc].critical.push(`WLC:1-${wordNum}`)
+          }
+          sources.forEach(source => {
+            delete dataByLoc[loc][`altReadingsFor${source}`]
           })
 
           if(manualReadingCorrectionsByLoc[loc]) {
             if(JSON.stringify(dataByLoc[loc].critical) !== JSON.stringify(manualReadingCorrectionsByLoc[loc].computed)) {
               console.log(JSON.stringify(manualReadingCorrectionsByLoc[loc].computed))
               console.log(JSON.stringify(dataByLoc[loc].critical))
+              console.log(verseUsfmPieces.join(''))
               throw `Expected computed value not found on manual reading correction loc: ${loc}`
             }
             dataByLoc[loc].critical = manualReadingCorrectionsByLoc[loc].corrected

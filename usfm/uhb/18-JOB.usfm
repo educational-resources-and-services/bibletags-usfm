@@ -6320,9 +6320,8 @@
 \w יִשְׁלַח|lemma="שָׁלַח" strong="H7971" x-morph="He,Vqi3ms" x-id="18KAo"\w*־\w יָ֑ד|lemma="יָד" strong="H3027" x-morph="He,Ncbsa" x-id="18xla"\w*
 \w אִם|lemma="אִם" strong="H0518a" x-morph="He,C" x-id="18jd2"\w*־\w בְּ֝⁠פִיד֗⁠וֹ|lemma="פִּיד" strong="b:H6365" x-morph="He,R:Ncmsc:Sp3ms" x-id="180jB"\w*
 \w לָהֶ֥ן|lemma="לָהֵן" strong="H3860" x-morph="He,C" x-id="18f0c"\w*
-\f + \ft or perhaps \fqa \+w לֹה|lemma="לֹא" strong="H3808" x-morph="He,Tn"\+w* \ft (BHS)\f*
 \w שֽׁוּעַ|lemma="שׁוּעַ" strong="H7769" x-morph="He,Ncmsa" x-id="18YtA"\w*׃
-\f + \ft or perhaps \fqa \+w יְשַׁוֵּעַ|lemma="שָׁוַע" strong="H7768" x-morph="He,Vpi3ms"\+w* \ft (BHS)\f*
+\zApparatusJson {"words":[{"w":"לֹה","id":"18wx8","lemma":"לֹא","strong":"H3808","morph":"He,Tn"},{"w":"יְשַׁוֵּעַ","id":"18Rbq","lemma":"שָׁוַע","strong":"H7768","morph":"He,Vpi3ms"}],"ancient":[],"critical":["BHS:1-7,+1-2","WLC:1-9"]}\zApparatusJson*
 
 \v 25
 \w אִם|lemma="אִם" strong="H0518a" x-morph="He,C" x-id="18Jm0"\w*־\w לֹ֣א|lemma="לֹא" strong="H3808" x-morph="He,Tn" x-id="188ZI"\w*

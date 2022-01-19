@@ -9574,7 +9574,6 @@
 
 \v 8
 \w ו⁠תגעש|lemma="גָּעַשׁ" strong="c:H1607" x-morph="He,C:Vqw3fs" x-id="10ODu"\w*
-\f + \ft \+w ו⁠תתגעש|lemma="גָּעַשׁ" strong="c:H1607" x-morph="He,C:Vtw3fs"\+w* some manuscripts read\f*
 \w וַ⁠תִּרְעַשׁ֙|lemma="רָעַשׁ" strong="c:H7493" x-morph="He,C:Vqw3fs" x-id="10avr"\w*
 \w הָ⁠אָ֔רֶץ|lemma="אֶרֶץ" strong="d:H0776" x-morph="He,Td:Ncbsa" x-id="10uG4"\w*
 \w מוֹסְד֥וֹת|lemma="מוֹסָדָה" strong="H4146" x-morph="He,Ncbpc" x-id="10gjl"\w*
@@ -9583,7 +9582,7 @@
 \w וַ⁠יִּֽתְגָּעֲשׁ֖וּ|lemma="גָּעַשׁ" strong="c:H1607" x-morph="He,C:Vtw3mp" x-id="10UP2"\w*
 \w כִּֽי|lemma="כִּי" strong="H3588a" x-morph="He,C" x-id="10xKG"\w*־\w חָ֥רָה|lemma="חָרָה" strong="H2734" x-morph="He,Vqp3ms" x-id="10inp"\w*
 \w לֽ⁠וֹ|lemma="" strong="l" x-morph="He,R:Sp3ms" x-id="10iaI"\w*׃
-\zApparatusJson {"words":[{"w":"וַיִּתְגָּעַ֤שׁ","id":"108R0","lemma":"גָּעַשׁ","strong":"c:H1607","morph":"He,C:Vtw3ms"}],"ancient":[],"critical":["Q:+1,2-10","K"]}\zApparatusJson*
+\zApparatusJson {"words":[{"w":"וַיִּתְגָּעַ֤שׁ","id":"108R0","lemma":"גָּעַשׁ","strong":"c:H1607","morph":"He,C:Vtw3ms"},{"w":"ו⁠תתגעש","id":"10fiK","lemma":"גָּעַשׁ","strong":"c:H1607","morph":"He,C:Vtw3fs"}],"ancient":[],"critical":["Q:+1,2-10","K","M:+2,2-10"]}\zApparatusJson*
 
 \v 9
 \w עָלָ֤ה|lemma="עָלָה" strong="H5927" x-morph="He,Vqp3ms" x-id="10boF"\w*

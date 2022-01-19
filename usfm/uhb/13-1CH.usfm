@@ -3301,10 +3301,9 @@
 \w שָׁ֑מֶר|lemma="שֶׁמֶר" strong="H8106" x-morph="He,Np" x-id="13Q1Y"\w*
 \w אֲחִ֥י|lemma="אֲחִי" strong="H0277" x-morph="He,Np" x-id="13pPi"\w*
 \w ו⁠רוהגה|lemma="רוֹהֲגָה" strong="c:H7303" x-morph="He,C:Np" x-id="13fzx"\w*
-\f + \ft Or perhaps \+w אֲחִיו|lemma="אָח" strong="H0251" x-morph="He,Ncmsc:Sp3ms"\+w* \+w רוֹהֲגָה|lemma="רוֹהֲגָה" strong="c:H7303" x-morph="He,C:Np"\+w*\f*
 \w וְחֻבָּ֥ה|lemma="חֻבָּה" strong="c:H3160" x-morph="He,C:Np" x-id="13UR1"\w*
 \w וַ⁠אֲרָֽם|lemma="אֲרָם" strong="c:H0758" x-morph="He,C:Np" x-id="13scU"\w*׃
-\zApparatusJson {"words":[{"w":"וְרָהְגָּ֖ה","id":"13fzx","lemma":"רוֹהֲגָה","strong":"c:H7303","morph":"He,C:Np"},{"w":"יחבה","id":"13qSL","lemma":"יְחֻבָּה","strong":"H3160","morph":"He,Np"}],"ancient":[],"critical":["Q:1-3,+1,5-6","K:1-4,+2,6"]}\zApparatusJson*
+\zApparatusJson {"words":[{"w":"וְרָהְגָּ֖ה","id":"13fzx","lemma":"רוֹהֲגָה","strong":"c:H7303","morph":"He,C:Np"},{"w":"אֲחִיו","id":"130HD","lemma":"אָח","strong":"H0251","morph":"He,Ncmsc:Sp3ms"},{"w":"רוֹהֲגָה","id":"13fzx","lemma":"רוֹהֲגָה","strong":"c:H7303","morph":"He,C:Np"},{"w":"יחבה","id":"13qSL","lemma":"יְחֻבָּה","strong":"H3160","morph":"He,Np"}],"ancient":[],"critical":["Q:1-3,+1,5-6","K:1-4,+4,6","M:1-2,+2-3,5-6"]}\zApparatusJson*
 
 \v 35
 \w וּ⁠בֶן|lemma="בֵּן" strong="c:H1121a" x-morph="He,C:Ncmsc" x-id="13bib"\w*־\w הֵ֖לֶם|lemma="הֶלֶם" strong="H1987" x-morph="He,Np" x-id="13yON"\w*
@@ -9043,9 +9042,9 @@
 \w אָחֻז֙|lemma="אָחַז" strong="H0270" x-morph="He,Vqsmsa" x-id="13FM2"\w*
 \w לְ⁠אֶלְעָזָ֔ר|lemma="אֶלְעָזָר" strong="l:H0499" x-morph="He,R:Np" x-id="13pCy"\w*
 \w וְ⁠אָחֻ֥ז|lemma="אָחַז" strong="c:H0270" x-morph="He,C:Vqsmsa" x-id="13DQW"\w* ׀
-\f + \ft Or perhaps \+w אֶחָ֗ד|lemma="אֶחָד" strong="H0259" x-morph="He,Acmsa"\+w* (see above)\f*
 \w אָחֻ֖ז|lemma="אָחַז" strong="H0270" x-morph="He,Vqsmsa" x-id="13gmW"\w*
 \w לְ⁠אִיתָמָֽר|lemma="אִיתָמָר" strong="l:H0385" x-morph="He,R:Np" x-id="13tjS"\w*׃פ
+\zApparatusJson {"words":[{"w":"אֶחָ֗ד","id":"131t5","lemma":"אֶחָד","strong":"H0259","morph":"He,Acmsa"}],"ancient":[],"critical":["M:1-24,+1,26-27","WLC:1-27"]}\zApparatusJson*
 
 \v 7
 \w וַ⁠יֵּצֵ֞א|lemma="יָצָא" strong="c:H3318" x-morph="He,C:Vqw3ms" x-id="13KPR"\w*
