@@ -88,9 +88,9 @@ const outputUsfmDir = './usfm/uhb'
       // change the versification to be original
       sourceUsfm = sourceUsfm.replace(/\\v 69\n\\va 68\\va\*\n/g, '')  // Ezra 7:68 does not exist in Hebrew
       sourceUsfm = sourceUsfm.replace("The best Hebrew manuscripts do not include this verse.", "The best Hebrew manuscripts do not include the previous portions of this verse.")
-      sourceUsfm = sourceUsfm.replace(/\\v 6\n\\w אָשִׁ֥ירָה/g, '\\w אָשִׁ֥ירָה')  // Ps 13:6 in Hebrew contains two verses in KJV
+      sourceUsfm = sourceUsfm.replace(/\n\\v 6\n\\w אָשִׁ֥ירָה/g, '\\w אָשִׁ֥ירָה')  // Ps 13:6 in Hebrew contains two verses in KJV
       sourceUsfm = sourceUsfm.replace(/\\c 64\n\\p\n\\v 1\n\\va 63:19b\\va\*/g, '\\p')  // Is 63:19 in Hebrew split across two verses in KJV
-      sourceUsfm = sourceUsfm.replace(/\\c 4\n\\p\n\\v 1\n\\va 3:19\\va\*/g, '\\p\n\\v 1\n\\va 3:19\\va*')  // Is 63:19 in Hebrew split across two verses in KJV
+      sourceUsfm = sourceUsfm.replace(/\\c 4\n\\p\n\\v 1\n\\va 3:19\\va\*/g, '\\p\n\\v 1\n\\va 3:19\\va*')  // Mal has 4 chapters in KJV, 3 in Hebrew
 
       sourceUsfm = sourceUsfm.replace(/(?:\\v [0-9]+|\\d)\n\\va (?:[0-9]+:)?([0-9]+)\\va\*/g, '\\v $1')
       ;(sourceUsfm.match(/\\ca [0-9]+\\ca\*/g) || []).forEach(ca => {
@@ -314,7 +314,7 @@ const outputUsfmDir = './usfm/uhb'
 })()
 
 
-// check 06009007, Ez 45:14, Num 26 (versification), Mal 4 (extra chapter in English), ps titles, Ps 13:6, Ezra 7:68
+// check Ez 48:14
 // multiple words per footnote
   // \f + \ft Or perhaps \+w כל|lemma="כֹּל" strong="H3605" x-morph="He,Ncmsc" x-id="12Evk"\+w*־\+w נביא|lemma="נָבִיא" strong="H5030" x-morph="He,Ncmsa"\+w* \+w וכל|lemma="כֹּל" strong="c:H3605" x-morph="He,C:Ncmsc"\+w*־\+w חזה|lemma="חֹזֶה" strong="H2374" x-morph="He,Ncmsa"\+w*\f*
 
