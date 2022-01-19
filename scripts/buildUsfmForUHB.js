@@ -154,6 +154,15 @@ const outputUsfmDir = './usfm/uhb'
 
       for(let loc in usfmByLoc) {
 
+        const checkWordJoiners = ({ w, morph }) => {
+          if(/\//.test(w)) throw `Unexpected slash in footnote word: ${w}`
+          if((w.match(/\u2060/g) || []).length !== (morph.match(/:/g) || []).length) {
+            const err = `morph parts do not equal word parts (designated by word joiners): ${w} // ${morph} // ${loc}`
+            // console.log(err)
+            // throw err
+          }
+        }
+
         let verseUsfmPieces = usfmByLoc[loc].split(/(\\w .*?\\w\*|\\f .*?\\f\*\n?)/g)
 
         // add x-id attribute into USFM, updating id dictionary and outputting issues when relevant
@@ -209,6 +218,8 @@ const outputUsfmDir = './usfm/uhb'
 
               dataByLoc[loc][`altReadingsFor${qOrK}`].push({ wordNum: thisWordNum, altWordNum: dataByLoc[loc].words.length })
 
+              checkWordJoiners({ w, morph })
+  
             })
 
             piece = ``
@@ -217,19 +228,27 @@ const outputUsfmDir = './usfm/uhb'
 
             wordNum++
             const id = getId({ wordUsfm, loc, wordNum, version: `UHB` })
-            const w = wordUsfm.match(/\\w (.*?)\|/)[1]
+            let w = wordUsfm.match(/\\w (.*?)\|/)[1]
+            const [ x, morph ] = wordUsfm.match(/x-morph="([^"]*)"/) || []
             words.push(w)
 
             if(/\//.test(w)) {
               console.log(`** Replaced slash with word joiner: ${loc} // ${w}`)
               piece = piece.replace(w, w.replace(/\//g, '\u2060'))  // should have word joiner, not slash
+              w = w.replace(/\//g, '\u2060')
             }
+
+            checkWordJoiners({ w, morph })
 
             piece = piece.replace(/(\\w\*)/, ` x-id="${id}"$1`)
 
           } else if(footnoteUsfm) {
 
             console.log(`** Non-word footnote: ${footnoteUsfm}`)
+
+            let [ x1, w ] = footnoteUsfm.match(/\\w (.*?)\|/) || []
+            const [ x2, morph ] = footnoteUsfm.match(/x-morph="([^"]*)"/) || []
+            w && morph && checkWordJoiners({ w, morph })
 
           }
 
