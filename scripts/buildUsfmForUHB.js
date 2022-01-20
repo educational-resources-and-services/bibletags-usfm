@@ -1,5 +1,5 @@
 const fs = require('fs').promises
-const { getWordKey, getVariantWordKey, getRandomId, getUsfmByLoc, getReading } = require('./utils')
+const { getWordKey, getVariantWordKey, getRandomId, getUsfmByLoc, getReading, addToStrongLemmaMap, logPossibleStrongLemmaIssues } = require('./utils')
 const manualReadingCorrectionsByLoc = require('./manualReadingCorrectionsByLoc')
 
 const outputUsfmDir = './usfm/uhb'
@@ -228,7 +228,8 @@ const outputUsfmDir = './usfm/uhb'
               dataByLoc[loc][`altReadingsFor${source}`].push({ wordNum: thisWordNum, altWordNum: dataByLoc[loc].words.length })
 
               checkWordJoiners({ w, morph })
-  
+              addToStrongLemmaMap(wordFootnoteUsfm, loc)
+
             })
 
             piece = ``
@@ -248,6 +249,7 @@ const outputUsfmDir = './usfm/uhb'
             }
 
             checkWordJoiners({ w, morph })
+            addToStrongLemmaMap(wordUsfm, loc)
 
             piece = piece.replace(/(\\w\*)/, ` x-id="${id}"$1`)
 
@@ -258,6 +260,7 @@ const outputUsfmDir = './usfm/uhb'
             let [ x1, w ] = footnoteUsfm.match(/\\w (.*?)\|/) || []
             const [ x2, morph ] = footnoteUsfm.match(/x-morph="([^"]*)"/) || []
             w && morph && checkWordJoiners({ w, morph })
+            addToStrongLemmaMap(footnoteUsfm, loc)
 
           }
 
@@ -325,7 +328,9 @@ const outputUsfmDir = './usfm/uhb'
       await fs.writeFile(`${outputUsfmDir}/${outputFilename}`, outputUsfm)
 
     }
-        
+
+    // logPossibleStrongLemmaIssues()
+
     console.log(``)
     console.log(`COMPLETED.`)
     console.log(``)
@@ -358,4 +363,3 @@ const outputUsfmDir = './usfm/uhb'
   // Deal with two word lexemes: Eg. באר שבע
   // Change יָלַךְ/H3212 lemma to הָלַךְ/H1980
   // change strongs to five-digit, zero-padded, no a/b/c.
-  // see (and fix) hbo_uhb Issues

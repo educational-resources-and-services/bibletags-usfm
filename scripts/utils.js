@@ -73,6 +73,9 @@ const bookNames = [
   "REV",
 ]
 
+const strongLemmaMap = {}
+const lemmaStrongMap = {}
+
 const utils = {
 
   normalizeGreek: str => {
@@ -220,6 +223,59 @@ const utils = {
 
     return reading
   },
+
+  addToStrongLemmaMap: (usfm, loc) => {
+    const [ x1, lemma ] = usfm.match(/lemma="([^"]*)"/) || []
+    let [ x2, strong ] = usfm.match(/strong="([^"]*)"/) || []
+
+    if(!strong || !lemma) return
+    strong = strong.split(':').pop()
+
+    if(!strongLemmaMap[strong]) {
+      strongLemmaMap[strong] = []
+    }
+    const idx1 = strongLemmaMap[strong].findIndex(({ l }) => l === lemma)
+    if(idx1 === -1) {
+      strongLemmaMap[strong].push({ l: lemma, locs: [ loc ] })
+    } else {
+      strongLemmaMap[strong][idx1].locs.push(loc)
+
+    }
+
+    const getStrongish = s => parseInt(s.slice(1).replace(/[a-z]$/, ''), 10)
+    const strongish = getStrongish(strong)
+
+    if(!lemmaStrongMap[lemma]) {
+      lemmaStrongMap[lemma] = []
+    }
+    const idx2 = lemmaStrongMap[lemma].findIndex(({ s }) => Math.abs(strongish - getStrongish(s)) <= 6)
+    if(idx2 === -1) {
+      lemmaStrongMap[lemma].push({ s: strong, locs: [ loc ] })
+    } else {
+      lemmaStrongMap[lemma][idx2].locs.push(loc)
+    }
+  },
+
+  logPossibleStrongLemmaIssues: () => {
+
+    console.log(``)
+    console.log(`Instances of strongs numbers with multiple lemmas:`)
+    for(let strong in strongLemmaMap) {
+      if(strongLemmaMap[strong].length > 1) {
+        console.log(`${strong} ${strongLemmaMap[strong].map(({ l, locs }) => `${l} (${locs.length === 1 ? `only in ${locs[0]}` : `${locs.length} occurences`})`).join(' + ')}`)
+      }
+    }
+
+    console.log(``)
+    console.log(`Instances of lemmas with multiple, significantly different strongs numbers:`)
+    for(let lemma in lemmaStrongMap) {
+      if(lemmaStrongMap[lemma].length > 1) {
+        console.log(`${lemma} ${lemmaStrongMap[lemma].map(({ s, locs }) => `${s} (${locs.length === 1 ? `only in ${locs[0]}` : `${locs.length} occurences`})`).join(' + ')}`)
+      }
+    }
+
+  },
+
 }
   
 module.exports = utils

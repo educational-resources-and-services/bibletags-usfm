@@ -1,5 +1,5 @@
 const fs = require('fs').promises
-const { normalizeGreek, getWordKey, getVariantWordKey, getRandomId, getUsfmByLoc, overNormalizeGreek, getReading } = require('./utils')
+const { normalizeGreek, getWordKey, getVariantWordKey, getRandomId, getUsfmByLoc, overNormalizeGreek, getReading, addToStrongLemmaMap, logPossibleStrongLemmaIssues } = require('./utils')
 
 const transcriptionsDir = './cntr/transcriptions'
 const outputUsfmDir = './usfm/ugnt'
@@ -178,6 +178,8 @@ const outputUsfmDir = './usfm/ugnt'
               occurrenceInVerse: ++numOccurrencesByForm[overNormalizeGreek(w)],
               getTotalHitsInVerse: () => numOccurrencesByForm[overNormalizeGreek(w)],
             })
+
+            addToStrongLemmaMap(wordUsfm, loc)
 
           }
 
@@ -428,6 +430,8 @@ const outputUsfmDir = './usfm/ugnt'
     // console.log(`Movable ν pairs`)
     // console.log(`==============`)
     // console.log(movableNuPairs.join("\n"))
+
+    // logPossibleStrongLemmaIssues()
 
     console.log(``)
     console.log(`COMPLETED.`)
