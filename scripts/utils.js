@@ -248,7 +248,7 @@ const utils = {
     if(!lemmaStrongMap[lemma]) {
       lemmaStrongMap[lemma] = []
     }
-    const idx2 = lemmaStrongMap[lemma].findIndex(({ s }) => Math.abs(strongish - getStrongish(s)) <= 6)
+    const idx2 = lemmaStrongMap[lemma].findIndex(({ s }) => Math.abs(strongish - getStrongish(s)) <= 60)
     if(idx2 === -1) {
       lemmaStrongMap[lemma].push({ s: strong, locs: [ loc ] })
     } else {

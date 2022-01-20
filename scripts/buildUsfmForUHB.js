@@ -118,6 +118,10 @@ const outputUsfmDir = './usfm/uhb'
       if(/יָלַךְ/.test(sourceUsfm)) throw `Still has יָלַךְ: ${(sourceUsfm.replace(/\n/g, '\\n').match(/.{10}יָלַךְ.{20}/) || {})[0]}`
       if(/H3212/.test(sourceUsfm)) throw `Still has H3212: ${(sourceUsfm.replace(/\n/g, '\\n').match(/.{30}H3212.{10}/) || {})[0]}`
 
+      // convert strongs to five-digit
+      sourceUsfm = sourceUsfm.replace(/strong="([^"]*?:)?(H[0-9]{4})([a-f])?"/g, (x, prefix=``, coreStrongsNum, letter) => `strong="${prefix}${coreStrongsNum}${`abcdef`.indexOf(letter)+1}"`)
+      if(/H[0-9]{4}"/.test(sourceUsfm)) throw `Still has four-digit strongs: ${(sourceUsfm.replace(/\n/g, '\\n').match(/.{10}H[0-9]{4}".{10}/) || {})[0]}`
+
       // get usfm by loc
       const usfmByLoc = getUsfmByLoc(sourceUsfm)
 
@@ -367,4 +371,3 @@ const outputUsfmDir = './usfm/uhb'
 
 // TODOs:
   // Deal with two word lexemes: Eg. באר שבע
-  // change strongs to five-digit, zero-padded, no a/b/c.
