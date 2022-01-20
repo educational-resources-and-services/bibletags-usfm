@@ -113,6 +113,12 @@ const outputUsfmDir = './usfm/uhb'
       if(/\\ca/.test(sourceUsfm)) throw `Still has \\ca tag: ${(sourceUsfm.replace(/\n/g, '\\n').match(/.{10}\\ca.{10}/) || {})[0]}`
       if(/\\va/.test(sourceUsfm)) throw `Still has \\va tag: ${(sourceUsfm.replace(/\n/g, '\\n').match(/.{10}\\va.{10}/) || {})[0]}`
 
+      // modify certain lemmas
+      sourceUsfm = sourceUsfm.replace(/lemma="(?:יָלַךְ|הָלַךְ)" strong="([^"]*?:)?H3212"/g, 'lemma="הָלַךְ" strong="$1H1980"')
+      if(/יָלַךְ/.test(sourceUsfm)) throw `Still has יָלַךְ: ${(sourceUsfm.replace(/\n/g, '\\n').match(/.{10}יָלַךְ.{20}/) || {})[0]}`
+      if(/H3212/.test(sourceUsfm)) throw `Still has H3212: ${(sourceUsfm.replace(/\n/g, '\\n').match(/.{30}H3212.{10}/) || {})[0]}`
+
+      // get usfm by loc
       const usfmByLoc = getUsfmByLoc(sourceUsfm)
 
       // confirm that versification is continguous
@@ -361,5 +367,4 @@ const outputUsfmDir = './usfm/uhb'
 
 // TODOs:
   // Deal with two word lexemes: Eg. באר שבע
-  // Change יָלַךְ/H3212 lemma to הָלַךְ/H1980
   // change strongs to five-digit, zero-padded, no a/b/c.
