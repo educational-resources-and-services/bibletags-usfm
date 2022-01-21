@@ -52,14 +52,14 @@ The following changes have been made via the import scripts:
       "w": "וַיֹּ֥אמֶר",
       "id": "06zXI",
       "lemma": "אָמַר",
-      "strong": "c:H0559",
+      "strong": "c:H05590",
       "morph": "He,C:Vqw3ms"
     },
     {
       "w": "אכרות",
       "id": "06iwU",
       "lemma": "כָּרַת",
-      "strong": "H3772",
+      "strong": "H37720",
       "morph": "He,Vqi1cs"
     }
   ],
@@ -121,4 +121,26 @@ The following changes have been made via the import scripts:
   - UGNT
     - Where the difference in a variant is merely the addition of brackets (to indicate uncertaintly), the `x-id` of that variant matches its counterpart in the UGNT.
 
-#### 3. Alternative versification (indicated by `\va` and `\ca` tags) has been made the standard versification (using `\v` and `\c` tags).
+#### 3. (UHB only) Alternative versification (indicated by `\va` and `\ca` tags) has been made the standard versification (using `\v` and `\c` tags).
+
+#### 4. (UHB only) Strongs numbers have been converted to five-digit notation to match the UGNT.
+
+- Eg. `H1254a` is now `H12541`
+- Where no letter was present, `0` has been appended. The letter `a` has been replaced with `1`, `b` with `2`, etc.
+
+#### 5. (UHB only) The `יָלַךְ`/`H32120` lemma/strongs combo has been changed to `הָלַךְ`/`H19800` as modern scholars no longer recognize a distinct `יָלַךְ` lemma.
+
+#### 6. (UHB only) Words with multi-word lemmas have been combined together.
+
+- Eg. Before and after (from Genesis 21:14)
+
+```
+BEFORE
+\w בְּאֵ֥ר|lemma="בְּאֵר שֶׁבַע" strong="H08840" x-morph="He,Np"\w*
+\w שָֽׁבַע|lemma="בְּאֵר שֶׁבַע" strong="H08840" x-morph="He,Np"\w*׃
+
+AFTER
+\w בְּאֵ֥ר שָֽׁבַע|lemma="בְּאֵר שֶׁבַע" strong="H08840" x-morph="He,Np" x-id="01fFu"\w*׃
+```
+
+

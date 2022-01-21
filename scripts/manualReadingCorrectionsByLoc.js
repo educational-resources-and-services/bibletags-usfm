@@ -44,8 +44,8 @@ const manualReadingCorrectionsByLoc = {
     corrected: ["Q:+1,2-15","K"],
   },
   '10023008': {
-    computed: ["Q:1-11,+1-3,15-20","K:1-11,+4-6,15-19,+7"],
-    corrected: ["Q:1-10,+1-3,15-20","K:1-10,+4-6,15-19,+7"],
+    computed: ["Q:1-10,+1-3,14-19","K:1-10,+4-6,14-18,+7"],
+    corrected: ["Q:1-9,+1-3,14-19","K:1-9,+4-6,14-18,+7"],
   },
   '11017014': {
     computed: ["Q:1-17,+1,19-22","K"],
@@ -55,10 +55,11 @@ const manualReadingCorrectionsByLoc = {
     computed: ["Q:1-12,+1,14-16","K"],
     corrected: ["Q:1-11,+1,13-16","K"],
   },
-  '12006025': {
-    computed: ["Q:1-16,+1,18-19","K"],
-    corrected: ["Q:1-15,+1,18-19","K"],
-  },
+  // this one commented out after word grouping of multi-word lemma
+  // '12006025': {
+  //   computed: ["Q:1-16,+1,18-19","K"],
+  //   corrected: ["Q:1-15,+1,18-19","K"],
+  // },
   '12016017': {
     computed: ["Q","K:1-9,+1,11-23"],
     corrected: ["Q","K:1-8,+1,10-23"],
@@ -138,6 +139,10 @@ const manualReadingCorrectionsByLoc = {
   '20023024': {
     computed: ["Q","K:+1-2,3-4,+3,6-7,+4"],
     corrected: ["Q","K:+1-2,3-4,+3,6,+4,8"],
+  },
+  '23009006': {
+    computed: ["Q","K:+2,2-23"],
+    corrected: ["Q","K:+1-2,2-23"],
   },
   '23010032': {
     computed: ["Q","K:1-8,+1,10-11"],

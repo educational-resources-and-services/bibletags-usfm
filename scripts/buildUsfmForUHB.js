@@ -122,6 +122,132 @@ const outputUsfmDir = './usfm/uhb'
       sourceUsfm = sourceUsfm.replace(/strong="([^"]*?:)?(H[0-9]{4})([a-f])?"/g, (x, prefix=``, coreStrongsNum, letter) => `strong="${prefix}${coreStrongsNum}${`abcdef`.indexOf(letter)+1}"`)
       if(/H[0-9]{4}"/.test(sourceUsfm)) throw `Still has four-digit strongs: ${(sourceUsfm.replace(/\n/g, '\\n').match(/.{10}H[0-9]{4}".{10}/) || {})[0]}`
 
+      // convert some lemmas in prep for next step
+      sourceUsfm = sourceUsfm.replace(/(\\w [^|]+\|lemma="רָמֹת גִּלעָד" strong="[^"]+" x-morph="[^"]+"\\w\*[ \n־׀]+\\w [^|]+\|lemma=")גִּלְעָד(" strong="(?:[^"]*?:)?)[^"]+(" x-morph="[^"]+"\\w\*)/g, `$1רָמֹת גִּלעָד$2H74330$3`)
+      sourceUsfm = sourceUsfm.replace(/\\w יונים\|lemma="יוֹנָה" strong="H31230"/g, `\\w יונים|lemma="חֲרֵי־יוֹנִים" strong="H2755"`)
+      sourceUsfm = sourceUsfm.replace(/נֵרְגַּל שַׁרְאֶצֶר/g, `נֵרְגַּל שַׁרְ־אֶצֶר`)
+      sourceUsfm = sourceUsfm.replace(
+        `\\w וְ⁠יִשְׁבִּ֨י|lemma="יִשְׁבּוֹ בְּנֹב" strong="c:H34300" x-morph="He,C:Np"\\w*\n\\f + \\ft K \\+w ו⁠ישבו|lemma="יִשְׁבּוֹ בְּנֹב" strong="c:H34300" x-morph="He,C:Np"\\+w*\\f*\n\\w בְּנֹ֜ב|lemma="יִשְׁבּוֹ בְּנֹב" strong="H34300" x-morph="He,Np"\\w*`,
+        `\\w וְ⁠יִשְׁבִּ֨י|lemma="יִשְׁבּוֹ בְּנֹב" strong="c:H34300" x-morph="He,C:Np"\\w*\n\\w בְּנֹ֜ב|lemma="יִשְׁבּוֹ בְּנֹב" strong="H34300" x-morph="He,Np"\\w*\n\\f + \\ft K \\+w ו⁠ישבו בְּנֹ֜ב|lemma="יִשְׁבּוֹ בְּנֹב" strong="c:H34300" x-morph="He,C:Np"\\+w*\\f*`,
+      )
+      sourceUsfm = sourceUsfm.replace(
+        `\\f + \\ft K \\+w ל⁠ם רבה|lemma="רַב" strong="H72270" x-morph="He,R:Sp3mp:Aafsc"\\+w*\\f*`,
+        `\\f + \\ft K \\+w ל⁠ם|lemma="" strong="l" x-morph="He,R:Sp3mp"\\+w* \\+w רבה|lemma="רַב" strong="H72270" x-morph="He,Aafsc"\\+w*\\f*`,
+      )
+
+      // group words together for multi-word lemmas
+      const firstWordRegexStr = `\\\\w ([^|]+)\\|lemma="([^" ־]+[ ־][^"]+)" strong="([^"]+)" x-morph="([^"]+)"\\\\w\\*`
+      const otherWordRegexStr = `(?:[ \\n־׀]+${firstWordRegexStr})+`
+      const regex = new RegExp(firstWordRegexStr + otherWordRegexStr, `g`)
+      const singleWordRegex = new RegExp(firstWordRegexStr)
+      const allGroupedWordMorphs = {}
+      sourceUsfm = sourceUsfm.replace(regex, match => {
+
+        const matchPieces = match.split(/(\\w [^|]+\|lemma="[^"]+" strong="[^"]+" x-morph="[^"]+"\\w\*)/g)
+        const newUsfmWordPieces = []
+
+        let x1, words, lemma, strong, morph, commonStrong, unifiedMorph, hasNp, lastMorph, morphPrefixes, morphSuffixes
+
+        const addNewUsfmWord = () => {
+          if(
+            words.replace(/ ׀ /g, ' ').match(/[ ־]/g).length !== lemma.match(/[ ־]/g).length
+            && lemma !== `בֵּית בַּעַל מְעוֹן`  // this lemma appears once in the text as בֵּית מְעוֹן
+          ) throw `Number of words in multi-word lemma doesn't match that of the text: ${match}`
+
+          if(/,Ng[mf][sp]a$/.test(lastMorph)) {
+            if(hasNp && lemma !== `עַשְׁתְּרֹת קַרְנַיִם`) throw `Unexpected combo of Np with Ng: ${match}`
+            unifiedMorph = lastMorph
+          } else if([ `קַו־קַו`, `פְּקַח־קוֹחַ`, `יְפֵה־פִיָּה` ].includes(lemma)) {
+            unifiedMorph = lastMorph
+          }
+
+          if(morphSuffixes.length > 1) throw `Unexpected multiple suffixes when grouping multi-word lemmas: ${match}`
+
+          const [ lang, mainWordMorph ] = unifiedMorph.split(',')
+          const finalMorph = `${lang},${[ ...new Set(morphPrefixes), mainWordMorph, ...morphSuffixes ].join(':')}`
+          allGroupedWordMorphs[finalMorph] = true
+
+          newUsfmWordPieces.push(`\\w ${words}|lemma="${lemma}" strong="${strong}" x-morph="${finalMorph}"\\w*`)
+
+          if((words.match(/\u2060/g) || []).length !== (finalMorph.match(/:/g) || []).length) {
+            throw `While grouping multi-word lemmas, morph parts do not equal word parts: \n<<<<${match}\n>>>> ${newUsfmWordPieces.join('')}`
+          }
+
+          if(finalMorph.split(/[,:]/g).length !== [ ...new Set(finalMorph.split(/[,:]/g)) ].length) {
+            throw `While grouping multi-word lemmas, made invalid morph (wrong number of colons): \n<<<<${match}\n>>>> ${newUsfmWordPieces.join('')}`
+          }
+
+          if((finalMorph.match(/^(?:He|Ar),.*[NA]/g) || []).length !== 1) {
+            throw `While grouping multi-word lemmas, made invalid morph: \n<<<<${match}\n>>>> ${newUsfmWordPieces.join('')}`
+          }
+        }
+
+        let connectorPiece = ``
+        for(let mPieceIdx=0; mPieceIdx<matchPieces.length; mPieceIdx++) {
+
+          if(!singleWordRegex.test(matchPieces[mPieceIdx])) {
+            if(connectorPiece) throw `Unexpected connector piece before word in grouping multi-word lemmas: ${match}`
+            connectorPiece = matchPieces[mPieceIdx]
+            continue
+          }
+
+          const [ x2, w, thisLemma, thisStrong, thisMorph ] = matchPieces[mPieceIdx].match(singleWordRegex)
+
+          if(thisLemma !== lemma || thisStrong === `c:H48070`) {  // H48070 appears twice in a row
+
+            if(lemma) {
+
+              addNewUsfmWord()
+              if(!connectorPiece) throw `Connector piece missing in multi-word lemma grouping: ${match}`
+              newUsfmWordPieces.push(connectorPiece)
+              connectorPiece = ``
+
+            } else if(connectorPiece) {
+              throw `Unexpected connector piece missing in multi-word lemma grouping: ${match}`
+            }
+
+            [ x1, words, lemma, strong, morph ] = matchPieces[mPieceIdx].match(singleWordRegex)
+            hasNp = /Np/.test(morph)
+            commonStrong = strong.split(':').pop()
+            unifiedMorph = morph.replace(/[^,]+$/, 'Np')
+
+            morphPrefixes = []
+            morphSuffixes = []
+
+          } else {
+
+            if(thisStrong.split(':').pop().slice(0,5) !== commonStrong.slice(0,5)) throw `Unexpected divergent strongs when grouping words: ${match}`
+            hasNp = hasNp || /Np/.test(thisMorph)
+            words += connectorPiece.replace(/\n/g, ' ') + w
+            connectorPiece = ``
+
+          }
+
+          morphPrefixes.push(...(thisMorph.replace(/:S[^:]+$/, '').replace(/^(?:He|Ar),((?:[^:]+:)*)(?:[^:]+)$/, '$1').match(/[^:]+/g) || []))
+          morphSuffixes.push(...(thisMorph.match(/S[^:,]+$/g) || []))
+          lastMorph = thisMorph.replace(/:S[^:]+$/, '').replace(/^(He|Ar),(?:[^:]+:)*([^:]+)$/, '$1,$2')
+
+        }
+
+        addNewUsfmWord()
+
+        return newUsfmWordPieces.join('')
+      })
+      const ungroupedLemmaRegex = /\\w [^| ־]+\|lemma="[^" ־]+[ ־][^"]+"/g
+      if(ungroupedLemmaRegex.test(sourceUsfm)) {
+        const match = sourceUsfm.match(ungroupedLemmaRegex)[0]
+        const matchIdx = sourceUsfm.search(ungroupedLemmaRegex)
+        if(
+          match !== `\\w הַֽ⁠חִירֹ֔ת|lemma="פִּי הַחִירֹת"`  // In this instance, the פי is missing in the text, though is a part of the lemma
+          && match !== `\\w קִרְיַ֔ת|lemma="קִרְיַת יְעָרִים"`  // In this instance, יְעָרִים is taken from the LXX
+          && match !== `\\w אִיכָב֣וֹד|lemma="אִי־כָבוֹד"`
+          && match !== `\\w וְיִשְׁבִּ֨י|lemma="יִשְׁבּוֹ בְּנֹב"`  // lemma relates to the ketiv reading
+          && match !== `\\w חרי⁠הם|lemma="חֲרֵי־יוֹנִים"`
+          && match !== `\\w ל⁠בנימיני|lemma="בֶּן־יְמִינִי"`
+        ) throw `Still has ungrouped multi-word lemma: ${sourceUsfm.slice(matchIdx - 30, matchIdx + 230)}`
+      }
+      // console.log('allGroupedWordMorphs', Object.keys(allGroupedWordMorphs))
+      
       // get usfm by loc
       const usfmByLoc = getUsfmByLoc(sourceUsfm)
 
@@ -198,10 +324,21 @@ const outputUsfmDir = './usfm/uhb'
 
               const thisWordNum = wordNum - (wordsUsfm.length - idx - 1)
 
-              const [ x0, w ] = wordFootnoteUsfm.match(/\\\+w (.*?)\|/) || []
+              let [ x0, w ] = wordFootnoteUsfm.match(/\\\+w (.*?)\|/) || []
               const [ x1, lemma ] = wordFootnoteUsfm.match(/lemma="([^"]*)"/) || []
               const [ x2, strong ] = wordFootnoteUsfm.match(/strong="([^"]*)"/) || []
               const [ x3, morph ] = wordFootnoteUsfm.match(/x-morph="([^"]*)"/) || []
+
+              if((w.replace(/ ׀ /g, ' ').match(/[ ־]/g) || []).length !== (lemma.match(/[ ־]/g) || []).length) {
+                if(lemma === `כְּפַר הָֽעַמֹּנָה`) {
+                  w = `כְּפַר ${w}`
+                } else if(lemma === `חֲרֵי־יוֹנִים`) {
+                  // nothing to do
+                } else {
+                  throw `Number of words in multi-word lemma doesn't match that of the text (apparatus): ${lemma} // ${w} // ${loc}`
+                }
+              }
+
               const id = getId({
                 loc,
                 wordUsfm: wordFootnoteUsfm,
@@ -367,7 +504,3 @@ const outputUsfmDir = './usfm/uhb'
   process.exit()
 
 })()
-
-
-// TODOs:
-  // Deal with two word lexemes: Eg. באר שבע
