@@ -130,7 +130,7 @@ const outputUsfmDir = './usfm/uhb'
         `\\w וְ⁠יִשְׁבִּ֨י|lemma="יִשְׁבּוֹ בְּנֹב" strong="c:H34300" x-morph="He,C:Np"\\w*\n\\f + \\ft K \\+w ו⁠ישבו|lemma="יִשְׁבּוֹ בְּנֹב" strong="c:H34300" x-morph="He,C:Np"\\+w*\\f*\n\\w בְּנֹ֜ב|lemma="יִשְׁבּוֹ בְּנֹב" strong="H34300" x-morph="He,Np"\\w*`,
         `\\w וְ⁠יִשְׁבִּ֨י|lemma="יִשְׁבּוֹ בְּנֹב" strong="c:H34300" x-morph="He,C:Np"\\w*\n\\w בְּנֹ֜ב|lemma="יִשְׁבּוֹ בְּנֹב" strong="H34300" x-morph="He,Np"\\w*\n\\f + \\ft K \\+w ו⁠ישבו בְּנֹ֜ב|lemma="יִשְׁבּוֹ בְּנֹב" strong="c:H34300" x-morph="He,C:Np"\\+w*\\f*`,
       )
-      sourceUsfm = sourceUsfm.replace(
+      sourceUsfm = sourceUsfm.replace(  // I have submitted a pull request to unfoldingWord such that this might not be needed in the future
         `\\f + \\ft K \\+w ל⁠ם רבה|lemma="רַב" strong="H72270" x-morph="He,R:Sp3mp:Aafsc"\\+w*\\f*`,
         `\\f + \\ft K \\+w ל⁠ם|lemma="" strong="l" x-morph="He,R:Sp3mp"\\+w* \\+w רבה|lemma="רַב" strong="H72270" x-morph="He,Aafsc"\\+w*\\f*`,
       )
