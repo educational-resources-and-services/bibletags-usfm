@@ -5391,20 +5391,20 @@
 \w אֶת|lemma="אֵת" strong="H08530" x-morph="He,To" x-id="166Ir"\w*־\w הַ⁠יְּהוּדִים֙|lemma="יְהוּדִי" strong="d:H30640" x-morph="He,Td:Ngmpa" x-id="16kRZ"\w*
 \w הֹשִׁ֗יבוּ|lemma="יָשַׁב" strong="H34270" x-morph="He,Vhp3cp" x-id="16eoo"\w*
 \w נָשִׁים֙|lemma="אִשָּׁה" strong="H08020" x-morph="He,Ncfpa" x-id="16JhJ"\w*
-\w אשדודיות|lemma="אַשְׁדּוֹדִי" strong="H07960" x-morph="He,Agfpa" x-id="16GP8"\w*
-\w עמוניות|lemma="עַמּוֹנִי" strong="H59840" x-morph="He,Agfpa" x-id="165At"\w*
+\w אשדודיות|lemma="אַשְׁדּוֹדִי" strong="H07960" x-morph="He,Ngfpa" x-id="16nBV"\w*
+\w עמוניות|lemma="עַמּוֹנִי" strong="H59840" x-morph="He,Ngfpa" x-id="16QkV"\w*
 \w מוֹאֲבִיּֽוֹת|lemma="מוֹאָבִי" strong="H41250" x-morph="He,Ngfpa" x-id="16s8R"\w*׃
-\zApparatusJson {"words":[{"w":"אַשְׁדֳּדִיּ֔וֹת","id":"16GP8","lemma":"אַשְׁדּוֹדִי","strong":"H07960","morph":"He,Agfpa"},{"w":"עַמֳּנִיּ֖וֹת","id":"165At","lemma":"עַמּוֹנִי","strong":"H59840","morph":"He,Agfpa"}],"ancient":[],"critical":["Q:1-8,+1-2,11","K"]}\zApparatusJson*
+\zApparatusJson {"words":[{"w":"אַשְׁדֳּדִיּ֔וֹת","id":"16nBV","lemma":"אַשְׁדּוֹדִי","strong":"H07960","morph":"He,Ngfpa"},{"w":"עַמֳּנִיּ֖וֹת","id":"16QkV","lemma":"עַמּוֹנִי","strong":"H59840","morph":"He,Ngfpa"}],"ancient":[],"critical":["Q:1-8,+1-2,11","K"]}\zApparatusJson*
 
 \v 24
 \w וּ⁠בְנֵי⁠הֶ֗ם|lemma="בֵּן" strong="c:H11211" x-morph="He,C:Ncmpc:Sp3mp" x-id="16Oof"\w*
 \w חֲצִי֙|lemma="חֵצִי" strong="H26770" x-morph="He,Ncmsa" x-id="16kn7"\w*
 \w מְדַבֵּ֣ר|lemma="דָבַר" strong="H16960" x-morph="He,Vprmsa" x-id="16PGu"\w*
-\w אַשְׁדּוֹדִ֔ית|lemma="אַשְׁדּוֹדִית" strong="H07970" x-morph="He,Agfsa" x-id="161CM"\w*
+\w אַשְׁדּוֹדִ֔ית|lemma="אַשְׁדּוֹדִית" strong="H07970" x-morph="He,Ngfsa" x-id="167I2"\w*
 \w וְ⁠אֵינָ֥⁠ם|lemma="אַיִן" strong="c:H03690" x-morph="He,C:Tn:Sp3mp" x-id="16fDx"\w*
 \w מַכִּירִ֖ים|lemma="נָכַר" strong="H52341" x-morph="He,Vhrmpa" x-id="16f0U"\w*
 \w לְ⁠דַבֵּ֣ר|lemma="דָבַר" strong="l:H16960" x-morph="He,R:Vpc" x-id="16U57"\w*
-\w יְהוּדִ֑ית|lemma="יְהוּדִית" strong="H30660" x-morph="He,Agfsa" x-id="16MGu"\w*
+\w יְהוּדִ֑ית|lemma="יְהוּדִית" strong="H30660" x-morph="He,Ngfsa" x-id="16IfB"\w*
 \w וְ⁠כִ⁠לְשׁ֖וֹן|lemma="לָשׁוֹן" strong="c:k:H39560" x-morph="He,C:R:Ncbsc" x-id="162zf"\w*
 \w עַ֥ם|lemma="עַם" strong="H59711" x-morph="He,Ncmsa" x-id="16Dx0"\w*
 \w וָ⁠עָֽם|lemma="עַם" strong="c:H59711" x-morph="He,C:Ncmsa" x-id="16vmX"\w*׃
