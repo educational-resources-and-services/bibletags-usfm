@@ -155,7 +155,7 @@ const utils = {
     const [ x3, morph ] = wordUsfm.match(/x-morph="([^"]*)"/) || []
 
     const wordKey = [
-      stripHebrewVowelsEtc(normalizeGreek(w)),
+      normalizeGreek(w),
       lemma,
       strong,
       morph,
