@@ -138,6 +138,10 @@ const outputUsfmDir = './usfm/uhb'
         `\\f + \\ft K \\+w ו⁠יעברו|lemma="עָבַר" strong="c:H56741" x-morph="He,C:Vqw3mp"\\+w* \\+w אֶת|lemma="אֵת" strong="H08540" x-morph="He,R"\\+w*־\\+w הַ⁠מֶּ֔לֶךְ|lemma="מֶלֶךְ" strong="d:H44280" x-morph="He,Td:Ncmsa"\\+w*\\f*`,
         `\\f + \\ft K \\+w ו⁠יעברו|lemma="עָבַר" strong="c:H56741" x-morph="He,C:Vqw3mp"\\+w* \\+w אֶת|lemma="אֵת" strong="H08540" x-morph="He,R"\\+w*\\f*`,
       )
+      sourceUsfm = sourceUsfm.replace(  // I have submitted a pull request to unfoldingWord such that this might not be needed in the future
+        `\\f + \\ft K \\+w בֶן|lemma="בֵּן" strong="H11211" x-morph="He,Ncmsc"\\+w*־\\+w בני⁠מן|lemma="בִּנְיָמִין" strong="H11440" x-morph="He,Ncmpc:R"\\+w*־\\+w בְּנֵי|lemma="בֵּן" strong="H11211" x-morph="He,Ncmpc"\\+w*־\\+w פֶ֖רֶץ|lemma="פֶּרֶץ" strong="H65570" x-morph="He,Np"\\+w*\\f*`,
+        `\\f + \\ft K \\+w בני⁠מן|lemma="בִּנְיָמִין" strong="H11440" x-morph="He,Ncmpc:R"\\+w*\\f*`,
+      )
       
 
       // group words together for multi-word lemmas

@@ -73,8 +73,8 @@ const manualReadingCorrectionsByLoc = {
     corrected: ["Q","K:1-5,+1,7-16"],
   },
   '13009004': {
-    computed: ["Q","K:1-8,+1-4,13-14"],
-    corrected: ["Q","K:1-7,+1-4,13-14"],
+    computed: ["Q","K:1-11,+1,13-14"],
+    corrected: ["Q","K:1-8,+1,11-14"],
   },
   '13011020': {
     computed: ["Q","K:1-16,+1,18"],
