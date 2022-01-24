@@ -76,53 +76,57 @@ const bookNames = [
 const strongLemmaMap = {}
 const lemmaStrongMap = {}
 
+const normalizeGreek = str => {
+  const mappings = {
+    "α": /[ἀἁἂἃἄἅἆἇάὰάᾀᾁᾂᾃᾄᾅᾆᾇᾰᾱᾲᾳᾴᾶᾷ]/g,
+    "Α": /[ἈἉἊἋἌἍἎἏΆᾈᾉᾊᾋᾌᾍᾎᾏᾸᾹᾺΆᾼ]/g,
+    "ε": /[ἐἑἒἓἔἕέὲέ]/g,
+    "Ε": /[ἘἙἚἛἜἝῈΈΈ]/g,
+    "η": /[ἠἡἢἣἤἥἦἧὴήᾐᾑᾒᾓᾔᾕᾖᾗῂῃῄῆῇή]/g,
+    "Η": /[ἨἩἪἫἬἭἮἯᾘᾙᾚᾛᾜᾝᾞᾟῊΉῌΉ]/g,
+    "ι": /[ἰἱἲἳἴἵἶἷὶίῐῑῒΐῖῗΐίϊΐί]/g,
+    "Ι": /[ἸἹἺἻἼἽἾἿῚΊῘῙΊΪ]/g,
+    "ο": /[ὀὁὂὃὄὅὸόό]/g,
+    "Ο": /[ὈὉὊὋὌὍῸΌΌ]/g,
+    "υ": /[ὐὑὒὓὔὕὖὗὺύῠῡῢΰῦῧΰύϋ]/g,
+    "Υ": /[ὙὛὝὟῨῩῪΎΎΫ]/g,
+    "ω": /[ὠὡὢὣὤὥὦὧὼώᾠᾡᾢᾣᾤᾥᾦᾧῲῳῴῶῷώ]/g,
+    "Ω": /[ὨὩὪὫὬὭὮὯᾨᾩᾪᾫᾬᾭᾮᾯῺΏῼΏ]/g,
+    "ρ": /[ῤῥ]/g,
+    "Ρ": /[Ῥ]/g,
+    "": /[῞ʹ͵΄᾽᾿῍῎῏῝῞῟῭΅`΅´῾῀῁]/g,
+  }
+
+  Object.keys(mappings).forEach(char => {
+    str = str.replace(mappings[char], char)
+  })
+
+  str = str.toLowerCase()
+  str = str.replace(/[,.·()’ʼ•:;?⋄–!⸁—⸅;⸄]/g, '')
+
+  // get rid of irrelevant CNTR annotations (see /cntr/transcriptions/#README.txt)
+  str = str.replace(/[\\|\/][0-9]*/g, '')
+  str = str.replace(/[&*_+\-"'`]/g, '')
+  str = str.replace(/  +/g, ' ').trim()
+
+  // swap out supplied words with … (see /cntr/transcriptions/#README.txt)
+  str = str.replace(/[~+][^\s]+/g, "…").replace(/…(?: …)+/g, "…")
+
+  return str
+}
+
+const stripHebrewVowelsEtc = str => (
+  str
+    .replace(/[\u05B0-\u05BC\u05C1\u05C2\u05C4]/g,'')  // vowels
+    .replace(/[\u0591-\u05AF\u05A5\u05BD\u05BF\u05C5\u05C7]/g,'')  // cantilation
+    .replace(/\u200D/g,'')  // invalid character
+)
+
 const utils = {
 
-  normalizeGreek: str => {
-    const mappings = {
-      "α": /[ἀἁἂἃἄἅἆἇάὰάᾀᾁᾂᾃᾄᾅᾆᾇᾰᾱᾲᾳᾴᾶᾷ]/g,
-      "Α": /[ἈἉἊἋἌἍἎἏΆᾈᾉᾊᾋᾌᾍᾎᾏᾸᾹᾺΆᾼ]/g,
-      "ε": /[ἐἑἒἓἔἕέὲέ]/g,
-      "Ε": /[ἘἙἚἛἜἝῈΈΈ]/g,
-      "η": /[ἠἡἢἣἤἥἦἧὴήᾐᾑᾒᾓᾔᾕᾖᾗῂῃῄῆῇή]/g,
-      "Η": /[ἨἩἪἫἬἭἮἯᾘᾙᾚᾛᾜᾝᾞᾟῊΉῌΉ]/g,
-      "ι": /[ἰἱἲἳἴἵἶἷὶίῐῑῒΐῖῗΐίϊΐί]/g,
-      "Ι": /[ἸἹἺἻἼἽἾἿῚΊῘῙΊΪ]/g,
-      "ο": /[ὀὁὂὃὄὅὸόό]/g,
-      "Ο": /[ὈὉὊὋὌὍῸΌΌ]/g,
-      "υ": /[ὐὑὒὓὔὕὖὗὺύῠῡῢΰῦῧΰύϋ]/g,
-      "Υ": /[ὙὛὝὟῨῩῪΎΎΫ]/g,
-      "ω": /[ὠὡὢὣὤὥὦὧὼώᾠᾡᾢᾣᾤᾥᾦᾧῲῳῴῶῷώ]/g,
-      "Ω": /[ὨὩὪὫὬὭὮὯᾨᾩᾪᾫᾬᾭᾮᾯῺΏῼΏ]/g,
-      "ρ": /[ῤῥ]/g,
-      "Ρ": /[Ῥ]/g,
-      "": /[῞ʹ͵΄᾽᾿῍῎῏῝῞῟῭΅`΅´῾῀῁]/g,
-    }
+  normalizeGreek,
 
-    Object.keys(mappings).forEach(char => {
-      str = str.replace(mappings[char], char)
-    })
-
-    str = str.toLowerCase()
-    str = str.replace(/[,.·()’ʼ•:;?⋄–!⸁—⸅;⸄]/g, '')
-
-    // get rid of irrelevant CNTR annotations (see /cntr/transcriptions/#README.txt)
-    str = str.replace(/[\\|\/][0-9]*/g, '')
-    str = str.replace(/[&*_+\-"'`]/g, '')
-    str = str.replace(/  +/g, ' ').trim()
-
-    // swap out supplied words with … (see /cntr/transcriptions/#README.txt)
-    str = str.replace(/[~+][^\s]+/g, "…").replace(/…(?: …)+/g, "…")
-
-    return str
-  },
-
-  stripHebrewVowelsEtc: str => (
-    str
-      .replace(/[\u05B0-\u05BC\u05C1\u05C2\u05C4]/g,'')  // vowels
-      .replace(/[\u0591-\u05AF\u05A5\u05BD\u05BF\u05C5\u05C7]/g,'')  // cantilation
-      .replace(/\u200D/g,'')  // invalid character
-  ),
+  stripHebrewVowelsEtc,
 
   overNormalizeGreek: w => {
 
@@ -145,11 +149,13 @@ const utils = {
   },
 
   getWordKey: ({ wordUsfm, loc, wordNum, version }) => {
+    const [ x0, w ] = wordUsfm.match(/\\\+?w (.*?)\|/) || []
     const [ x1, lemma ] = wordUsfm.match(/lemma="([^"]*)"/) || []
     const [ x2, strong ] = wordUsfm.match(/strong="([^"]*)"/) || []
     const [ x3, morph ] = wordUsfm.match(/x-morph="([^"]*)"/) || []
 
     const wordKey = [
+      stripHebrewVowelsEtc(normalizeGreek(w)),
       lemma,
       strong,
       morph,

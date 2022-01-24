@@ -117,7 +117,7 @@ The following changes have been made via the import scripts:
 #### 2. A unique `x-id` has been added to each word in the UHB and UGNT and each variant word represented in a critical text.
 
   - UHB
-    - Where the alternative reading possesses the same lemma, strong, and morph values, the `x-id` matches the selected reading.
+    - All Ketiv/Qere variants are given a unique `x-id`, even if they possess the same lemma, strong, and morph values.
   - UGNT
     - Where the difference in a variant is merely the addition of brackets (to indicate uncertaintly), the `x-id` of that variant matches its counterpart in the UGNT.
 

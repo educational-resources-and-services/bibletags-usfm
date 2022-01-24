@@ -1261,7 +1261,7 @@
 \w מֶ֥לֶךְ|lemma="מֶלֶךְ" strong="H44280" x-morph="He,Ncmsa" x-id="21aEY"\w*
 \w לְ⁠שָׂדֶ֖ה|lemma="שָׂדֶה" strong="l:H77042" x-morph="He,R:Ncmsa" x-id="21ePg"\w*
 \w נֶעֱבָֽד|lemma="עָבַד" strong="H56470" x-morph="He,VNp3ms" x-id="21hqm"\w*׃
-\zApparatusJson {"words":[{"w":"ה֑וּא","id":"21mxF","lemma":"הוּא","strong":"H19310","morph":"He,Pp3fs"}],"ancient":[],"critical":["Q:1-3,+1,5-7","K"]}\zApparatusJson*
+\zApparatusJson {"words":[{"w":"ה֑וּא","id":"21uz1","lemma":"הוּא","strong":"H19310","morph":"He,Pp3fs"}],"ancient":[],"critical":["Q:1-3,+1,5-7","K"]}\zApparatusJson*
 
 \v 9
 \w אֹהֵ֥ב|lemma="אָהַב" strong="H01570" x-morph="He,Vqrmsa" x-id="21gAZ"\w*
@@ -1285,7 +1285,7 @@
 \w כִּ֖י|lemma="כִּי" strong="H35882" x-morph="He,C" x-id="210n2"\w*
 \w אִם|lemma="אִם" strong="H05182" x-morph="He,C" x-id="21Vhk"\w*־\w רְא֥וּת|lemma="רְאִית" strong="H72120" x-morph="He,Ncmsc" x-id="21qHY"\w*
 \w עֵינָֽי⁠ו|lemma="עַיִן" strong="H58691" x-morph="He,Ncbdc:Sp3ms" x-id="21tJB"\w*׃
-\zApparatusJson {"words":[{"w":"ראית","id":"21qHY","lemma":"רְאִית","strong":"H72120","morph":"He,Ncmsc"}],"ancient":[],"critical":["Q","K:1-9,+1,11"]}\zApparatusJson*
+\zApparatusJson {"words":[{"w":"ראית","id":"216YZ","lemma":"רְאִית","strong":"H72120","morph":"He,Ncmsc"}],"ancient":[],"critical":["Q","K:1-9,+1,11"]}\zApparatusJson*
 
 \v 11
 \w מְתוּקָה֙|lemma="מָתוֹק" strong="H49660" x-morph="He,Aafsa" x-id="211zu"\w*
