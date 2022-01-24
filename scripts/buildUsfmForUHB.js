@@ -122,7 +122,7 @@ const outputUsfmDir = './usfm/uhb'
       sourceUsfm = sourceUsfm.replace(/strong="([^"]*?:)?(H[0-9]{4})([a-f])?"/g, (x, prefix=``, coreStrongsNum, letter) => `strong="${prefix}${coreStrongsNum}${`abcdef`.indexOf(letter)+1}"`)
       if(/H[0-9]{4}"/.test(sourceUsfm)) throw `Still has four-digit strongs: ${(sourceUsfm.replace(/\n/g, '\\n').match(/.{10}H[0-9]{4}".{10}/) || {})[0]}`
 
-      // convert some lemmas in prep for next step
+      // modify some pecular lines in prep for next step
       sourceUsfm = sourceUsfm.replace(/(\\w [^|]+\|lemma="רָמֹת גִּלעָד" strong="[^"]+" x-morph="[^"]+"\\w\*[ \n־׀]+\\w [^|]+\|lemma=")גִּלְעָד(" strong="(?:[^"]*?:)?)[^"]+(" x-morph="[^"]+"\\w\*)/g, `$1רָמֹת גִּלעָד$2H74330$3`)
       sourceUsfm = sourceUsfm.replace(/\\w יונים\|lemma="יוֹנָה" strong="H31230"/g, `\\w יונים|lemma="חֲרֵי־יוֹנִים" strong="H2755"`)
       sourceUsfm = sourceUsfm.replace(/נֵרְגַּל שַׁרְאֶצֶר/g, `נֵרְגַּל שַׁרְ־אֶצֶר`)
@@ -134,6 +134,11 @@ const outputUsfmDir = './usfm/uhb'
         `\\f + \\ft K \\+w ל⁠ם רבה|lemma="רַב" strong="H72270" x-morph="He,R:Sp3mp:Aafsc"\\+w*\\f*`,
         `\\f + \\ft K \\+w ל⁠ם|lemma="" strong="l" x-morph="He,R:Sp3mp"\\+w* \\+w רבה|lemma="רַב" strong="H72270" x-morph="He,Aafsc"\\+w*\\f*`,
       )
+      sourceUsfm = sourceUsfm.replace(  // I have submitted a pull request to unfoldingWord such that this might not be needed in the future
+        `\\f + \\ft K \\+w ו⁠יעברו|lemma="עָבַר" strong="c:H56741" x-morph="He,C:Vqw3mp"\\+w* \\+w אֶת|lemma="אֵת" strong="H08540" x-morph="He,R"\\+w*־\\+w הַ⁠מֶּ֔לֶךְ|lemma="מֶלֶךְ" strong="d:H44280" x-morph="He,Td:Ncmsa"\\+w*\\f*`,
+        `\\f + \\ft K \\+w ו⁠יעברו|lemma="עָבַר" strong="c:H56741" x-morph="He,C:Vqw3mp"\\+w* \\+w אֶת|lemma="אֵת" strong="H08540" x-morph="He,R"\\+w*\\f*`,
+      )
+      
 
       // group words together for multi-word lemmas
       const firstWordRegexStr = `\\\\w ([^|]+)\\|lemma="([^" ־]+[ ־][^"]+)" strong="([^"]+)" x-morph="([^"]+)"\\\\w\\*`

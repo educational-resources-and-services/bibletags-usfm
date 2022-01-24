@@ -39,6 +39,10 @@ const manualReadingCorrectionsByLoc = {
     computed: ["Q:1-27,+1,29-33","K"],
     corrected: ["Q:1-26,+1,28-33","K"],
   },
+  '10019041': {
+    computed: ["Q","K:1-10,+1-2,13-16"],
+    corrected: ["Q","K:1-9,+1-2,12-16"],
+  },
   '10021006': {
     computed: ["Q:1,+1,3-15","K"],
     corrected: ["Q:+1,2-15","K"],
