@@ -103,11 +103,14 @@ const normalizeGreek = str => {
 
   str = str.toLowerCase()
   str = str.replace(/[,.·()’ʼ•:;?⋄–!⸁—⸅;⸄]/g, '')
-
+  
   // get rid of irrelevant CNTR annotations (see /cntr/transcriptions/#README.txt)
   str = str.replace(/[\\|\/][0-9]*/g, '')
   str = str.replace(/[&*_+\-"'`]/g, '')
   str = str.replace(/  +/g, ' ').trim()
+
+  // make sure words ending in sigma have the final letter
+  str = str.replace(/σ(?= |$)/g, 'ς')
 
   // swap out supplied words with … (see /cntr/transcriptions/#README.txt)
   str = str.replace(/[~+][^\s]+/g, "…").replace(/…(?: …)+/g, "…")
