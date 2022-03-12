@@ -143,4 +143,4 @@ AFTER
 \w בְּאֵ֥ר שָֽׁבַע|lemma="בְּאֵר שֶׁבַע" strong="H08840" x-morph="He,Np" x-id="01fFu"\w*׃
 ```
 
-
+#### 7. (UHB only) Added a `\p` after each verse-ending פ (petucha).

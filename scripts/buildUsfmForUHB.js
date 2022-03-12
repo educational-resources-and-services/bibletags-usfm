@@ -113,6 +113,9 @@ const outputUsfmDir = './usfm/uhb'
       if(/\\ca/.test(sourceUsfm)) throw `Still has \\ca tag: ${(sourceUsfm.replace(/\n/g, '\\n').match(/.{10}\\ca.{10}/) || {})[0]}`
       if(/\\va/.test(sourceUsfm)) throw `Still has \\va tag: ${(sourceUsfm.replace(/\n/g, '\\n').match(/.{10}\\va.{10}/) || {})[0]}`
 
+      // put paragraphs after verse-ending פ where needed
+      sourceUsfm = sourceUsfm.replace(/׃פ\n\n\\v/g, '׃פ\n\n\\p\n\\v')
+
       // modify certain lemmas
       sourceUsfm = sourceUsfm.replace(/lemma="(?:יָלַךְ|הָלַךְ)" strong="([^"]*?:)?H3212"/g, 'lemma="הָלַךְ" strong="$1H1980"')
       if(/יָלַךְ/.test(sourceUsfm)) throw `Still has יָלַךְ: ${(sourceUsfm.replace(/\n/g, '\\n').match(/.{10}יָלַךְ.{20}/) || {})[0]}`
