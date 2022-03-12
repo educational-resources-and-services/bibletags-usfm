@@ -109,8 +109,9 @@ const normalizeGreek = str => {
   str = str.replace(/[&*_+\-"'`]/g, '')
   str = str.replace(/  +/g, ' ').trim()
 
-  // make sure words ending in sigma have the final letter
+  // make sure words ending in sigma have the final letter, and non-word-ending sigmas are not final letters
   str = str.replace(/σ(?= |$)/g, 'ς')
+  str = str.replace(/ς(?![ ,.·[\];"|–):!ʹ]|$)/g, 'σ')
 
   // swap out supplied words with … (see /cntr/transcriptions/#README.txt)
   str = str.replace(/[~+][^\s]+/g, "…").replace(/…(?: …)+/g, "…")
