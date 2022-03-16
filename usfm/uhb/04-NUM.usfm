@@ -6005,7 +6005,7 @@
 \w אֲשֶׁ֖ר|lemma="אֲשֶׁר" strong="H08341" x-morph="He,Tr" x-id="04H8N"\w*
 \w עַל|lemma="עַל" strong="H59211" x-morph="He,R" x-id="04Lbv"\w*־\w פְּנֵ֥י|lemma="פָּנִים" strong="H64400" x-morph="He,Ncbpc" x-id="04T7M"\w*
 \w הָ⁠אֲדָמָֽה|lemma="אֲדָמָה" strong="d:H01270" x-morph="He,Td:Ncfsa" x-id="04FU3"\w*׃ס
-\zApparatusJson {"words":[{"w":"עָנָ֣יו","id":"042H9","lemma":"עָנָו","strong":"H60400","morph":"He,Ncmsc:Sp3ms"}],"ancient":[],"critical":["Q:1-2,+1,4-10","K"]}\zApparatusJson*
+\zApparatusJson {"words":[{"w":"עָנָ֣י⁠ו","id":"042H9","lemma":"עָנָו","strong":"H60400","morph":"He,Ncmsc:Sp3ms"}],"ancient":[],"critical":["Q:1-2,+1,4-10","K"]}\zApparatusJson*
 
 \v 4
 \w וַ⁠יֹּ֨אמֶר|lemma="אָמַר" strong="c:H05590" x-morph="He,C:Vqw3ms" x-id="048pG"\w*
@@ -7069,7 +7069,7 @@
 \w לָ⁠ת֣וּר|lemma="תּוּר" strong="l:H84460" x-morph="He,R:Vqc" x-id="0497t"\w*
 \w אֶת|lemma="אֵת" strong="H08530" x-morph="He,To" x-id="04QKx"\w*־\w הָ⁠אָ֑רֶץ|lemma="אֶרֶץ" strong="d:H07760" x-morph="He,Td:Ncbsa" x-id="04pWH"\w*
 \w וַ⁠יָּשֻׁ֗בוּ|lemma="שׁוּב" strong="c:H77250" x-morph="He,C:Vqw3mp" x-id="04Ej2"\w*
-\w וַיַּלִּ֤ינוּ|lemma="לוּן" strong="c:H38852" x-morph="He,C:Vhw3mp" x-id="04BcD"\w*
+\w וַ⁠יַּלִּ֤ינוּ|lemma="לוּן" strong="c:H38852" x-morph="He,C:Vhw3mp" x-id="04BcD"\w*
 \w עָלָי⁠ו֙|lemma="עַל" strong="H59211" x-morph="He,R:Sp3ms" x-id="04VZJ"\w*
 \w אֶת|lemma="אֵת" strong="H08530" x-morph="He,To" x-id="04aNY"\w*־\w כָּל|lemma="כֹּל" strong="H36050" x-morph="He,Ncmsc" x-id="0406O"\w*־\w הָ֣⁠עֵדָ֔ה|lemma="עֵדָה" strong="d:H57120" x-morph="He,Td:Ncfsa" x-id="04wHD"\w*
 \w לְ⁠הוֹצִ֥יא|lemma="יָצָא" strong="l:H33180" x-morph="He,R:Vhc" x-id="04RAe"\w*
@@ -10270,7 +10270,7 @@
 \w אֶת|lemma="אֵת" strong="H08530" x-morph="He,To" x-id="04mAx"\w*־\w יַעְזֵ֔ר|lemma="יַעֲזֵיר" strong="H32700" x-morph="He,Np" x-id="04Seb"\w*
 \w וַֽ⁠יִּלְכְּד֖וּ|lemma="לָכַד" strong="c:H39200" x-morph="He,C:Vqw3mp" x-id="04N97"\w*
 \w בְּנֹתֶ֑י⁠הָ|lemma="בַּת" strong="H13230" x-morph="He,Ncfpc:Sp3fs" x-id="04H5x"\w*
-\w וַיּ֖וֹרֶשׁ|lemma="יָרַשׁ" strong="c:H34230" x-morph="He,C:Vhw3ms" x-id="047tE"\w*
+\w וַ⁠יּ֖וֹרֶשׁ|lemma="יָרַשׁ" strong="c:H34230" x-morph="He,C:Vhw3ms" x-id="047tE"\w*
 \w אֶת|lemma="אֵת" strong="H08530" x-morph="He,To" x-id="04ARS"\w*־\w הָ⁠אֱמֹרִ֥י|lemma="אֱמֹרִי" strong="d:H05670" x-morph="He,Td:Ngmsa" x-id="04ICn"\w*
 \w אֲשֶׁר|lemma="אֲשֶׁר" strong="H08341" x-morph="He,Tr" x-id="044Jd"\w*־\w שָֽׁם|lemma="שָׁם" strong="H80330" x-morph="He,D" x-id="04Ze8"\w*׃
 \zApparatusJson {"words":[{"w":"ו⁠יירש","id":"04I0l","lemma":"יָרַשׁ","strong":"c:H34230","morph":"He,C:Vhw3ms"}],"ancient":[],"critical":["Q","K:1-7,+1,9-12"]}\zApparatusJson*
@@ -11152,7 +11152,7 @@
 \w תִרְאֶ֑ה|lemma="רָאָה" strong="H72000" x-morph="He,Vqi2ms" x-id="048PQ"\w*
 \w וְ⁠קָבְ⁠נוֹ|lemma="קָבַב" strong="c:H68950" x-morph="He,C:Vqv2ms:Sp3ms" x-id="04vL8"\w*־\w לִ֖⁠י|lemma="" strong="l" x-morph="He,R:Sp1cs" x-id="04x65"\w*
 \w מִ⁠שָּֽׁם|lemma="שָׁם" strong="m:H80330" x-morph="He,R:D" x-id="04pvS"\w*׃
-\zApparatusJson {"words":[{"w":"לך","id":"04xgT","lemma":"הָלַךְ","strong":"H19800","morph":"He,Vqv2ms:Sh"}],"ancient":[],"critical":["Q:1-3,+1,5-21","K"]}\zApparatusJson*
+\zApparatusJson {"words":[{"w":"ל⁠ך","id":"04xgT","lemma":"הָלַךְ","strong":"H19800","morph":"He,Vqv2ms:Sh"}],"ancient":[],"critical":["Q:1-3,+1,5-21","K"]}\zApparatusJson*
 
 \v 14
 \w וַ⁠יִּקָּחֵ֨⁠הוּ֙|lemma="לָקַח" strong="c:H39470" x-morph="He,C:Vqw3ms:Sp3ms" x-id="043z3"\w*
@@ -12747,7 +12747,7 @@
 \v 5
 \w וַ⁠יַּקְרֵ֥ב|lemma="קָרַב" strong="c:H71260" x-morph="He,C:Vhw3ms" x-id="04zo7"\w*
 \w מֹשֶׁ֛ה|lemma="מֹשֶׁה" strong="H48720" x-morph="He,Np" x-id="044nQ"\w*
-\w אֶת|lemma="אֵת" strong="H08530" x-morph="He,To" x-id="04UCr"\w*־\w מִשְׁפָּטָן|lemma="מִשְׁפָּט" strong="H49410" x-morph="He,Ncmsc:Sp3fp" x-id="04MGz"\w*
+\w אֶת|lemma="אֵת" strong="H08530" x-morph="He,To" x-id="04UCr"\w*־\w מִשְׁפָּטָ⁠ן|lemma="מִשְׁפָּט" strong="H49410" x-morph="He,Ncmsc:Sp3fp" x-id="04MGz"\w*
 \w לִ⁠פְנֵ֥י|lemma="פָּנִים" strong="l:H64400" x-morph="He,R:Ncbpc" x-id="04oa4"\w*
 \w יְהוָֽה|lemma="יְהֹוָה" strong="H30680" x-morph="He,Np" x-id="04Z13"\w*׃ס
 
@@ -14862,7 +14862,7 @@
 
 \v 7
 \w וְ⁠לָ֣⁠מָּה|lemma="מָה" strong="c:l:H41000" x-morph="He,C:R:Ti" x-id="04GIX"\w*
-\w תְנִיא֔וּן|lemma="נוּא" strong="H51060" x-morph="He,Vhi2mp:Sn" x-id="04du8"\w*
+\w תְנִיא֔וּ⁠ן|lemma="נוּא" strong="H51060" x-morph="He,Vhi2mp:Sn" x-id="04du8"\w*
 \w אֶת|lemma="אֵת" strong="H08530" x-morph="He,To" x-id="04lDj"\w*־\w לֵ֖ב|lemma="לֵב" strong="H38201" x-morph="He,Ncmsc" x-id="04gjl"\w*
 \w בְּנֵ֣י|lemma="בֵּן" strong="H11211" x-morph="He,Ncmpc" x-id="04hUk"\w*
 \w יִשְׂרָאֵ֑ל|lemma="יִשְׂרָאֵל" strong="H34780" x-morph="He,Np" x-id="04FlP"\w*
@@ -15893,7 +15893,7 @@
 \w לְ⁠מַעֲלֵ֤ה עַקְרַבִּים֙|lemma="מַעֲלֵה עַקְרַבִּים" strong="l:H46100" x-morph="He,R:Np" x-id="04RTz"\w*
 \w וְ⁠עָ֣בַר|lemma="עָבַר" strong="c:H56741" x-morph="He,C:Vqq3ms" x-id="04y7r"\w*
 \w צִ֔נָ⁠ה|lemma="צִן" strong="H67900" x-morph="He,Np:Sd" x-id="04vPz"\w*
-\w וְהָיוּ֙|lemma="הָיָה" strong="c:H19610" x-morph="He,C:Vqq3cp" x-id="04Ag7"\w*
+\w וְ⁠הָיוּ֙|lemma="הָיָה" strong="c:H19610" x-morph="He,C:Vqq3cp" x-id="04Ag7"\w*
 \w תּֽוֹצְאֹתָ֔י⁠ו|lemma="תּוֹצָאָה" strong="H84440" x-morph="He,Ncfpc:Sp3ms" x-id="04SGX"\w*
 \w מִ⁠נֶּ֖גֶב|lemma="נֶגֶב" strong="m:H50450" x-morph="He,R:Ncmsa" x-id="04aI7"\w*
 \w לְ⁠קָדֵ֣שׁ בַּרְנֵ֑עַ|lemma="קָדֵשׁ בַּרְנֵעַ" strong="l:H69470" x-morph="He,R:Np" x-id="04XVj"\w*

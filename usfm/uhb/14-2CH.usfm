@@ -872,7 +872,7 @@
 \w וְ⁠שֵׁ֥ם|lemma="שֵׁם" strong="c:H80340" x-morph="He,C:Ncmsc" x-id="141T8"\w*
 \w הַ⁠שְּׂמָאלִ֖י|lemma="שְׂמֹאול" strong="d:H80400" x-morph="He,Td:Aamsa" x-id="14CjE"\w*
 \w בֹּֽעַז|lemma="בֹּעַז" strong="H11620" x-morph="He,Np" x-id="14Dnl"\w*׃ס
-\zApparatusJson {"words":[{"w":"הַיְמָנִי֙","id":"14TlO","lemma":"יְמִינִי","strong":"d:H32330","morph":"He,Td:Aamsa"}],"ancient":[],"critical":["Q:1-12,+1,14-17","K"]}\zApparatusJson*
+\zApparatusJson {"words":[{"w":"הַ⁠יְמָנִי֙","id":"14TlO","lemma":"יְמִינִי","strong":"d:H32330","morph":"He,Td:Aamsa"}],"ancient":[],"critical":["Q:1-12,+1,14-17","K"]}\zApparatusJson*
 
 \c 4
 \p
@@ -1399,7 +1399,7 @@
 \v 13
 \w וַ⁠יְהִ֣י|lemma="הָיָה" strong="c:H19610" x-morph="He,C:Vqw3ms" x-id="14mVq"\w*
 \w כְ֠⁠אֶחָד|lemma="אֶחָד" strong="k:H02590" x-morph="He,R:Acmsa" x-id="145jR"\w*
-\w לַמְחַצְּרִ֨ים|lemma="חָצַר" strong="l:H26900" x-morph="He,Rd:Vprmpa" x-id="1499j"\w*
+\w לַ⁠מְחַצְּרִ֨ים|lemma="חָצַר" strong="l:H26900" x-morph="He,Rd:Vprmpa" x-id="1499j"\w*
 \w וְ⁠לַ⁠מְשֹֽׁרֲרִ֜ים|lemma="שִׁיר" strong="c:l:H78910" x-morph="He,C:Rd:Vormpa" x-id="14ao7"\w*
 \w לְ⁠הַשְׁמִ֣יעַ|lemma="שָׁמַע" strong="l:H80850" x-morph="He,R:Vhc" x-id="14fqj"\w*
 \w קוֹל|lemma="קוֹל" strong="H69631" x-morph="He,Ncmsa" x-id="14pRd"\w*־\w אֶחָ֗ד|lemma="אֶחָד" strong="H02590" x-morph="He,Acmsa" x-id="14X62"\w*
@@ -2692,7 +2692,7 @@
 \w וּ⁠מָאתָ֑יִם|lemma="מֵאָה" strong="c:H39670" x-morph="He,C:Acbda" x-id="14o9Z"\w*
 \w הָ⁠רֹדִ֖ים|lemma="רָדָה" strong="d:H72871" x-morph="He,Td:Vqrmpa" x-id="1409N"\w*
 \w בָּ⁠עָֽם|lemma="עַם" strong="b:H59711" x-morph="He,Rd:Ncmsa" x-id="141IL"\w*׃
-\zApparatusJson {"words":[{"w":"הַנִּצָּבִ֛ים","id":"140Oj","lemma":"נָצַב","strong":"d:H53240","morph":"He,Td:VNrmpa"}],"ancient":[],"critical":["Q:1-2,+1,4-10","K"]}\zApparatusJson*
+\zApparatusJson {"words":[{"w":"הַ⁠נִּצָּבִ֛ים","id":"140Oj","lemma":"נָצַב","strong":"d:H53240","morph":"He,Td:VNrmpa"}],"ancient":[],"critical":["Q:1-2,+1,4-10","K"]}\zApparatusJson*
 
 \v 11
 \w וְ⁠אֶת|lemma="אֵת" strong="c:H08530" x-morph="He,C:To" x-id="14NtQ"\w*־\w בַּת|lemma="בַּת" strong="H13230" x-morph="He,Ncfsc" x-id="14bKZ"\w*־\w פַּרְעֹ֗ה|lemma="פַּרְעֹה" strong="H65470" x-morph="He,Np" x-id="14iHY"\w*
@@ -5352,7 +5352,7 @@
 \w וּ⁠נְתַנְיָ֡הוּ|lemma="נְתַנְיָה" strong="c:H54180" x-morph="He,C:Np" x-id="14bGR"\w*
 \w וּ⁠זְבַדְיָ֡הוּ|lemma="זְבַדְיָה" strong="c:H20690" x-morph="He,C:Np" x-id="14QEz"\w*
 \w וַ⁠עֲשָׂהאֵ֡ל|lemma="עֲשָׂהאֵל" strong="c:H62140" x-morph="He,C:Np" x-id="14uhn"\w*
-\w וּשְׁמִֽירָמ֡וֹת|lemma="שְׁמִירָמוֹת" strong="c:H80700" x-morph="He,C:Np" x-id="14AZI"\w*
+\w וּ⁠שְׁמִֽירָמ֡וֹת|lemma="שְׁמִירָמוֹת" strong="c:H80700" x-morph="He,C:Np" x-id="14AZI"\w*
 \w וִֽ⁠יהוֹנָתָן֩|lemma="יְהוֹנָתָן" strong="c:H30830" x-morph="He,C:Np" x-id="14YP9"\w*
 \w וַ⁠אֲדֹ֨נִיָּ֧הוּ|lemma="אֲדֹנִיָּה" strong="c:H01380" x-morph="He,C:Np" x-id="14blx"\w*
 \w וְ⁠טֽוֹבִיָּ֛הוּ|lemma="טוֹבִיָּה" strong="c:H29000" x-morph="He,C:Np" x-id="14XcJ"\w*
@@ -6020,7 +6020,7 @@
 \w וַ⁠יֹּ֣אמֶר|lemma="אָמַר" strong="c:H05590" x-morph="He,C:Vqw3ms" x-id="14Nrr"\w*
 \w לָֽ⁠רַכָּ֗ב|lemma="רַכָּב" strong="l:H73950" x-morph="He,Rd:Ncmsa" x-id="14kcl"\w*
 \w הֲפֹ֧ךְ|lemma="הָפַךְ" strong="H20150" x-morph="He,Vqv2ms" x-id="144Q6"\w*
-\w יָדְךָ֛|lemma="יָד" strong="H30270" x-morph="He,Ncbsc:Sp2ms" x-id="14gZZ"\w*
+\w יָדְ⁠ךָ֛|lemma="יָד" strong="H30270" x-morph="He,Ncbsc:Sp2ms" x-id="14gZZ"\w*
 \w וְ⁠הוֹצֵאתַ֥⁠נִי|lemma="יָצָא" strong="c:H33180" x-morph="He,C:Vhq2ms:Sp1cs" x-id="147JU"\w*
 \w מִן|lemma="מִן" strong="H44801" x-morph="He,R" x-id="14vjD"\w*־\w הַֽ⁠מַּחֲנֶ֖ה|lemma="מַחֲנֶה" strong="d:H42640" x-morph="He,Td:Ncbsa" x-id="14Z6J"\w*
 \w כִּ֥י|lemma="כִּי" strong="H35881" x-morph="He,C" x-id="14yqr"\w*
@@ -8137,7 +8137,7 @@
 \w קְבָרֻ֖⁠הוּ|lemma="קָבַר" strong="H69120" x-morph="He,Vqp3cp:Sp3ms" x-id="14dho"\w*
 \w בְּ⁠קִבְר֥וֹת|lemma="קֶבֶר" strong="b:H69130" x-morph="He,R:Ncmpc" x-id="14aS3"\w*
 \w הַ⁠מְּלָכִֽים|lemma="מֶלֶךְ" strong="d:H44280" x-morph="He,Td:Ncmpa" x-id="140if"\w*׃ס
-\zApparatusJson {"words":[{"w":"בְּמַחֲלוּיִ֣ם","id":"14ncW","lemma":"מַחְלֻי","strong":"b:H42510","morph":"He,R:Ncmpa"}],"ancient":[],"critical":["Q:1-5,+1,7-25","K"]}\zApparatusJson*
+\zApparatusJson {"words":[{"w":"בְּ⁠מַחֲלוּיִ֣ם","id":"14ncW","lemma":"מַחְלֻי","strong":"b:H42510","morph":"He,R:Ncmpa"}],"ancient":[],"critical":["Q:1-5,+1,7-25","K"]}\zApparatusJson*
 
 \v 26
 \w וְ⁠אֵ֖לֶּה|lemma="אֵלֶּה" strong="c:H04280" x-morph="He,C:Pdxcp" x-id="14DOY"\w*
@@ -8167,7 +8167,7 @@
 \w אֲמַצְיָ֥הוּ|lemma="אֲמַצְיָה" strong="H05580" x-morph="He,Np" x-id="1445S"\w*
 \w בְנ֖⁠וֹ|lemma="בֵּן" strong="H11211" x-morph="He,Ncmsc:Sp3ms" x-id="14lJS"\w*
 \w תַּחְתָּֽי⁠ו|lemma="תַּחַת" strong="H84780" x-morph="He,R:Sp3ms" x-id="14o8j"\w*׃פ
-\zApparatusJson {"words":[{"w":"יִ֧רֶ֞ב","id":"14J4y","lemma":"רֹב","strong":"c:H72350","morph":"He,C:Vqj3ms"}],"ancient":[],"critical":["Q:1,+1,3-17","K"]}\zApparatusJson*
+\zApparatusJson {"words":[{"w":"יִ֧רֶ֞ב","id":"14J4y","lemma":"רֹב","strong":"c:H72350","morph":"He,Vqj3ms"}],"ancient":[],"critical":["Q:1,+1,3-17","K"]}\zApparatusJson*
 
 \c 25
 \p
@@ -8475,7 +8475,7 @@
 \w לך|lemma="הָלַךְ" strong="H19800" x-morph="He,Vqv2ms" x-id="14UOg"\w*
 \w נִתְרָאֶ֥ה|lemma="רָאָה" strong="H72000" x-morph="He,Vth1cp" x-id="14Sfr"\w*
 \w פָנִֽים|lemma="פָּנִים" strong="H64400" x-morph="He,Ncbpa" x-id="142LR"\w*׃
-\zApparatusJson {"words":[{"w":"לך","id":"14MrO","lemma":"הָלַךְ","strong":"H19800","morph":"He,Vqv2ms:Sh"}],"ancient":[],"critical":["Q:1-14,+1,16-17","K"]}\zApparatusJson*
+\zApparatusJson {"words":[{"w":"לְכָ֖⁠ה","id":"14T10","lemma":"הָלַךְ","strong":"H19800","morph":"He,Vqv2ms:Sh"}],"ancient":[],"critical":["Q:1-14,+1,16-17","K"]}\zApparatusJson*
 
 \v 18
 \w וַ⁠יִּשְׁלַ֞ח|lemma="שָׁלַח" strong="c:H79710" x-morph="He,C:Vqw3ms" x-id="14z1i"\w*
@@ -8753,7 +8753,7 @@
 \w הַ⁠יֹּשְׁבִ֥ים|lemma="יָשַׁב" strong="d:H34270" x-morph="He,Td:Vqrmpa" x-id="14WFT"\w*
 \w בְּ⁠גוּר־בָּ֖עַל|lemma="גּוּר־בַּעַל" strong="b:H14850" x-morph="He,R:Np" x-id="14VeO"\w*
 \w וְ⁠הַ⁠מְּעוּנִֽים|lemma="מְעוּנִי" strong="c:d:H45860" x-morph="He,C:Td:Ngmpa" x-id="14d1i"\w*׃
-\zApparatusJson {"words":[{"w":"הָֽעַרְבִ֛ים","id":"149Hi","lemma":"עֲרָבִי","strong":"d:H61630","morph":"He,Td:Ngmpa"}],"ancient":[],"critical":["Q:1-5,+1,7-9","K"]}\zApparatusJson*
+\zApparatusJson {"words":[{"w":"הָֽ⁠עַרְבִ֛ים","id":"149Hi","lemma":"עֲרָבִי","strong":"d:H61630","morph":"He,Td:Ngmpa"}],"ancient":[],"critical":["Q:1-5,+1,7-9","K"]}\zApparatusJson*
 
 \v 8
 \w וַ⁠יִּתְּנ֧וּ|lemma="נָתַן" strong="c:H54140" x-morph="He,C:Vqw3mp" x-id="14nXB"\w*
@@ -8984,7 +8984,7 @@
 \w מוֹת֗⁠וֹ|lemma="מָוֶת" strong="H41940" x-morph="He,Ncmsc:Sp3ms" x-id="14hq7"\w*
 \w וַ⁠יֵּ֜שֶׁב|lemma="יָשַׁב" strong="c:H34270" x-morph="He,C:Vqw3ms" x-id="14uzc"\w*
 \w בֵּ֤ית|lemma="בַּיִת" strong="H10042" x-morph="He,Ncmsc" x-id="145sU"\w*
-\w הַֽחָפְשִׁית֙|lemma="חָפְשִׁית" strong="d:H26690" x-morph="He,Td:Ncfsa" x-id="14gHQ"\w*
+\w הַֽ⁠חָפְשִׁית֙|lemma="חָפְשִׁית" strong="d:H26690" x-morph="He,Td:Ncfsa" x-id="14gHQ"\w*
 \w מְצֹרָ֔ע|lemma="צָרַע" strong="H68790" x-morph="He,VPsmsa" x-id="14Am5"\w*
 \w כִּ֥י|lemma="כִּי" strong="H35881" x-morph="He,C" x-id="14kpb"\w*
 \w נִגְזַ֖ר|lemma="גָּזַר" strong="H15040" x-morph="He,VNp3ms" x-id="14qLh"\w*
@@ -9697,7 +9697,7 @@
 \w אַתֶּ֥ם|lemma="אַתָּה" strong="H08594" x-morph="He,Pp2mp" x-id="14Z9a"\w*
 \w רֹאִ֖ים|lemma="רָאָה" strong="H72000" x-morph="He,Vqrmpa" x-id="14uxT"\w*
 \w בְּ⁠עֵינֵי⁠כֶֽם|lemma="עַיִן" strong="b:H58691" x-morph="He,R:Ncbdc:Sp2mp" x-id="14Xsb"\w*׃
-\zApparatusJson {"words":[{"w":"לְזַֽעֲוָה֙","id":"14j1V","lemma":"זַעֲוָה","strong":"l:H21890","morph":"He,R:Ncfsa"}],"ancient":[],"critical":["Q:1-7,+1,9-14","K"]}\zApparatusJson*
+\zApparatusJson {"words":[{"w":"לְ⁠זַֽעֲוָה֙","id":"14j1V","lemma":"זַעֲוָה","strong":"l:H21890","morph":"He,R:Ncfsa"}],"ancient":[],"critical":["Q:1-7,+1,9-14","K"]}\zApparatusJson*
 
 \v 9
 \w וְ⁠הִנֵּ֛ה|lemma="הִנֵּה" strong="c:H20090" x-morph="He,C:Tm" x-id="14bib"\w*
@@ -9763,7 +9763,7 @@
 \w וּ⁠מִן|lemma="מִן" strong="c:H44801" x-morph="He,C:R" x-id="14gu8"\w*־\w בְּנֵי֙|lemma="בֵּן" strong="H11211" x-morph="He,Ncmpc" x-id="14g72"\w*
 \w אֱלִ֣יצָפָ֔ן|lemma="אֱלִיצָפָן" strong="H04690" x-morph="He,Np" x-id="14t3g"\w*
 \w שִׁמְרִ֖י|lemma="שִׁמְרִי" strong="H81130" x-morph="He,Np" x-id="14gNK"\w*
-\w וִיעִיאֵ֑ל|lemma="יְעִיאֵל" strong="c:H32730" x-morph="He,C:Np" x-id="14Isb"\w*
+\w וִ⁠יעִיאֵ֑ל|lemma="יְעִיאֵל" strong="c:H32730" x-morph="He,C:Np" x-id="14Isb"\w*
 \w וּ⁠מִן|lemma="מִן" strong="c:H44801" x-morph="He,C:R" x-id="14RgM"\w*־\w בְּנֵ֣י|lemma="בֵּן" strong="H11211" x-morph="He,Ncmpc" x-id="14PUv"\w*
 \w אָסָ֔ף|lemma="אָסָף" strong="H06230" x-morph="He,Np" x-id="148OM"\w*
 \w זְכַרְיָ֖הוּ|lemma="זְכַרְיָה" strong="H21481" x-morph="He,Np" x-id="14fSz"\w*
@@ -11253,7 +11253,7 @@
 \w וַ⁠יָּבֹא֙|lemma="בּוֹא" strong="c:H09350" x-morph="He,C:Vqw3ms" x-id="14XEF"\w*
 \w בֵּ֣ית|lemma="בַּיִת" strong="H10042" x-morph="He,Ncmsc" x-id="14bpB"\w*
 \w אֱלֹהָ֔י⁠ו|lemma="אֱלֹהִים" strong="H04300" x-morph="He,Ncmpc:Sp3ms" x-id="14xzo"\w*
-\w וּמִֽיצִיאֵ֣י|lemma="יָצִיא" strong="c:m:H33290" x-morph="He,C:R:Ncmsc" x-id="14btG"\w*
+\w וּ⁠מִֽ⁠יצִיאֵ֣י|lemma="יָצִיא" strong="c:m:H33290" x-morph="He,C:R:Ncmsc" x-id="14btG"\w*
 \w מֵעָ֔י⁠ו|lemma="מֵעֶה" strong="H45780" x-morph="He,Ncmpc:Sp3ms" x-id="14ZuW"\w*
 \w שָׁ֖ם|lemma="שָׁם" strong="H80330" x-morph="He,D" x-id="14eTM"\w*
 \w הִפִּילֻ֥⁠הוּ|lemma="נָפַל" strong="H53070" x-morph="He,Vhp3cp:Sp3ms" x-id="14QX6"\w*
@@ -11708,7 +11708,7 @@
 \w אֶת|lemma="אֵת" strong="H08530" x-morph="He,To" x-id="1438F"\w*־\w יְהוָ֖ה|lemma="יְהֹוָה" strong="H30680" x-morph="He,Np" x-id="143kW"\w*
 \w אֱלֹהֵ֥י|lemma="אֱלֹהִים" strong="H04300" x-morph="He,Ncmpc" x-id="14Sx7"\w*
 \w יִשְׂרָאֵֽל|lemma="יִשְׂרָאֵל" strong="H34780" x-morph="He,Np" x-id="14tzj"\w*׃
-\zApparatusJson {"words":[{"w":"וַיִּ֙בֶן֙","id":"143ym","lemma":"בָּנָה","strong":"c:H11290","morph":"He,C:Vqw3ms"}],"ancient":[],"critical":["Q:+1,2-16","K"]}\zApparatusJson*
+\zApparatusJson {"words":[{"w":"וַ⁠יִּ֙בֶן֙","id":"143ym","lemma":"בָּנָה","strong":"c:H11290","morph":"He,C:Vqw3ms"}],"ancient":[],"critical":["Q:+1,2-16","K"]}\zApparatusJson*
 
 \v 17
 \w אֲבָל֙|lemma="אֲבָל" strong="H00610" x-morph="He,D" x-id="14P1f"\w*
@@ -11911,7 +11911,7 @@
 \w וְ⁠עַצְמוֹת֙|lemma="עֶצֶם" strong="c:H61060" x-morph="He,C:Ncfpc" x-id="14pvX"\w*
 \w כֹּֽהֲנִ֔ים|lemma="כֹּהֵן" strong="H35480" x-morph="He,Ncmpa" x-id="14Uj8"\w*
 \w שָׂרַ֖ף|lemma="שָׂרַף" strong="H83130" x-morph="He,Vqp3ms" x-id="14G48"\w*
-\w עַל|lemma="עַל" strong="H59211" x-morph="He,R" x-id="14HV8"\w*־\w מִזְבְּחוֹתָ֑ם|lemma="מִזְבֵּחַ" strong="H41960" x-morph="He,Ncmpa:Sp3mp" x-id="14ctA"\w*
+\w עַל|lemma="עַל" strong="H59211" x-morph="He,R" x-id="14HV8"\w*־\w מִזְבְּחוֹתָ֑⁠ם|lemma="מִזְבֵּחַ" strong="H41960" x-morph="He,Ncmpa:Sp3mp" x-id="14ctA"\w*
 \w וַ⁠יְטַהֵ֥ר|lemma="טָהֵר" strong="c:H28910" x-morph="He,C:Vpw3ms" x-id="14a1y"\w*
 \w אֶת|lemma="אֵת" strong="H08530" x-morph="He,To" x-id="146rl"\w*־\w יְהוּדָ֖ה|lemma="יְהוּדָה" strong="H30630" x-morph="He,Np" x-id="14bb3"\w*
 \w וְ⁠אֶת|lemma="אֵת" strong="c:H08530" x-morph="He,C:To" x-id="14iYR"\w*־\w יְרוּשָׁלִָֽם|lemma="יְרוּשָׁלִַ͏ם" strong="H33890" x-morph="He,Np" x-id="14p1e"\w*׃
@@ -11986,7 +11986,7 @@
 \w וּ⁠בִנְיָמִ֑ן|lemma="בִּנְיָמִין" strong="c:H11440" x-morph="He,C:Np" x-id="1412g"\w*
 \w ו⁠ישבי|lemma="יָשַׁב" strong="c:H34270" x-morph="He,C:Vqrmpc" x-id="142Uw"\w*
 \w יְרֽוּשָׁלִָֽם|lemma="יְרוּשָׁלִַ͏ם" strong="H33890" x-morph="He,Np" x-id="142u0"\w*׃
-\zApparatusJson {"words":[{"w":"וַיָּשֻׁ֖בוּ","id":"14NZ9","lemma":"שׁוּב","strong":"c:H77250","morph":"He,C:Vqw3mp"}],"ancient":[],"critical":["Q:1-25,+1,27","K"]}\zApparatusJson*
+\zApparatusJson {"words":[{"w":"וַ⁠יָּשֻׁ֖בוּ","id":"14NZ9","lemma":"שׁוּב","strong":"c:H77250","morph":"He,C:Vqw3mp"}],"ancient":[],"critical":["Q:1-25,+1,27","K"]}\zApparatusJson*
 
 \v 10
 \w וַֽ⁠יִּתְּנ֗וּ|lemma="נָתַן" strong="c:H54140" x-morph="He,C:Vqw3mp" x-id="14lJa"\w*
@@ -12261,7 +12261,7 @@
 \w הַ⁠זֶּ֖ה|lemma="זֶה" strong="d:H20880" x-morph="He,Td:Pdxms" x-id="14H0O"\w*
 \w וְ⁠לֹ֥א|lemma="לֹא" strong="c:H38080" x-morph="He,C:Tn" x-id="14VDL"\w*
 \w תִכְבֶּֽה|lemma="כָּבָה" strong="H35180" x-morph="He,Vqi3fs" x-id="142sQ"\w*׃
-\zApparatusJson {"words":[{"w":"וַֽיְקַטְּרוּ֙","id":"14gGn","lemma":"קָטַר","strong":"c:H69991","morph":"He,C:Vpw3mp"}],"ancient":[],"critical":["Q:1-3,+1,5-17","K"]}\zApparatusJson*
+\zApparatusJson {"words":[{"w":"וַֽ⁠יְקַטְּרוּ֙","id":"14gGn","lemma":"קָטַר","strong":"c:H69991","morph":"He,C:Vpw3mp"}],"ancient":[],"critical":["Q:1-3,+1,5-17","K"]}\zApparatusJson*
 
 \v 26
 \w וְ⁠אֶל|lemma="אֵל" strong="c:H04130" x-morph="He,C:R" x-id="14H9d"\w*־\w מֶ֣לֶךְ|lemma="מֶלֶךְ" strong="H44280" x-morph="He,Ncmsc" x-id="14Ebw"\w*
@@ -12443,7 +12443,7 @@
 \v 3
 \w וַ⁠יֹּ֣אמֶר|lemma="אָמַר" strong="c:H05590" x-morph="He,C:Vqw3ms" x-id="14ejV"\w*
 \w לַ֠⁠לְוִיִּם|lemma="לֵוִיִּי" strong="l:H38810" x-morph="He,Rd:Ngmpa" x-id="14VvU"\w*
-\w הַמְּבִינִ֨ים|lemma="בִּין" strong="d:H09950" x-morph="He,Td:Vhrmpa" x-id="14d6S"\w*
+\w הַ⁠מְּבִינִ֨ים|lemma="בִּין" strong="d:H09950" x-morph="He,Td:Vhrmpa" x-id="14d6S"\w*
 \w לְ⁠כָל|lemma="כֹּל" strong="l:H36050" x-morph="He,R:Ncmsc" x-id="14fmp"\w*־\w יִשְׂרָאֵ֜ל|lemma="יִשְׂרָאֵל" strong="H34780" x-morph="He,Np" x-id="14Txo"\w*
 \w הַ⁠קְּדוֹשִׁ֣ים|lemma="קָדוֹשׁ" strong="d:H69180" x-morph="He,Td:Aampa" x-id="14Tu6"\w*
 \w לַ⁠יהוָ֗ה|lemma="יְהֹוָה" strong="l:H30680" x-morph="He,R:Np" x-id="14CcH"\w*
@@ -12469,7 +12469,7 @@
 \zApparatusJson {"words":[{"w":"ה⁠מבונים","id":"14baW","lemma":"בִּין","strong":"d:H09950","morph":"He,Td:Vhrmpa"}],"ancient":[],"critical":["Q","K:1-2,+1,4-31"]}\zApparatusJson*
 
 \v 4
-\w והכונו|lemma="כּוּן" strong="c:H35591" x-morph="He,C:VNv2mp" x-id="14RjD"\w*
+\w ו⁠הכונו|lemma="כּוּן" strong="c:H35591" x-morph="He,C:VNv2mp" x-id="14RjD"\w*
 \w לְ⁠בֵית|lemma="בַּיִת" strong="l:H10042" x-morph="He,R:Ncmsc" x-id="141sS"\w*־\w אֲבוֹתֵי⁠כֶ֖ם|lemma="אָב" strong="H00010" x-morph="He,Ncmpc:Sp2mp" x-id="145R6"\w*
 \w כְּ⁠מַחְלְקוֹתֵי⁠כֶ֑ם|lemma="מַחֲלֹקֶת" strong="k:H42560" x-morph="He,R:Ncfpc:Sp2mp" x-id="14YQi"\w*
 \w בִּ⁠כְתָ֗ב|lemma="כָּתָב" strong="b:H37910" x-morph="He,R:Ncmsc" x-id="14v1z"\w*
@@ -12567,7 +12567,7 @@
 \w וּ⁠בָקָ֖ר|lemma="בָּקָר" strong="c:H12410" x-morph="He,C:Ncbsa" x-id="14OtU"\w*
 \w חֲמֵ֥שׁ|lemma="חָמֵשׁ" strong="H25680" x-morph="He,Acfsa" x-id="14fK2"\w*
 \w מֵאֽוֹת|lemma="מֵאָה" strong="H39670" x-morph="He,Acbpa" x-id="141F9"\w*׃
-\zApparatusJson {"words":[{"w":"וְ֠כָֽנַנְיָהוּ","id":"14hWe","lemma":"כּוֹנַנְיָהוּ","strong":"c:H35620","morph":"He,C:Np"}],"ancient":[],"critical":["Q:+1,2-17","K"]}\zApparatusJson*
+\zApparatusJson {"words":[{"w":"וְ֠⁠כָֽנַנְיָהוּ","id":"14hWe","lemma":"כּוֹנַנְיָהוּ","strong":"c:H35620","morph":"He,C:Np"}],"ancient":[],"critical":["Q:+1,2-17","K"]}\zApparatusJson*
 
 \v 10
 \w וַ⁠תִּכּ֖וֹן|lemma="כּוּן" strong="c:H35591" x-morph="He,C:VNw3fs" x-id="1447Z"\w*
@@ -13047,7 +13047,7 @@
 \w הַ⁠כֹּהֲנִ֤ים|lemma="כֹּהֵן" strong="d:H35480" x-morph="He,Td:Ncmpa" x-id="14wYy"\w*
 \w וְ⁠הָ⁠עָם֙|lemma="עַם" strong="c:d:H59711" x-morph="He,C:Td:Ncmsa" x-id="14aFR"\w*
 \w הִרְבּ֣וּ|lemma="רָבָה" strong="H72351" x-morph="He,Vhp3cp" x-id="14QWB"\w*
-\w למעול|lemma="מָעַל" strong="l:H46030" x-morph="He,R:Vqc" x-id="14EM8"\w*־\w מַ֔עַל|lemma="מָעַל" strong="H46030" x-morph="He,Ncmsa" x-id="14Obw"\w*
+\w ל⁠מעול|lemma="מָעַל" strong="l:H46030" x-morph="He,R:Vqc" x-id="14EM8"\w*־\w מַ֔עַל|lemma="מָעַל" strong="H46030" x-morph="He,Ncmsa" x-id="14Obw"\w*
 \w כְּ⁠כֹ֖ל|lemma="כֹּל" strong="k:H36050" x-morph="He,R:Ncmsc" x-id="14oTk"\w*
 \w תֹּעֲב֣וֹת|lemma="תּוֹעֵבַה" strong="H84410" x-morph="He,Ncfpc" x-id="14i0A"\w*
 \w הַ⁠גּוֹיִ֑ם|lemma="גּוֹי" strong="d:H14711" x-morph="He,Td:Ncmpa" x-id="145Vk"\w*
@@ -13057,7 +13057,7 @@
 \w אֲשֶׁ֥ר|lemma="אֲשֶׁר" strong="H08341" x-morph="He,Tr" x-id="14GW7"\w*
 \w הִקְדִּ֖ישׁ|lemma="קָדַשׁ" strong="H69420" x-morph="He,Vhp3ms" x-id="14Z5t"\w*
 \w בִּ⁠ירוּשָׁלִָֽם|lemma="יְרוּשָׁלִַ͏ם" strong="b:H33890" x-morph="He,R:Np" x-id="14Bvs"\w*׃
-\zApparatusJson {"words":[{"w":"לִמְעָל","id":"14ybh","lemma":"מָעַל","strong":"l:H46030","morph":"He,R:Vqc"}],"ancient":[],"critical":["Q:1-7,+1,9-18","K"]}\zApparatusJson*
+\zApparatusJson {"words":[{"w":"לִ⁠מְעָל","id":"14ybh","lemma":"מָעַל","strong":"l:H46030","morph":"He,R:Vqc"}],"ancient":[],"critical":["Q:1-7,+1,9-18","K"]}\zApparatusJson*
 
 \v 15
 \w וַ⁠יִּשְׁלַ֡ח|lemma="שָׁלַח" strong="c:H79710" x-morph="He,C:Vqw3ms" x-id="140tA"\w*

@@ -369,7 +369,7 @@
 \w אֱלֹהֵי⁠הֶ֖ם|lemma="אֱלֹהִים" strong="H04300" x-morph="He,Ncmpc:Sp3mp" x-id="361e4"\w*
 \w וְ⁠שָׁ֥ב|lemma="שׁוּב" strong="c:H77250" x-morph="He,C:Vqq3ms" x-id="36IdM"\w*
 \w שבות⁠ם|lemma="שְׁבוּת" strong="H76220" x-morph="He,Ncfsc:Sp3mp" x-id="363Or"\w*׃
-\zApparatusJson {"words":[{"w":"שְׁבִיתָֽם","id":"363TK","lemma":"שְׁבוּת","strong":"H76220","morph":"He,Ncfsc:Sp3mp"}],"ancient":[],"critical":["Q:1-16,+1","K"]}\zApparatusJson*
+\zApparatusJson {"words":[{"w":"שְׁבִיתָֽ⁠ם","id":"363TK","lemma":"שְׁבוּת","strong":"H76220","morph":"He,Ncfsc:Sp3mp"}],"ancient":[],"critical":["Q:1-16,+1","K"]}\zApparatusJson*
 
 \v 8
 \w שָׁמַ֨עְתִּי֙|lemma="שָׁמַע" strong="H80850" x-morph="He,Vqp1cs" x-id="36hgg"\w*
@@ -407,7 +407,7 @@
 \w עַמִּ⁠י֙|lemma="עַם" strong="H59711" x-morph="He,Ncmsc:Sp1cs" x-id="36DiL"\w*
 \w יְבָזּ֔וּ⁠ם|lemma="בָּזַז" strong="H09620" x-morph="He,Vqi3mp:Sp3mp" x-id="366ay"\w*
 \w וְ⁠יֶ֥תֶר|lemma="יֶתֶר" strong="c:H34991" x-morph="He,C:Ncmsc" x-id="36DhO"\w*
-\w גּוֹיִ֖י|lemma="גּוֹי" strong="H14711" x-morph="He,Ncmsa:Sp1cs" x-id="364dP"\w*
+\w גּוֹיִ֖⁠י|lemma="גּוֹי" strong="H14711" x-morph="He,Ncmsa:Sp1cs" x-id="364dP"\w*
 \w יִנְחָלֽוּ⁠ם|lemma="נָחַל" strong="H51570" x-morph="He,Vqi3mp:Sp3mp" x-id="36CvQ"\w*׃
 \zApparatusJson {"words":[{"w":"גוי","id":"36xvw","lemma":"גּוֹי","strong":"H14711","morph":"He,Ncmsa"}],"ancient":[],"critical":["Q","K:1-26,+1,28"]}\zApparatusJson*
 
@@ -720,7 +720,7 @@
 \w בַּ⁠יּ֣וֹם|lemma="יוֹם" strong="b:H31170" x-morph="He,Rd:Ncmsa" x-id="3698f"\w*
 \w הַ⁠ה֔וּא|lemma="הוּא" strong="d:H19310" x-morph="He,Td:Pp3ms" x-id="367gH"\w*
 \w יֵאָמֵ֥ר|lemma="אָמַר" strong="H05590" x-morph="He,VNi3ms" x-id="362O8"\w*
-\w לִירֽוּשָׁלִַ֖ם|lemma="יְרוּשָׁלִַ͏ם" strong="l:H33890" x-morph="He,R:Np" x-id="36NT5"\w*
+\w לִ⁠ירֽוּשָׁלִַ֖ם|lemma="יְרוּשָׁלִַ͏ם" strong="l:H33890" x-morph="He,R:Np" x-id="36NT5"\w*
 \w אַל|lemma="אַל" strong="H04080" x-morph="He,Tn" x-id="36rah"\w*־\w תִּירָ֑אִי|lemma="יָרֵא" strong="H33720" x-morph="He,Vqj2fs" x-id="36X4R"\w*
 \w צִיּ֖וֹן|lemma="צִיּוֹן" strong="H67260" x-morph="He,Np" x-id="36Xrq"\w*
 \w אַל|lemma="אַל" strong="H04080" x-morph="He,Tn" x-id="36xyn"\w*־\w יִרְפּ֥וּ|lemma="רָפָה" strong="H75030" x-morph="He,Vqj3mp" x-id="36gEW"\w*

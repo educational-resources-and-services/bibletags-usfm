@@ -310,7 +310,7 @@ const outputUsfmDir = './usfm/uhb'
           if((w.match(/\u2060/g) || []).length !== (morph.match(/:/g) || []).length) {
             const err = `morph parts do not equal word parts (designated by word joiners): ${w} // ${morph} // ${loc}`
             // console.log(err)
-            // throw err
+            throw err
           }
         }
 
