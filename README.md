@@ -144,3 +144,5 @@ AFTER
 ```
 
 #### 7. (UHB only) Added a `\p` after each verse-ending פ (petucha).
+
+#### 8. (UHB only) The lemma and strongs for `אֲרָם` when a part of the place name `פַּדָּן אֲרָם` have been changed to `אֲרָם` and `#H07580` respectively. This modification was preferred to combining this word together with `פַּדָּן` as a multi-word lemma, since `פַּדָּן` sometimes takes a directional ה suffix.

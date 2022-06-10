@@ -117,6 +117,7 @@ const outputUsfmDir = './usfm/uhb'
       sourceUsfm = sourceUsfm.replace(/׃פ\n\n\\v/g, '׃פ\n\n\\p\n\\v')
 
       // modify certain lemmas
+      sourceUsfm = sourceUsfm.replace(/\\w (אֲרָ֑ם|אֲרָ֔ם|אֲרָֽם|)\|lemma="פַּדָּן" strong="H6307"/g, '\\w $1|lemma="אֲרָם" strong="H0758"')
       sourceUsfm = sourceUsfm.replace(/lemma="(?:יָלַךְ|הָלַךְ)" strong="([^"]*?:)?H3212"/g, 'lemma="הָלַךְ" strong="$1H1980"')
       if(/יָלַךְ/.test(sourceUsfm)) throw `Still has יָלַךְ: ${(sourceUsfm.replace(/\n/g, '\\n').match(/.{10}יָלַךְ.{20}/) || {})[0]}`
       if(/H3212/.test(sourceUsfm)) throw `Still has H3212: ${(sourceUsfm.replace(/\n/g, '\\n').match(/.{30}H3212.{10}/) || {})[0]}`
@@ -259,7 +260,7 @@ const outputUsfmDir = './usfm/uhb'
           && match !== `\\w וְיִשְׁבִּ֨י|lemma="יִשְׁבּוֹ בְּנֹב"`  // lemma relates to the ketiv reading
           && match !== `\\w חרי⁠הם|lemma="חֲרֵי־יוֹנִים"`
           && match !== `\\w ל⁠בנימיני|lemma="בֶּן־יְמִינִי"`
-        ) throw `Still has ungrouped multi-word lemma: ${sourceUsfm.slice(matchIdx - 30, matchIdx + 230)}`
+        ) throw `Still has ungrouped multi-word lemma: ${match}\n\n${sourceUsfm.slice(matchIdx - 30, matchIdx + 230)}\n`
       }
       // console.log('allGroupedWordMorphs', Object.keys(allGroupedWordMorphs))
       
@@ -507,7 +508,7 @@ const outputUsfmDir = './usfm/uhb'
     console.log(`***********************`)
     console.log(``)
     console.log(`Syntax: \`npm run build-usfm-for-uhb [uhbDir]\`\n`)
-    console.log(`Example #1: \`npm run build-usfm-for-uhb ../hbo_uhb\``)
+    console.log(`Example #1: \`npm run build-usfm-for-uhb ../../hbo_uhb\``)
     console.log(``)
     console.log(`Note #1: \`uhbDir\` should point to your local clone of the unfoldingword.org/uhb repo.`)
     console.log(``)
