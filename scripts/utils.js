@@ -126,6 +126,33 @@ const stripHebrewVowelsEtc = str => (
     .replace(/\u200D/g,'')  // invalid character
 )
 
+const getHebrewStrongs = id => {
+  if(!/^H/.test(id)) return id
+  const endDigit = {
+    a: 1,
+    b: 2,
+    c: 3,
+    d: 4,
+    e: 5,
+    f: 6,
+  }[id.slice(-1)] || 0
+  return `H${`000${id.replace(/[^0-9]/g, '')}`.slice(-4)}${endDigit}`
+}
+
+const getGreekStrongs = id => {
+  let endDigit
+  if(!/\+/.test(id)) endDigit = 0
+  if(/\+1/.test(id)) endDigit = 5
+  if(endDigit === undefined) return ``
+  return `G${`000${id.slice(1).replace(/\+.*$/, '')}`.slice(-4)}${endDigit}`
+}
+
+const getStrongs = id => (
+  /^G/.test(id)
+    ? getGreekStrongs(id)
+    : getHebrewStrongs(id)
+)
+
 const utils = {
 
   normalizeGreek,
@@ -285,6 +312,8 @@ const utils = {
     }
 
   },
+
+  getStrongs,
 
 }
   
