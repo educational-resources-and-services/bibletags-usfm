@@ -12,14 +12,14 @@
 \w ὃς|lemma="ὅς" strong="G37390" x-morph="Gr,RR,,,,NMS,"\w*
 \w ἐγενήθη|lemma="γίνομαι" strong="G10960" x-morph="Gr,V,IAP3,,S,"\w*
 \w πρὸς|lemma="πρός" strong="G43140" x-morph="Gr,P,,,,,,,,,"\w*
-\w Σοφονιαν|lemma="Σοφονιας" x-morph="Gr,N,,,,,AMS,"\w*
+\w Σοφονιαν|lemma="Σοφονίας" strong="G63608" x-morph="Gr,N,,,,,AMS,"\w*
 \w τὸν|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,AMS,"\w*
 \w τοῦ|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,GMS,"\w*
-\w Χουσι|lemma="Χουσι" x-morph="Gr,N,,,,,GMS,"\w*
+\w Χουσι|lemma="Χουσι" strong="G62985" x-morph="Gr,N,,,,,GMS,"\w*
 \w υἱὸν|lemma="υἱός" strong="G52070" x-morph="Gr,N,,,,,AMS,"\w*
-\w Γοδολιου|lemma="Γοδολιας" x-morph="Gr,N,,,,,GMS,"\w*
+\w Γοδολιου|lemma="Γοδολιας" strong="G63609" x-morph="Gr,N,,,,,GMS,"\w*
 \w τοῦ|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,GMS,"\w*
-\w Αμαριου|lemma="Αμαριας" x-morph="Gr,N,,,,,GMS,"\w*
+\w Αμαριου|lemma="Αμαριας" strong="G64553" x-morph="Gr,N,,,,,GMS,"\w*
 \w τοῦ|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,GMS,"\w*
 \w Εζεκιου|lemma="Ἑζεκίας" strong="G14780" x-morph="Gr,N,,,,,GMS,"\w*
 \w ἐν|lemma="ἐν" strong="G17220" x-morph="Gr,P,,,,,,,,,"\w*
@@ -32,7 +32,7 @@
 
 \p
 \v 2
-\w ἐκλείψει|lemma="ἔκλειψις" x-morph="Gr,N,,,,,DFS,"\w*
+\w ἐκλείψει|lemma="ἔκλειψις" strong="G61837" x-morph="Gr,N,,,,,DFS,"\w*
 \w ἐκλιπέτω|lemma="ἐκλείπω" strong="G15870" x-morph="Gr,V,MAA3,,S,"\w*
 \w πάντα|lemma="πᾶς" strong="G39560" x-morph="Gr,A,,,,,AMS,"\w*
 \w ἀπὸ|lemma="ἀπό" strong="G05750" x-morph="Gr,P,,,,,,,,,"\w*
@@ -114,13 +114,13 @@
 \w οὐρανοῦ|lemma="οὐρανός" strong="G37720" x-morph="Gr,N,,,,,GMS,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
 \w τοὺς|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,AMP,"\w*
-\w ὀμνύοντας|lemma="ὄμνυμι" x-morph="Gr,V,PPA,AMP,"\w*
+\w ὀμνύοντας|lemma="ὄμνυμι" strong="G60258" x-morph="Gr,V,PPA,AMP,"\w*
 \w κατὰ|lemma="κατά" strong="G25960" x-morph="Gr,P,,,,,,,,,"\w*
 \w τοῦ|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,GMS,"\w*
 \w κυρίου|lemma="κύριος" strong="G29620" x-morph="Gr,N,,,,,GMS,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
 \w τοὺς|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,AMP,"\w*
-\w ὀμνύοντας|lemma="ὄμνυμι" x-morph="Gr,V,PPA,AMP,"\w*
+\w ὀμνύοντας|lemma="ὄμνυμι" strong="G60258" x-morph="Gr,V,PPA,AMP,"\w*
 \w κατὰ|lemma="κατά" strong="G25960" x-morph="Gr,P,,,,,,,,,"\w*
 \w τοῦ|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,GMS,"\w*
 \w βασιλέως|lemma="βασιλεύς" strong="G09350" x-morph="Gr,N,,,,,GMS,"\w*
@@ -205,10 +205,10 @@
 \w ἐκδικήσω|lemma="ἐκδικέω" strong="G15560" x-morph="Gr,V,IFA1,,S,"\w*
 \w ἐπὶ|lemma="ἐπί" strong="G19090" x-morph="Gr,P,,,,,,,,,"\w*
 \w πάντας|lemma="πᾶς" strong="G39560" x-morph="Gr,A,,,,,AMP,"\w*
-\w ἐμφανῶς|lemma="ἐμφανῶς" x-morph="Gr,D,,,,,,,,,"\w*
+\w ἐμφανῶς|lemma="ἐμφανῶς" strong="G65604" x-morph="Gr,D,,,,,,,,,"\w*
 \w ἐπὶ|lemma="ἐπί" strong="G19090" x-morph="Gr,P,,,,,,,,,"\w*
 \w τὰ|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,ANP,"\w*
-\w πρόπυλα|lemma="πρόπυλον" x-morph="Gr,N,,,,,ANP,"\w*
+\w πρόπυλα|lemma="πρόπυλον" strong="G66822" x-morph="Gr,N,,,,,ANP,"\w*
 \w ἐν|lemma="ἐν" strong="G17220" x-morph="Gr,P,,,,,,,,,"\w*
 \w ἐκείνῃ|lemma="ἐκεῖνος" strong="G15650" x-morph="Gr,RR,,,,DFS,"\w*
 \w τῇ|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,DFS,"\w*
@@ -239,14 +239,14 @@
 \w κραυγῆς|lemma="κραυγή" strong="G29060" x-morph="Gr,N,,,,,GFS,"\w*
 \w ἀπὸ|lemma="ἀπό" strong="G05750" x-morph="Gr,P,,,,,,,,,"\w*
 \w πύλης|lemma="πύλη" strong="G44390" x-morph="Gr,N,,,,,GFS,"\w*
-\w ἀποκεντούντων|lemma="ἀποκεντέω" x-morph="Gr,V,PPA,GMP,"\w*
+\w ἀποκεντούντων|lemma="ἀποκεντέω" strong="G61485" x-morph="Gr,V,PPA,GMP,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
-\w ὀλολυγμὸς|lemma="ὀλολυγμός" x-morph="Gr,N,,,,,NMS,"\w*
+\w ὀλολυγμὸς|lemma="ὀλολυγμός" strong="G66159" x-morph="Gr,N,,,,,NMS,"\w*
 \w ἀπὸ|lemma="ἀπό" strong="G05750" x-morph="Gr,P,,,,,,,,,"\w*
 \w τῆς|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,GFS,"\w*
 \w δευτέρας|lemma="δεύτερος" strong="G12080" x-morph="Gr,A,,,,,GFS,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
-\w συντριμμὸς|lemma="συντριμμός" x-morph="Gr,N,,,,,NMS,"\w*
+\w συντριμμὸς|lemma="συντριμμός" strong="G63050" x-morph="Gr,N,,,,,NMS,"\w*
 \w μέγας|lemma="μέγας" strong="G31730" x-morph="Gr,A,,,,,NMS,"\w*
 \w ἀπὸ|lemma="ἀπό" strong="G05750" x-morph="Gr,P,,,,,,,,,"\w*
 \w τῶν|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,GMP,"\w*
@@ -293,7 +293,7 @@
 \w καταφρονοῦντας|lemma="καταφρονέω" strong="G27060" x-morph="Gr,V,PPA,AMP,"\w*
 \w ἐπὶ|lemma="ἐπί" strong="G19090" x-morph="Gr,P,,,,,,,,,"\w*
 \w τὰ|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,ANP,"\w*
-\w φυλάγματα|lemma="φύλαγμα" x-morph="Gr,N,,,,,ANP,"\w*
+\w φυλάγματα|lemma="φύλαγμα" strong="G61112" x-morph="Gr,N,,,,,ANP,"\w*
 \w αὐτῶν|lemma="αὐτός" strong="G08460" x-morph="Gr,RR,,,,GMP,"\w*
 \w οἱ|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,NMP,"\w*
 \w λέγοντες|lemma="λέγω" strong="G30040" x-morph="Gr,V,PPA,NMP,"\w*
@@ -318,7 +318,7 @@
 \w δύναμις|lemma="δύναμις" strong="G14110" x-morph="Gr,N,,,,,NFS,"\w*
 \w αὐτῶν|lemma="αὐτός" strong="G08460" x-morph="Gr,RR,,,,GMP,"\w*
 \w εἰς|lemma="εἰς" strong="G15190" x-morph="Gr,P,,,,,,,,,"\w*
-\w διαρπαγὴν|lemma="διαρπαγή" x-morph="Gr,N,,,,,AFS,"\w*
+\w διαρπαγὴν|lemma="διαρπαγή" strong="G61401" x-morph="Gr,N,,,,,AFS,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
 \w οἱ|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,NMP,"\w*
 \w οἶκοι|lemma="οἶκος" strong="G36240" x-morph="Gr,N,,,,,NMP,"\w*
@@ -379,7 +379,7 @@
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
 \w ἀνάγκης|lemma="ἀνάγκη" strong="G03180" x-morph="Gr,N,,,,,GFS,"\w*
 \w ἡμέρα|lemma="ἡμέρα" strong="G22500" x-morph="Gr,N,,,,,NFS,"\w*
-\w ἀωρίας|lemma="ἀωρία" x-morph="Gr,N,,,,,GFS,"\w*
+\w ἀωρίας|lemma="ἀωρία" strong="G65747" x-morph="Gr,N,,,,,GFS,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
 \w ἀφανισμοῦ|lemma="ἀφανισμός" strong="G08540" x-morph="Gr,N,,,,,GMS,"\w*
 \w ἡμέρα|lemma="ἡμέρα" strong="G22500" x-morph="Gr,N,,,,,NFS,"\w*
@@ -401,7 +401,7 @@
 \w τὰς|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,AFP,"\w*
 \w πόλεις|lemma="πόλις" strong="G41720" x-morph="Gr,N,,,,,AFP,"\w*
 \w τὰς|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,AFP,"\w*
-\w ὀχυρὰς|lemma="ὀχυρός" x-morph="Gr,A,,,,,AFP,"\w*
+\w ὀχυρὰς|lemma="ὀχυρός" strong="G60671" x-morph="Gr,A,,,,,AFP,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
 \w ἐπὶ|lemma="ἐπί" strong="G19090" x-morph="Gr,P,,,,,,,,,"\w*
 \w τὰς|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,AFP,"\w*
@@ -435,7 +435,7 @@
 \w σάρκας|lemma="σάρξ" strong="G45610" x-morph="Gr,N,,,,,AFP,"\w*
 \w αὐτῶν|lemma="αὐτός" strong="G08460" x-morph="Gr,RR,,,,GMP,"\w*
 \w ὡς|lemma="ὡς" strong="G56130" x-morph="Gr,C,,,,,,,,,"\w*
-\w βόλβιτα|lemma="βόλβιτον" x-morph="Gr,N,,,,,ANP,"\w*
+\w βόλβιτα|lemma="βόλβιτον" strong="G66549" x-morph="Gr,N,,,,,ANP,"\w*
 
 \p
 \v 18
@@ -531,7 +531,7 @@
 \w ἀποκρίνεσθε|lemma="κρίνω" strong="G29190" x-morph="Gr,V,IPM2,,P,"\w*
 \w αὐτά|lemma="αὐτός" strong="G08460" x-morph="Gr,RR,,,,ANP,"\w*
 \w ὅπως|lemma="ὅπως" strong="G37040" x-morph="Gr,C,,,,,,,,,"\w*
-\w σκεπασθῆτε|lemma="σκεπάζω" x-morph="Gr,V,SAP2,,P,"\w*
+\w σκεπασθῆτε|lemma="σκεπάζω" strong="G60678" x-morph="Gr,V,SAP2,,P,"\w*
 \w ἐν|lemma="ἐν" strong="G17220" x-morph="Gr,P,,,,,,,,,"\w*
 \w ἡμέρᾳ|lemma="ἡμέρα" strong="G22500" x-morph="Gr,N,,,,,DFS,"\w*
 \w ὀργῆς|lemma="ὀργή" strong="G37090" x-morph="Gr,N,,,,,GFS,"\w*
@@ -544,7 +544,7 @@
 \w διηρπασμένη|lemma="διαρπάζω" strong="G12830" x-morph="Gr,V,PEM,NFS,"\w*
 \w ἔσται|lemma="εἰμί" strong="G15100" x-morph="Gr,V,IFM3,,S,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
-\w Ἀσκαλὼν|lemma="Ἀσκαλών" x-morph="Gr,N,,,,,NFS,"\w*
+\w Ἀσκαλὼν|lemma="Ἀσκαλών" strong="G62363" x-morph="Gr,N,,,,,NFS,"\w*
 \w ἔσται|lemma="εἰμί" strong="G15100" x-morph="Gr,V,IFM3,,S,"\w*
 \w εἰς|lemma="εἰς" strong="G15190" x-morph="Gr,P,,,,,,,,,"\w*
 \w ἀφανισμόν|lemma="ἀφανισμός" strong="G08540" x-morph="Gr,N,,,,,AMS,"\w*
@@ -553,7 +553,7 @@
 \w μεσημβρίας|lemma="μεσημβρία" strong="G33140" x-morph="Gr,N,,,,,GFS,"\w*
 \w ἐκριφήσεται|lemma="ῥίπτω" strong="G44960" x-morph="Gr,V,IFP3,,S,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
-\w Ακκαρων|lemma="Ακκαρων" x-morph="Gr,N,,,,,N,S,"\w*
+\w Ακκαρων|lemma="Ακκαρων" strong="G61977" x-morph="Gr,N,,,,,N,S,"\w*
 \w ἐκριζωθήσεται|lemma="ἐκριζόω" strong="G16100" x-morph="Gr,V,IFP3,,S,"\w*
 
 \p
@@ -562,11 +562,11 @@
 \w οἱ|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,VMP,"\w*
 \w κατοικοῦντες|lemma="κατοικέω" strong="G27300" x-morph="Gr,V,PPA,VMP,"\w*
 \w τὸ|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,ANS,"\w*
-\w σχοίνισμα|lemma="σχοίνισμα" x-morph="Gr,N,,,,,ANS,"\w*
+\w σχοίνισμα|lemma="σχοίνισμα" strong="G61859" x-morph="Gr,N,,,,,ANS,"\w*
 \w τῆς|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,GFS,"\w*
 \w θαλάσσης|lemma="θάλασσα" strong="G22810" x-morph="Gr,N,,,,,GFS,"\w*
 \w πάροικοι|lemma="πάροικος" strong="G39410" x-morph="Gr,A,,,,,VMP,"\w*
-\w Κρητῶν|lemma="Κρῆτες" x-morph="Gr,N,,,,,G,P,"\w*
+\w Κρητῶν|lemma="Κρῆτες" strong="G66623" x-morph="Gr,N,,,,,G,P,"\w*
 \w λόγος|lemma="λόγος" strong="G30560" x-morph="Gr,N,,,,,NMS,"\w*
 \w κυρίου|lemma="κύριος" strong="G29620" x-morph="Gr,N,,,,,GMS,"\w*
 \w ἐφ’|lemma="ἐπί" strong="G19090" x-morph="Gr,P,,,,,,,,,"\w*
@@ -588,7 +588,7 @@
 \w νομὴ|lemma="νομή" strong="G35420" x-morph="Gr,N,,,,,NFS,"\w*
 \w ποιμνίων|lemma="ποίμνιον" strong="G41680" x-morph="Gr,N,,,,,GNP,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
-\w μάνδρα|lemma="μάνδρα" x-morph="Gr,N,,,,,NFS,"\w*
+\w μάνδρα|lemma="μάνδρα" strong="G62679" x-morph="Gr,N,,,,,NFS,"\w*
 \w προβάτων|lemma="πρόβατον" strong="G42630" x-morph="Gr,N,,,,,GNP,"\w*
 
 \p
@@ -596,7 +596,7 @@
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
 \w ἔσται|lemma="εἰμί" strong="G15100" x-morph="Gr,V,IFM3,,S,"\w*
 \w τὸ|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,NNS,"\w*
-\w σχοίνισμα|lemma="σχοίνισμα" x-morph="Gr,N,,,,,NNS,"\w*
+\w σχοίνισμα|lemma="σχοίνισμα" strong="G61859" x-morph="Gr,N,,,,,NNS,"\w*
 \w τῆς|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,GFS,"\w*
 \w θαλάσσης|lemma="θάλασσα" strong="G22810" x-morph="Gr,N,,,,,GFS,"\w*
 \w τοῖς|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,DMP,"\w*
@@ -605,11 +605,11 @@
 \w Ιουδα|lemma="Ἰουδα" strong="G24480" x-morph="Gr,N,,,,,GMS,"\w*
 \w ἐπ’|lemma="ἐπί" strong="G19090" x-morph="Gr,P,,,,,,,,,"\w*
 \w αὐτοὺς|lemma="αὐτός" strong="G08460" x-morph="Gr,RR,,,,AMP,"\w*
-\w νεμήσονται|lemma="νέμω" x-morph="Gr,V,IFM3,,P,"\w*
+\w νεμήσονται|lemma="νέμω" strong="G60460" x-morph="Gr,V,IFM3,,P,"\w*
 \w ἐν|lemma="ἐν" strong="G17220" x-morph="Gr,P,,,,,,,,,"\w*
 \w τοῖς|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,DMP,"\w*
 \w οἴκοις|lemma="οἶκος" strong="G36240" x-morph="Gr,N,,,,,DMP,"\w*
-\w Ἀσκαλῶνος|lemma="Ἀσκαλών" x-morph="Gr,N,,,,,GFS,"\w*
+\w Ἀσκαλῶνος|lemma="Ἀσκαλών" strong="G62363" x-morph="Gr,N,,,,,GFS,"\w*
 \w δείλης|lemma="δειλός" strong="G11690" x-morph="Gr,A,,,,,GFS,"\w*
 \w καταλύσουσιν|lemma="καταλύω" strong="G26470" x-morph="Gr,V,IFA3,,P,"\w*
 \w ἀπὸ|lemma="ἀπό" strong="G05750" x-morph="Gr,P,,,,,,,,,"\w*
@@ -633,11 +633,11 @@
 \v 8
 \w ἤκουσα|lemma="ἀκούω" strong="G01910" x-morph="Gr,V,IAA1,,S,"\w*
 \w ὀνειδισμοὺς|lemma="ὀνειδισμός" strong="G36800" x-morph="Gr,N,,,,,AMP,"\w*
-\w Μωαβ|lemma="Μωαβ" x-morph="Gr,N,,,,,GFS,"\w*
+\w Μωαβ|lemma="Μωαβ" strong="G60243" x-morph="Gr,N,,,,,GFS,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
-\w κονδυλισμοὺς|lemma="κονδυλισμός" x-morph="Gr,N,,,,,AMP,"\w*
+\w κονδυλισμοὺς|lemma="κονδυλισμός" strong="G66867" x-morph="Gr,N,,,,,AMP,"\w*
 \w υἱῶν|lemma="υἱός" strong="G52070" x-morph="Gr,N,,,,,GMP,"\w*
-\w Αμμων|lemma="Αμμων" x-morph="Gr,N,,,,,G,S,"\w*
+\w Αμμων|lemma="Αμμων" strong="G61447" x-morph="Gr,N,,,,,G,S,"\w*
 \w ἐν|lemma="ἐν" strong="G17220" x-morph="Gr,P,,,,,,,,,"\w*
 \w οἷς|lemma="ὅς" strong="G37390" x-morph="Gr,RR,,,,DMP,"\w*
 \w ὠνείδιζον|lemma="ὀνειδίζω" strong="G36790" x-morph="Gr,V,IIA3,,P,"\w*
@@ -665,21 +665,21 @@
 \w θεὸς|lemma="θεός" strong="G23160" x-morph="Gr,N,,,,,NMS,"\w*
 \w Ισραηλ|lemma="Ἰσραήλ" strong="G24740" x-morph="Gr,N,,,,,GMS,"\w*
 \w διότι|lemma="διότι" strong="G13600" x-morph="Gr,C,,,,,,,,,"\w*
-\w Μωαβ|lemma="Μωαβ" x-morph="Gr,N,,,,,NFS,"\w*
+\w Μωαβ|lemma="Μωαβ" strong="G60243" x-morph="Gr,N,,,,,NFS,"\w*
 \w ὡς|lemma="ὡς" strong="G56130" x-morph="Gr,C,,,,,,,,,"\w*
 \w Σοδομα|lemma="Σόδομα" strong="G46700" x-morph="Gr,N,,,,,N,S,"\w*
 \w ἔσται|lemma="εἰμί" strong="G15100" x-morph="Gr,V,IFM3,,S,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
 \w οἱ|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,NMP,"\w*
 \w υἱοὶ|lemma="υἱός" strong="G52070" x-morph="Gr,N,,,,,NMP,"\w*
-\w Αμμων|lemma="Αμμων" x-morph="Gr,N,,,,,G,S,"\w*
+\w Αμμων|lemma="Αμμων" strong="G61447" x-morph="Gr,N,,,,,G,S,"\w*
 \w ὡς|lemma="ὡς" strong="G56130" x-morph="Gr,C,,,,,,,,,"\w*
 \w Γομορρα|lemma="Γόμορρα" strong="G11160" x-morph="Gr,N,,,,,N,S,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
 \w Δαμασκὸς|lemma="Δαμασκός" strong="G11540" x-morph="Gr,N,,,,,N,S,"\w*
 \w ἐκλελειμμένη|lemma="ἐκλείπω" strong="G15870" x-morph="Gr,V,PEM,NFS,"\w*
 \w ὡς|lemma="ὡς" strong="G56130" x-morph="Gr,C,,,,,,,,,"\w*
-\w θιμωνιὰ|lemma="θημονία" x-morph="Gr,N,,,,,NFS,"\w*
+\w θιμωνιὰ|lemma="θημονία" strong="G66868" x-morph="Gr,N,,,,,NFS,"\w*
 \w ἅλωνος|lemma="ἅλων" strong="G02570" x-morph="Gr,N,,,,,GFS,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
 \w ἠφανισμένη|lemma="ἀπορφανίζω" strong="G06420" x-morph="Gr,V,PEM,NFS,"\w*
@@ -753,7 +753,7 @@
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
 \w ὑμεῖς|lemma="σύ" strong="G47710" x-morph="Gr,RR,,,,N,P,"\w*
 \w Αἰθίοπες|lemma="Αἰθίοψ" strong="G01280" x-morph="Gr,N,,,,,VFP,"\w*
-\w τραυματίαι|lemma="τραυματίας" x-morph="Gr,N,,,,,NMP,"\w*
+\w τραυματίαι|lemma="τραυματίας" strong="G60416" x-morph="Gr,N,,,,,NMP,"\w*
 \w ῥομφαίας|lemma="ῥομφαία" strong="G45010" x-morph="Gr,N,,,,,GFS,"\w*
 \w μού|lemma="ἐγώ" strong="G14730" x-morph="Gr,RR,,,,G,S,"\w*
 \w ἐστε|lemma="εἰμί" strong="G15100" x-morph="Gr,V,IPA2,,P,"\w*
@@ -766,15 +766,15 @@
 \w χεῖρα|lemma="χείρ" strong="G54950" x-morph="Gr,N,,,,,AFS,"\w*
 \w αὐτοῦ|lemma="αὐτός" strong="G08460" x-morph="Gr,RR,,,,GMS,"\w*
 \w ἐπὶ|lemma="ἐπί" strong="G19090" x-morph="Gr,P,,,,,,,,,"\w*
-\w βορρᾶν|lemma="βορέας" x-morph="Gr,N,,,,,AMS,"\w*
+\w βορρᾶν|lemma="βορέας" strong="G60162" x-morph="Gr,N,,,,,AMS,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
 \w ἀπολεῖ|lemma="ἀπολύω" strong="G06300" x-morph="Gr,V,IFA3,,S,"\w*
 \w τὸν|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,AMS,"\w*
-\w Ἀσσύριον|lemma="Ἀσσύριος" x-morph="Gr,N,,,,,AMS,"\w*
+\w Ἀσσύριον|lemma="Ἀσσύριος" strong="G60017" x-morph="Gr,N,,,,,AMS,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
 \w θήσει|lemma="τίθημι" strong="G50870" x-morph="Gr,V,IFA3,,S,"\w*
 \w τὴν|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,AFS,"\w*
-\w Νινευη|lemma="Νινευη" x-morph="Gr,N,,,,,AFS,"\w*
+\w Νινευη|lemma="Νινευη" strong="G60097" x-morph="Gr,N,,,,,AFS,"\w*
 \w εἰς|lemma="εἰς" strong="G15190" x-morph="Gr,P,,,,,,,,,"\w*
 \w ἀφανισμὸν|lemma="ἀφανισμός" strong="G08540" x-morph="Gr,N,,,,,AMS,"\w*
 \w ἄνυδρον|lemma="ἄνυδρος" strong="G05040" x-morph="Gr,A,,,,,AMS,"\w*
@@ -784,7 +784,7 @@
 \p
 \v 14
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
-\w νεμήσονται|lemma="νέμω" x-morph="Gr,V,IFM3,,P,"\w*
+\w νεμήσονται|lemma="νέμω" strong="G60460" x-morph="Gr,V,IFM3,,P,"\w*
 \w ἐν|lemma="ἐν" strong="G17220" x-morph="Gr,P,,,,,,,,,"\w*
 \w μέσῳ|lemma="μέσος" strong="G33190" x-morph="Gr,A,,,,,DNS,"\w*
 \w αὐτῆς|lemma="αὐτός" strong="G08460" x-morph="Gr,RR,,,,GFS,"\w*
@@ -796,20 +796,20 @@
 \w τῆς|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,GFS,"\w*
 \w γῆς|lemma="γῆ" strong="G10930" x-morph="Gr,N,,,,,GFS,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
-\w χαμαιλέοντες|lemma="χαμαιλέων" x-morph="Gr,N,,,,,NMP,"\w*
+\w χαμαιλέοντες|lemma="χαμαιλέων" strong="G61151" x-morph="Gr,N,,,,,NMP,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
-\w ἐχῖνοι|lemma="ἐχῖνος" x-morph="Gr,N,,,,,NMP,"\w*
+\w ἐχῖνοι|lemma="ἐχῖνος" strong="G66149" x-morph="Gr,N,,,,,NMP,"\w*
 \w ἐν|lemma="ἐν" strong="G17220" x-morph="Gr,P,,,,,,,,,"\w*
 \w τοῖς|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,DNP,"\w*
-\w φατνώμασιν|lemma="φάτνωμα" x-morph="Gr,N,,,,,DNP,"\w*
+\w φατνώμασιν|lemma="φάτνωμα" strong="G66053" x-morph="Gr,N,,,,,DNP,"\w*
 \w αὐτῆς|lemma="αὐτός" strong="G08460" x-morph="Gr,RR,,,,GFS,"\w*
-\w κοιτασθήσονται|lemma="κοιτάζομαι" x-morph="Gr,V,IFP3,,P,"\w*
+\w κοιτασθήσονται|lemma="κοιτάζομαι" strong="G61205" x-morph="Gr,V,IFP3,,P,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
 \w θηρία|lemma="θηρίον" strong="G23420" x-morph="Gr,N,,,,,ANP,"\w*
 \w φωνήσει|lemma="φωνέω" strong="G54550" x-morph="Gr,V,IFA3,,S,"\w*
 \w ἐν|lemma="ἐν" strong="G17220" x-morph="Gr,P,,,,,,,,,"\w*
 \w τοῖς|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,DNP,"\w*
-\w διορύγμασιν|lemma="διόρυγμα" x-morph="Gr,N,,,,,DNP,"\w*
+\w διορύγμασιν|lemma="διόρυγμα" strong="G60836" x-morph="Gr,N,,,,,DNP,"\w*
 \w αὐτῆς|lemma="αὐτός" strong="G08460" x-morph="Gr,RR,,,,GFS,"\w*
 \w κόρακες|lemma="κόραξ" strong="G28760" x-morph="Gr,N,,,,,NMP,"\w*
 \w ἐν|lemma="ἐν" strong="G17220" x-morph="Gr,P,,,,,,,,,"\w*
@@ -819,7 +819,7 @@
 \w διότι|lemma="διότι" strong="G13600" x-morph="Gr,C,,,,,,,,,"\w*
 \w κέδρος|lemma="κεδρος" strong="G27475" x-morph="Gr,N,,,,,NFS,"\w*
 \w τὸ|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,NNS,"\w*
-\w ἀνάστημα|lemma="ἀνάστημα" x-morph="Gr,N,,,,,NNS,"\w*
+\w ἀνάστημα|lemma="ἀνάστημα" strong="G60058" x-morph="Gr,N,,,,,NNS,"\w*
 \w αὐτῆς|lemma="αὐτός" strong="G08460" x-morph="Gr,RR,,,,GFS,"\w*
 
 \p
@@ -828,7 +828,7 @@
 \w ἡ|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,NFS,"\w*
 \w πόλις|lemma="πόλις" strong="G41720" x-morph="Gr,N,,,,,NFS,"\w*
 \w ἡ|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,NFS,"\w*
-\w φαυλίστρια|lemma="φαυλίστρια" x-morph="Gr,N,,,,,NFS,"\w*
+\w φαυλίστρια|lemma="φαυλίστρια" strong="G66869" x-morph="Gr,N,,,,,NFS,"\w*
 \w ἡ|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,NFS,"\w*
 \w κατοικοῦσα|lemma="κατοικέω" strong="G27300" x-morph="Gr,V,PPA,NFS,"\w*
 \w ἐπ’|lemma="ἐπί" strong="G19090" x-morph="Gr,P,,,,,,,,,"\w*
@@ -857,7 +857,7 @@
 \w διαπορευόμενος|lemma="διαπορεύομαι" strong="G12790" x-morph="Gr,V,PPM,NMS,"\w*
 \w δι’|lemma="διά" strong="G12230" x-morph="Gr,P,,,,,,,,,"\w*
 \w αὐτῆς|lemma="αὐτός" strong="G08460" x-morph="Gr,RR,,,,GFS,"\w*
-\w συριεῖ|lemma="συρίζω" x-morph="Gr,V,IFA3,,S,"\w*
+\w συριεῖ|lemma="συρίζω" strong="G63258" x-morph="Gr,V,IFA3,,S,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
 \w κινήσει|lemma="κινέω" strong="G27950" x-morph="Gr,V,IFA3,,S,"\w*
 \w τὰς|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,AFP,"\w*
@@ -927,7 +927,7 @@
 \w οἱ|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,NMP,"\w*
 \w προφῆται|lemma="προφήτης" strong="G43960" x-morph="Gr,N,,,,,NMP,"\w*
 \w αὐτῆς|lemma="αὐτός" strong="G08460" x-morph="Gr,RR,,,,GFS,"\w*
-\w πνευματοφόροι|lemma="πνευματοφόρος" x-morph="Gr,N,,,,,NMP,"\w*
+\w πνευματοφόροι|lemma="πνευματοφόρος" strong="G66785" x-morph="Gr,N,,,,,NMP,"\w*
 \w ἄνδρες|lemma="ἀνήρ" strong="G04350" x-morph="Gr,N,,,,,NMP,"\w*
 \w καταφρονηταί|lemma="καταφρονητής" strong="G27070" x-morph="Gr,N,,,,,NMP,"\w*
 \w οἱ|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,NMP,"\w*
@@ -969,11 +969,11 @@
 \w ἔγνω|lemma="γινώσκω" strong="G10970" x-morph="Gr,V,IAA3,,S,"\w*
 \w ἀδικίαν|lemma="ἀδικία" strong="G00930" x-morph="Gr,N,,,,,AFS,"\w*
 \w ἐν|lemma="ἐν" strong="G17220" x-morph="Gr,P,,,,,,,,,"\w*
-\w ἀπαιτήσει|lemma="ἀπαίτησις" x-morph="Gr,N,,,,,DFS,"\w*
+\w ἀπαιτήσει|lemma="ἀπαίτησις" strong="G64963" x-morph="Gr,N,,,,,DFS,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
 \w οὐκ|lemma="οὐ" strong="G37560" x-morph="Gr,D,,,,,,,,,"\w*
 \w εἰς|lemma="εἰς" strong="G15190" x-morph="Gr,P,,,,,,,,,"\w*
-\w νεῖκος|lemma="νεῖκος" x-morph="Gr,N,,,,,ANS,"\w*
+\w νεῖκος|lemma="νεῖκος" strong="G65465" x-morph="Gr,N,,,,,ANS,"\w*
 \w ἀδικίαν|lemma="ἀδικία" strong="G00930" x-morph="Gr,N,,,,,AFS,"\w*
 
 \p
@@ -990,7 +990,7 @@
 \w ὁδοὺς|lemma="ὁδός" strong="G35980" x-morph="Gr,N,,,,,AFP,"\w*
 \w αὐτῶν|lemma="αὐτός" strong="G08460" x-morph="Gr,RR,,,,GMP,"\w*
 \w τὸ|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,ANS,"\w*
-\w παράπαν|lemma="παράπαν" x-morph="Gr,D,,,,,,,,,"\w*
+\w παράπαν|lemma="παράπαν" strong="G63275" x-morph="Gr,D,,,,,,,,,"\w*
 \w τοῦ|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,GNS,"\w*
 \w μὴ|lemma="μή" strong="G33610" x-morph="Gr,D,,,,,,,,,"\w*
 \w διοδεύειν|lemma="διοδεύω" strong="G13530" x-morph="Gr,V,NPA,,,,,"\w*
@@ -1031,7 +1031,7 @@
 \w διέφθαρται|lemma="διαφθείρω" strong="G13110" x-morph="Gr,V,IEM3,,S,"\w*
 \w πᾶσα|lemma="πᾶς" strong="G39560" x-morph="Gr,A,,,,,NFS,"\w*
 \w ἡ|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,NFS,"\w*
-\w ἐπιφυλλὶς|lemma="ἐπιφυλλίς" x-morph="Gr,N,,,,,NFS,"\w*
+\w ἐπιφυλλὶς|lemma="ἐπιφυλλίς" strong="G62460" x-morph="Gr,N,,,,,NFS,"\w*
 \w αὐτῶν|lemma="αὐτός" strong="G08460" x-morph="Gr,RR,,,,GMP,"\w*
 
 \p
@@ -1122,7 +1122,7 @@
 \w ἐκ|lemma="ἐκ" strong="G15370" x-morph="Gr,P,,,,,,,,,"\w*
 \w πάντων|lemma="πᾶς" strong="G39560" x-morph="Gr,A,,,,,GNP,"\w*
 \w τῶν|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,GNP,"\w*
-\w ἐπιτηδευμάτων|lemma="ἐπιτήδευμα" x-morph="Gr,N,,,,,GNP,"\w*
+\w ἐπιτηδευμάτων|lemma="ἐπιτήδευμα" strong="G61212" x-morph="Gr,N,,,,,GNP,"\w*
 \w σου|lemma="σύ" strong="G47710" x-morph="Gr,RR,,,,G,S,"\w*
 \w ὧν|lemma="ὅς" strong="G37390" x-morph="Gr,RR,,,,GMP,"\w*
 \w ἠσέβησας|lemma="ἀσεβέω" strong="G07640" x-morph="Gr,V,IAA2,,S,"\w*
@@ -1134,7 +1134,7 @@
 \w ἀπὸ|lemma="ἀπό" strong="G05750" x-morph="Gr,P,,,,,,,,,"\w*
 \w σοῦ|lemma="σύ" strong="G47710" x-morph="Gr,RR,,,,G,S,"\w*
 \w τὰ|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,ANP,"\w*
-\w φαυλίσματα|lemma="φαύλισμα" x-morph="Gr,N,,,,,ANP,"\w*
+\w φαυλίσματα|lemma="φαύλισμα" strong="G66870" x-morph="Gr,N,,,,,ANP,"\w*
 \w τῆς|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,GFS,"\w*
 \w ὕβρεώς|lemma="ὕβρις" strong="G51960" x-morph="Gr,N,,,,,GFS,"\w*
 \w σου|lemma="σύ" strong="G47710" x-morph="Gr,RR,,,,G,S,"\w*
@@ -1194,9 +1194,9 @@
 \w δολία|lemma="δόλιος" strong="G13860" x-morph="Gr,A,,,,,NFS,"\w*
 \w διότι|lemma="διότι" strong="G13600" x-morph="Gr,C,,,,,,,,,"\w*
 \w αὐτοὶ|lemma="αὐτός" strong="G08460" x-morph="Gr,RR,,,,NMP,"\w*
-\w νεμήσονται|lemma="νέμω" x-morph="Gr,V,IFM3,,P,"\w*
+\w νεμήσονται|lemma="νέμω" strong="G60460" x-morph="Gr,V,IFM3,,P,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
-\w κοιτασθήσονται|lemma="κοιτάζομαι" x-morph="Gr,V,IFP3,,P,"\w*
+\w κοιτασθήσονται|lemma="κοιτάζομαι" strong="G61205" x-morph="Gr,V,IFP3,,P,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
 \w οὐκ|lemma="οὐ" strong="G37560" x-morph="Gr,D,,,,,,,,,"\w*
 \w ἔσται|lemma="εἰμί" strong="G15100" x-morph="Gr,V,IFM3,,S,"\w*
@@ -1215,7 +1215,7 @@
 \w Ιερουσαλημ|lemma="Ἰερουσαλήμ" strong="G24190" x-morph="Gr,N,,,,,GFS,"\w*
 \w εὐφραίνου|lemma="εὐφραίνω" strong="G21650" x-morph="Gr,V,MPM2,,S,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
-\w κατατέρπου|lemma="κατατέρπω" x-morph="Gr,V,MPM2,,S,"\w*
+\w κατατέρπου|lemma="κατατέρπω" strong="G66871" x-morph="Gr,V,MPM2,,S,"\w*
 \w ἐξ|lemma="ἐκ" strong="G15370" x-morph="Gr,P,,,,,,,,,"\w*
 \w ὅλης|lemma="ὅλος" strong="G36500" x-morph="Gr,A,,,,,GFS,"\w*
 \w τῆς|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,GFS,"\w*
@@ -1282,18 +1282,18 @@
 \w σὲ|lemma="σύ" strong="G47710" x-morph="Gr,RR,,,,A,S,"\w*
 \w εὐφροσύνην|lemma="εὐφροσύνη" strong="G21670" x-morph="Gr,N,,,,,AFS,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
-\w καινιεῖ|lemma="καινίζω" x-morph="Gr,V,IFA3,,S,"\w*
+\w καινιεῖ|lemma="καινίζω" strong="G66283" x-morph="Gr,V,IFA3,,S,"\w*
 \w σε|lemma="σύ" strong="G47710" x-morph="Gr,RR,,,,A,S,"\w*
 \w ἐν|lemma="ἐν" strong="G17220" x-morph="Gr,P,,,,,,,,,"\w*
 \w τῇ|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,DFS,"\w*
-\w ἀγαπήσει|lemma="ἀγάπησις" x-morph="Gr,N,,,,,DFS,"\w*
+\w ἀγαπήσει|lemma="ἀγάπησις" strong="G62843" x-morph="Gr,N,,,,,DFS,"\w*
 \w αὐτοῦ|lemma="αὐτός" strong="G08460" x-morph="Gr,RR,,,,GMS,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
 \w εὐφρανθήσεται|lemma="εὐφραίνω" strong="G21650" x-morph="Gr,V,IFP3,,S,"\w*
 \w ἐπὶ|lemma="ἐπί" strong="G19090" x-morph="Gr,P,,,,,,,,,"\w*
 \w σὲ|lemma="σύ" strong="G47710" x-morph="Gr,RR,,,,A,S,"\w*
 \w ἐν|lemma="ἐν" strong="G17220" x-morph="Gr,P,,,,,,,,,"\w*
-\w τέρψει|lemma="τέρψις" x-morph="Gr,N,,,,,DFS,"\w*
+\w τέρψει|lemma="τέρψις" strong="G63251" x-morph="Gr,N,,,,,DFS,"\w*
 \w ὡς|lemma="ὡς" strong="G56130" x-morph="Gr,C,,,,,,,,,"\w*
 \w ἐν|lemma="ἐν" strong="G17220" x-morph="Gr,P,,,,,,,,,"\w*
 \w ἡμέρᾳ|lemma="ἡμέρα" strong="G22500" x-morph="Gr,N,,,,,DFS,"\w*
@@ -1341,7 +1341,7 @@
 \w εἰς|lemma="εἰς" strong="G15190" x-morph="Gr,P,,,,,,,,,"\w*
 \w καύχημα|lemma="καύχημα" strong="G27450" x-morph="Gr,N,,,,,ANS,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
-\w ὀνομαστοὺς|lemma="ὀνομαστός" x-morph="Gr,A,,,,,AMP,"\w*
+\w ὀνομαστοὺς|lemma="ὀνομαστός" strong="G60047" x-morph="Gr,A,,,,,AMP,"\w*
 \w ἐν|lemma="ἐν" strong="G17220" x-morph="Gr,P,,,,,,,,,"\w*
 \w πάσῃ|lemma="πᾶς" strong="G39560" x-morph="Gr,A,,,,,DFS,"\w*
 \w τῇ|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,DFS,"\w*
@@ -1369,7 +1369,7 @@
 \w διότι|lemma="διότι" strong="G13600" x-morph="Gr,C,,,,,,,,,"\w*
 \w δώσω|lemma="δίδωμι" strong="G13250" x-morph="Gr,V,IFA1,,S,"\w*
 \w ὑμᾶς|lemma="σύ" strong="G47710" x-morph="Gr,RR,,,,A,P,"\w*
-\w ὀνομαστοὺς|lemma="ὀνομαστός" x-morph="Gr,A,,,,,AMP,"\w*
+\w ὀνομαστοὺς|lemma="ὀνομαστός" strong="G60047" x-morph="Gr,A,,,,,AMP,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
 \w εἰς|lemma="εἰς" strong="G15190" x-morph="Gr,P,,,,,,,,,"\w*
 \w καύχημα|lemma="καύχημα" strong="G27450" x-morph="Gr,N,,,,,ANS,"\w*

@@ -26,7 +26,7 @@ For more information on this project, see the [Bible Tags website](https://bible
 
 This repo includes the usfm files used in [bibletags-data](https://github.com/educational-resources-and-services/bibletags-data) and [bibletags-react-native-app](https://github.com/educational-resources-and-services/bibletags-react-native-app).
 
-These USFM 3.0 files are derived from [unfoldingword.org/uhb](https://unfoldingword.org/uhb) and [unfoldingword.org/ugnt](https://unfoldingword.org/ugnt).
+These USFM 3.0 files are derived from [unfoldingword.org/uhb](https://unfoldingword.org/uhb), [unfoldingword.org/ugnt](https://unfoldingword.org/ugnt) and [CCAT/lxxmorph](http://ccat.sas.upenn.edu/gopher/text/religion/biblical/lxxmorph/).
 
 The following changes have been made via the import scripts:
 
@@ -146,3 +146,12 @@ AFTER
 #### 8. (UHB only) The lemma and strongs for `אֲרָם` when a part of the place name `פַּדָּן אֲרָם` have been changed to `אֲרָם` and `#H07580` respectively.
 
 - This modification was preferred to combining this word together with `פַּדָּן` as a multi-word lemma, since `פַּדָּן` sometimes takes a directional ה suffix.
+
+#### 9. (UGNT only) Fixed the lemma and strongs in several places where `Χριστιανός` was incorrectly indicated. (See [this commit](https://github.com/educational-resources-and-services/bibletags-usfm/commit/08a4b56e92662e4e80d6539cd023d0e4dd657603).)
+
+#### 10. (LXX only) Added Strongs numbers where missing.
+
+- For the most part, missings strongs were due to that word not appearing in the GNT. In such cases, a strongs number starting with `G60000` was added.
+- In other cases, the Strongs number was identified by comparing the lemma to an existing Strongs entry.
+
+#### 11. (LXX only) Converted the morphology to match that of the UGNT.
