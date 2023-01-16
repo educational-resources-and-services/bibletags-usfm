@@ -6937,14 +6937,14 @@
 \w κύψας|lemma="κύπτω" strong="G29550" x-morph="Gr,V,PAA,NMS," x-id="43gI7"\w*
 \w τῷ|lemma="ὁ" strong="G35880" x-morph="Gr,EA,,,,DMS," x-id="438w7"\w*
 \w δακτύλῳ|lemma="δάκτυλος" strong="G11470" x-morph="Gr,N,,,,,DMS," x-id="434KV"\w*
-\w κατέγραφεν|lemma="Χριστιανός" strong="G99237" x-morph="Gr,V,IIA3,,S," x-id="431Zg"\w*
+\w κατέγραφεν|lemma="καταγράφω" strong="G26085" x-morph="Gr,V,IIA3,,S," x-id="431Zg"\w*
 \w εἰς|lemma="εἰς" strong="G15190" x-morph="Gr,P,,,,,A,,," x-id="432Rd"\w*
 \w τὴν|lemma="ὁ" strong="G35880" x-morph="Gr,EA,,,,AFS," x-id="434mM"\w*
 \w γῆν|lemma="γῆ" strong="G10930" x-morph="Gr,N,,,,,AFS," x-id="439nY"\w*.
 \zApparatusJson {"words":[{"id":"43B06","w":"τουτο"},{"id":"43WPb","w":"ελεγον"},{"id":"43Ucq","w":"πειραζοντες"},{"id":"43b6F","w":"αυτον"},{"id":"43zv3","w":"ινα"},{"id":"43119","w":"εχωσιν"},{"id":"43qzl","w":"κατηγορειν"},{"id":"435Cq","w":"αυτου"},{"id":"43MGE","w":"δε"},{"id":"43GsL","w":"εγραφεν"},{"id":"43k2m","w":"μη"},{"id":"439mx","w":"προσποιουμενος"},{"id":"43mYn","w":"εχωσι"},{"id":"43k2m","w":"[μη"},{"id":"439mx","w":"προσποιουμενος]"},"∴","=ιης"],"critical":["WH","RP:+1,2,+2-8,1,+9,3-7,+10,9-11,+11-12","ST:+1,2,+2-5,+13,+7-8,1,+9,3-7,+10,9-11","KJTR:+1,2,+2-8,1,+9,3-7,+10,9-11,+14-15","NA:+1,2,+2-8,1,+9,3-11"],"ancient":["𝔓45:+16","𝔓66,𝔓75,01,03,029,032","05:1-2,+17,4-11"]}\zApparatusJson*
 
 \v 7
-\w Ὡς|lemma="Χριστιανός" strong="G56130" x-morph="Gr,D,,,,,,,,," x-id="43X2j"\w*
+\w Ὡς|lemma="ὡς" strong="G56130" x-morph="Gr,D,,,,,,,,," x-id="43X2j"\w*
 \w δὲ|lemma="δέ" strong="G11610" x-morph="Gr,CC,,,,,,,," x-id="43KEO"\w*
 \w ἐπέμενον|lemma="ἐπιμένω" strong="G19610" x-morph="Gr,V,IIA3,,P," x-id="43AcO"\w*
 \w ἐρωτῶντες|lemma="ἐρωτάω" strong="G20650" x-morph="Gr,V,PPA,NMP," x-id="43zjy"\w*
@@ -6965,10 +6965,10 @@
 \v 8
 \w Καὶ|lemma="καί" strong="G25320" x-morph="Gr,CC,,,,,,,," x-id="43hIG"\w*
 \w πάλιν|lemma="πάλιν" strong="G38250" x-morph="Gr,D,,,,,,,,," x-id="43tX6"\w*
-\w κατακύψας|lemma="Χριστιανός" strong="G99241" x-morph="Gr,V,PAA,NMS," x-id="43lVA"\w*
+\w κατακύψας|lemma="κατακύπτω" strong="G26335" x-morph="Gr,V,PAA,NMS," x-id="43lVA"\w*
 \w τῷ|lemma="ὁ" strong="G35880" x-morph="Gr,EA,,,,DMS," x-id="435Oy"\w*
 \w δακτύλῳ|lemma="δάκτυλος" strong="G11470" x-morph="Gr,N,,,,,DMS," x-id="4326d"\w*
-\w κατέγραφεν|lemma="Χριστιανός" strong="G99237" x-morph="Gr,V,IIA3,,S," x-id="43dE2"\w*
+\w κατέγραφεν|lemma="καταγράφω" strong="G26085" x-morph="Gr,V,IIA3,,S," x-id="43dE2"\w*
 \w εἰς|lemma="εἰς" strong="G15190" x-morph="Gr,P,,,,,A,,," x-id="43EK9"\w*
 \w τὴν|lemma="ὁ" strong="G35880" x-morph="Gr,EA,,,,AFS," x-id="43eBf"\w*
 \w γῆν|lemma="γῆ" strong="G10930" x-morph="Gr,N,,,,,AFS," x-id="4334e"\w*.
@@ -6984,7 +6984,7 @@
 \w ἀπὸ|lemma="ἀπό" strong="G05750" x-morph="Gr,P,,,,,G,,," x-id="43m3U"\w*
 \w τῶν|lemma="ὁ" strong="G35880" x-morph="Gr,EA,,,,GMP," x-id="43E8M"\w*
 \w πρεσβυτέρων|lemma="πρεσβύτερος" strong="G42450" x-morph="Gr,AA,,,,GMP," x-id="43Ten"\w*
-\w ὥστε|lemma="Χριστιανός" strong="G56200" x-morph="Gr,CS,,,,,,,," x-id="43eLE"\w*
+\w ὥστε|lemma="ὥστε" strong="G56200" x-morph="Gr,CS,,,,,,,," x-id="43eLE"\w*
 \w πάντας|lemma="πᾶς" strong="G39560" x-morph="Gr,AA,,,,AMP," x-id="43op6"\w*
 \w ἐξελθεῖν|lemma="ἐξέρχομαι" strong="G18310" x-morph="Gr,V,NAA,,,,," x-id="43hXm"\w*;
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,CC,,,,,,,," x-id="43Zv4"\w*
