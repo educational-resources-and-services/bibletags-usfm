@@ -242,13 +242,37 @@ const getBookNum = bookId => (
           morph = `Gr,V,PAM,NMS,`
         } else if(morph === `Gr,V,IEMN,,F,`) {  // why was this wrong?
           morph = `Gr,V,IEM,NF,,`
+        } else if(morph === `Gr,V,IAD2,,P,`) {
+          morph = `Gr,V,IAA2,,P,`
+        } else if(morph === `Gr,V,1FM,,,,,`) {
+          morph = `Gr,V,IFM2,,S,`
+        } else if(morph === `Gr,V,IFAI,,S,`) {
+          morph = `Gr,V,IFA1,,S,`
+        } else if(morph === `Gr,V,IEAA,,S,`) {
+          morph = `Gr,V,IEA3,,S,`
+        } else if(morph === `Gr,V,IVX1,,S,`) {
+          morph = `Gr,V,IEP1,,S,`
+        } else if(morph === `Gr,V,IEMN,,P,`) {
+          morph = `Gr,V,PEM,NMP,`
+        } else if(morph === `Gr,V,PVM,NMP,`) {
+          morph = `Gr,V,PEM,NMP,`
+        } else if(morph === `Gr,V,PSM,GMP,`) {
+          morph = `Gr,V,PPM,GMP,`
+        } else if(morph === `Gr,V,IIAN,,S,`) {
+          morph = `Gr,V,IIA3,,P,`
         } else if(
-          (![',','N','D','G','A','V'].includes(morphItems[5]))
-          || (![',','S','P'].includes(morphItems[7]))
+          (!['N','A','E','R','V','I','P','D','C','T'].includes(morphItems[0][0]))
+          || (morphItems[0][1] !== ',' && (!['AS','AP','AA','AR','EA','ED','EF','EP','EQ','EN','EO','ER','ET','PD','PE','PP','PC','PI','PR','PT','VT','VI','VL','VM','VP','IE','ID','IR','DI','DO','CC','CS','CO','FF'].includes(morphItems[0].replace(/^R/, 'P'))))
+          || (![',','I','M','S','O','N','P'].includes(morphItems[1]))
+          || (![',','P','I','F','A','E','L'].includes(morphItems[2]))
+          || (![',','A','M','P'].includes(morphItems[3]))
+          || (![',','1','2','3'].includes(morphItems[4]))
+          || (![',','N','D','G','A','V'].includes(morphItems[5]))
           || (![',','M','F','N'].includes(morphItems[6]))
+          || (![',','S','P'].includes(morphItems[7]))
           || (![',','C','S','D','I'].includes(morphItems[8]))
         ) {
-          console.log(`BAD:`, morph, (oldMorph.slice(0,2) === 'N-' || oldMorph.slice(0,2) === 'A-' || oldMorph.slice(0,1) === 'R'), oldMorph, contentPieces[idx2], loc)
+          console.log(`BAD:`, morph, oldMorph, contentPieces[idx2], loc)
         }
 
         const newStrongs = getStrongs(strongs)
