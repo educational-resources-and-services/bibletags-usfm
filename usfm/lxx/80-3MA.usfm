@@ -159,7 +159,7 @@
 \w δώσειν|lemma="δίδωμι" strong="G13250" x-morph="Gr,V,NFA,,,,,"\w*
 \w νικήσασιν|lemma="νικάω" strong="G35280" x-morph="Gr,V,SAA3,,P,"\w*
 \w ἑκάστῳ|lemma="ἕκαστος" strong="G15380" x-morph="Gr,A,,,,,DMS,"\w*
-\w δύο|lemma="δύο" strong="G14170" x-morph="Gr,A,,,,,D/U,"\w*
+\w δύο|lemma="δύο" strong="G14170" x-morph="Gr,A,,,,,,,,,"\w*
 \w μνᾶς|lemma="μνᾶ" strong="G34140" x-morph="Gr,N,,,,,AFP,"\w*
 \w χρυσίου|lemma="χρυσίον" strong="G55530" x-morph="Gr,N,,,,,GNS,"\w*
 
@@ -4891,7 +4891,7 @@
 \w χορηγεῖν|lemma="χορηγέω" strong="G55240" x-morph="Gr,V,NAA,,,,,"\w*
 \w ἐπὶ|lemma="ἐπί" strong="G19090" x-morph="Gr,P,,,,,,,,,"\w*
 \w ἡμέρας|lemma="ἡμέρα" strong="G22500" x-morph="Gr,N,,,,,AFP,"\w*
-\w ἑπτὰ|lemma="ἑπτά" strong="G20330" x-morph="Gr,A,,,,,EP(,"\w*
+\w ἑπτὰ|lemma="ἑπτά" strong="G20330" x-morph="Gr,A,,,,,,,,,"\w*
 \w κρίνας|lemma="κρίνω" strong="G29190" x-morph="Gr,V,PAA,NMS,"\w*
 \w αὐτοὺς|lemma="αὐτός" strong="G08460" x-morph="Gr,RR,,,,AMP,"\w*
 \w ἐν|lemma="ἐν" strong="G17220" x-morph="Gr,P,,,,,,,,,"\w*
@@ -5660,7 +5660,7 @@
 \w αὐτῶν|lemma="αὐτός" strong="G08460" x-morph="Gr,RR,,,,GMP,"\w*
 \w βουλὴν|lemma="βουλή" strong="G10120" x-morph="Gr,N,,,,,AFS,"\w*
 \w ἡμέρας|lemma="ἡμέρα" strong="G22500" x-morph="Gr,N,,,,,AFP,"\w*
-\w ἑπτά|lemma="ἑπτά" strong="G20330" x-morph="Gr,A,,,,,EP(,"\w*
+\w ἑπτά|lemma="ἑπτά" strong="G20330" x-morph="Gr,A,,,,,,,,,"\w*
 
 \p
 \v 18

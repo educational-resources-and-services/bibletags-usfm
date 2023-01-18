@@ -167,6 +167,7 @@ const getBookNum = bookId => (
     let outputUsfm = ``
     const mismatchedLemmas = {}
     const lemmasWithoutStrongs = {}
+    const presumedIndeclinable = {}
 
     let lxxWordsIdx = 0
     for(let idx=0; idx<lxxVerses.length - 1; idx++) {
@@ -210,7 +211,13 @@ const getBookNum = bookId => (
           oldMorph[7],  // number
           oldMorph[9],  // attribute
         ].map(str => str.replace('-', '') || ',')
-        const morph = `Gr,${morphItems.join('')}`
+
+        let morph = `Gr,${morphItems.join('')}`
+        if(/[/\\()|+*]/.test(oldMorph)) {  // indicates indeclinable
+          morph = `Gr,${morphItems[0]},,,,,,,,`
+          presumedIndeclinable[contentPieces[idx2]] = presumedIndeclinable[contentPieces[idx2]] || []
+          presumedIndeclinable[contentPieces[idx2]].push(loc)
+        }
 
         const newStrongs = getStrongs(strongs)
         let strongsStr = /^G/.test(newStrongs) ? `strong="${newStrongs}" ` : ``
@@ -651,6 +658,11 @@ const getBookNum = bookId => (
 
     console.log(``)
     console.log(`Missing strongs: ${extraStrongsNumber - 60000} strongs numbers created.`)
+    console.log(``)
+
+    console.log(``)
+    console.log(`Presumed indeclinable:`)
+    console.log(Object.keys(presumedIndeclinable).sort().map(word => `${word} // ${presumedIndeclinable[word].length}x (e.g. ${presumedIndeclinable[word][0]})`).join(`\n`))
     console.log(``)
 
     console.log(``)

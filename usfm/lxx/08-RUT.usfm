@@ -116,7 +116,7 @@
 \w κατῴκησαν|lemma="κατοικέω" strong="G27300" x-morph="Gr,V,IAA3,,P,"\w*
 \w ἐκεῖ|lemma="ἐκεῖ" strong="G15630" x-morph="Gr,D,,,,,,,,,"\w*
 \w ὡς|lemma="ὡς" strong="G56130" x-morph="Gr,C,,,,,,,,,"\w*
-\w δέκα|lemma="δέκα" strong="G11760" x-morph="Gr,A,,,,,D/E,"\w*
+\w δέκα|lemma="δέκα" strong="G11760" x-morph="Gr,A,,,,,,,,,"\w*
 \w ἔτη|lemma="ἔτος" strong="G20940" x-morph="Gr,N,,,,,ANP,"\w*
 
 \p
@@ -1644,7 +1644,7 @@
 \w αὐτό|lemma="αὐτός" strong="G08460" x-morph="Gr,RR,,,,ANS,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
 \w ἐμέτρησεν|lemma="μετρέω" strong="G33540" x-morph="Gr,V,IAA3,,S,"\w*
-\w ἓξ|lemma="ἕξ" strong="G18030" x-morph="Gr,A,,,,,E/(,"\w*
+\w ἓξ|lemma="ἕξ" strong="G18030" x-morph="Gr,A,,,,,,,,,"\w*
 \w κριθῶν|lemma="κριθή" strong="G29150" x-morph="Gr,N,,,,,GFP,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
 \w ἐπέθηκεν|lemma="ἐπιτίθημι" strong="G20070" x-morph="Gr,V,IAA3,,S,"\w*
@@ -1687,7 +1687,7 @@
 \w εἶπεν|lemma="λέγω" strong="G30040" x-morph="Gr,V,IAA3,,S,"\w*
 \w αὐτῇ|lemma="αὐτός" strong="G08460" x-morph="Gr,RR,,,,DFS,"\w*
 \w τὰ|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,ANP,"\w*
-\w ἓξ|lemma="ἕξ" strong="G18030" x-morph="Gr,A,,,,,E/(,"\w*
+\w ἓξ|lemma="ἕξ" strong="G18030" x-morph="Gr,A,,,,,,,,,"\w*
 \w τῶν|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,GFP,"\w*
 \w κριθῶν|lemma="κριθή" strong="G29150" x-morph="Gr,N,,,,,GFP,"\w*
 \w ταῦτα|lemma="οὗτος" strong="G37780" x-morph="Gr,RR,,,,ANP,"\w*
@@ -1773,7 +1773,7 @@
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
 \w ἔλαβεν|lemma="λαμβάνω" strong="G29830" x-morph="Gr,V,IAA3,,S,"\w*
 \w Βοος|lemma="Βόος" strong="G10030" x-morph="Gr,N,,,,,NMS,"\w*
-\w δέκα|lemma="δέκα" strong="G11760" x-morph="Gr,A,,,,,D/E,"\w*
+\w δέκα|lemma="δέκα" strong="G11760" x-morph="Gr,A,,,,,,,,,"\w*
 \w ἄνδρας|lemma="ἀνήρ" strong="G04350" x-morph="Gr,N,,,,,AMP,"\w*
 \w ἀπὸ|lemma="ἀπό" strong="G05750" x-morph="Gr,P,,,,,,,,,"\w*
 \w τῶν|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,GMP,"\w*
@@ -2227,7 +2227,7 @@
 \w ἀγαθή|lemma="ἀγαθός" strong="G00180" x-morph="Gr,A,,,,,NFS,"\w*
 \w σοι|lemma="σύ" strong="G47710" x-morph="Gr,RR,,,,DFS,"\w*
 \w ὑπὲρ|lemma="ὑπέρ" strong="G52280" x-morph="Gr,P,,,,,,,,,"\w*
-\w ἑπτὰ|lemma="ἑπτά" strong="G20330" x-morph="Gr,A,,,,,EP(,"\w*
+\w ἑπτὰ|lemma="ἑπτά" strong="G20330" x-morph="Gr,A,,,,,,,,,"\w*
 \w υἱούς|lemma="υἱός" strong="G52070" x-morph="Gr,N,,,,,AMP,"\w*
 
 \p

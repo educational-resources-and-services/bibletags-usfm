@@ -802,7 +802,7 @@
 \w κλίνη|lemma="κλίνη" strong="G28250" x-morph="Gr,N,,,,,NFS,"\w*
 \w τοῦ|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,GMS,"\w*
 \w Σαλωμων|lemma="Σαλωμων" strong="G45395" x-morph="Gr,N,,,,,GMS,"\w*
-\w ἑξήκοντα|lemma="ἑξήκοντα" strong="G18350" x-morph="Gr,A,,,,,EC(,"\w*
+\w ἑξήκοντα|lemma="ἑξήκοντα" strong="G18350" x-morph="Gr,A,,,,,,,,,"\w*
 \w δυνατοὶ|lemma="δυνατός" strong="G14150" x-morph="Gr,A,,,,,NMP,"\w*
 \w κύκλῳ|lemma="κύκλος" strong="G60286" x-morph="Gr,N,,,,,DMS,"\w*
 \w αὐτῆς|lemma="αὐτός" strong="G08460" x-morph="Gr,RR,,,,GFS,"\w*
@@ -993,11 +993,11 @@
 
 \p
 \v 5
-\w δύο|lemma="δύο" strong="G14170" x-morph="Gr,A,,,,,D/U,"\w*
+\w δύο|lemma="δύο" strong="G14170" x-morph="Gr,A,,,,,,,,,"\w*
 \w μαστοί|lemma="μαστός" strong="G31490" x-morph="Gr,N,,,,,NMP,"\w*
 \w σου|lemma="σύ" strong="G47710" x-morph="Gr,RR,,,,G,S,"\w*
 \w ὡς|lemma="ὡς" strong="G56130" x-morph="Gr,C,,,,,,,,,"\w*
-\w δύο|lemma="δύο" strong="G14170" x-morph="Gr,A,,,,,D/U,"\w*
+\w δύο|lemma="δύο" strong="G14170" x-morph="Gr,A,,,,,,,,,"\w*
 \w νεβροὶ|lemma="νεβρός" strong="G66055" x-morph="Gr,N,,,,,NMP,"\w*
 \w δίδυμοι|lemma="δίδυμος" strong="G13240" x-morph="Gr,A,,,,,NMP,"\w*
 \w δορκάδος|lemma="δορκάς" strong="G13930" x-morph="Gr,N,,,,,GFS,"\w*
@@ -1717,11 +1717,11 @@
 
 \p
 \v 8
-\w ἑξήκοντά|lemma="ἑξήκοντα" strong="G18350" x-morph="Gr,A,,,,,EC(,"\w*
+\w ἑξήκοντά|lemma="ἑξήκοντα" strong="G18350" x-morph="Gr,A,,,,,,,,,"\w*
 \w εἰσιν|lemma="εἰμί" strong="G15100" x-morph="Gr,V,IPA3,,P,"\w*
 \w βασίλισσαι|lemma="βασίλισσα" strong="G09380" x-morph="Gr,N,,,,,NFP,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
-\w ὀγδοήκοντα|lemma="ὀγδοήκοντα" strong="G35890" x-morph="Gr,A,,,,,OG),"\w*
+\w ὀγδοήκοντα|lemma="ὀγδοήκοντα" strong="G35890" x-morph="Gr,A,,,,,,,,,"\w*
 \w παλλακαί|lemma="παλλακή" strong="G60274" x-morph="Gr,N,,,,,NFP,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
 \w νεάνιδες|lemma="νεᾶνις" strong="G60684" x-morph="Gr,N,,,,,NFP,"\w*
@@ -1882,11 +1882,11 @@
 
 \p
 \v 4
-\w δύο|lemma="δύο" strong="G14170" x-morph="Gr,A,,,,,D/U,"\w*
+\w δύο|lemma="δύο" strong="G14170" x-morph="Gr,A,,,,,,,,,"\w*
 \w μαστοί|lemma="μαστός" strong="G31490" x-morph="Gr,N,,,,,NMP,"\w*
 \w σου|lemma="σύ" strong="G47710" x-morph="Gr,RR,,,,G,S,"\w*
 \w ὡς|lemma="ὡς" strong="G56130" x-morph="Gr,C,,,,,,,,,"\w*
-\w δύο|lemma="δύο" strong="G14170" x-morph="Gr,A,,,,,D/U,"\w*
+\w δύο|lemma="δύο" strong="G14170" x-morph="Gr,A,,,,,,,,,"\w*
 \w νεβροὶ|lemma="νεβρός" strong="G66055" x-morph="Gr,N,,,,,NMP,"\w*
 \w δίδυμοι|lemma="δίδυμος" strong="G13240" x-morph="Gr,A,,,,,NMP,"\w*
 \w δορκάδος|lemma="δορκάς" strong="G13930" x-morph="Gr,N,,,,,GFS,"\w*
