@@ -4114,7 +4114,7 @@
 \w τὸν|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,AMS,"\w*
 \w μισθόν|lemma="μισθός" strong="G34080" x-morph="Gr,N,,,,,AMS,"\w*
 \w μου|lemma="ἐγώ" strong="G14730" x-morph="Gr,RR,,,,G,S,"\w*
-\w τριάκοντα|lemma="τριάκοντα" strong="G51440" x-morph="Gr,A,,,,,TIR,"\w*
+\w τριάκοντα|lemma="τριάκοντα" strong="G51440" x-morph="Gr,A,,,,,,,,,"\w*
 \w ἀργυροῦς|lemma="ἀργυροῦς" strong="G06930" x-morph="Gr,A,,,,,AMP,"\w*
 
 \p
@@ -4142,7 +4142,7 @@
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
 \w ἔλαβον|lemma="λαμβάνω" strong="G29830" x-morph="Gr,V,IAA1,,S,"\w*
 \w τοὺς|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,AMP,"\w*
-\w τριάκοντα|lemma="τριάκοντα" strong="G51440" x-morph="Gr,A,,,,,TIR,"\w*
+\w τριάκοντα|lemma="τριάκοντα" strong="G51440" x-morph="Gr,A,,,,,,,,,"\w*
 \w ἀργυροῦς|lemma="ἀργυροῦς" strong="G06930" x-morph="Gr,A,,,,,NMS,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
 \w ἐνέβαλον|lemma="βάλλω" strong="G09060" x-morph="Gr,V,IAA3,,P,"\w*

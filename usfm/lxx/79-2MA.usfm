@@ -2806,7 +2806,7 @@
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
 \w ἕτερα|lemma="ἕτερος" strong="G20870" x-morph="Gr,A,,,,,ANP,"\w*
 \w διαγράφειν|lemma="γράφω" strong="G11250" x-morph="Gr,V,NPA,,,,,"\w*
-\w πεντήκοντα|lemma="πεντήκοντα" strong="G40040" x-morph="Gr,A,,,,,PNE,"\w*
+\w πεντήκοντα|lemma="πεντήκοντα" strong="G40040" x-morph="Gr,A,,,,,,,,,"\w*
 \w πρὸς|lemma="πρός" strong="G43140" x-morph="Gr,P,,,,,,,,,"\w*
 \w τοῖς|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,DNP,"\w*
 \w ἑκατόν|lemma="ἑκατόν" strong="G15400" x-morph="Gr,A,,,,,,,,,"\w*
@@ -9986,7 +9986,7 @@
 \w σταδίων|lemma="στάδιον" strong="G47120" x-morph="Gr,N,,,,,GMP,"\w*
 \w ὄντων|lemma="εἰμί" strong="G15100" x-morph="Gr,V,PPA,GMP,"\w*
 \w διακοσίων|lemma="διακόσιοι" strong="G12500" x-morph="Gr,A,,,,,GMP,"\w*
-\w τεσσαράκοντα|lemma="τεσσαράκοντα" strong="G50620" x-morph="Gr,A,,,,,TSE,"\w*
+\w τεσσαράκοντα|lemma="τεσσαράκοντα" strong="G50620" x-morph="Gr,A,,,,,,,,,"\w*
 
 \p
 \v 10
@@ -10191,7 +10191,7 @@
 \w ἀποσπάσαντες|lemma="ἀποσπάω" strong="G06450" x-morph="Gr,V,PAA,NMP,"\w*
 \w σταδίους|lemma="στάδιον" strong="G47120" x-morph="Gr,N,,,,,AMP,"\w*
 \w ἑπτακοσίους|lemma="ἑπτακόσιοι" strong="G60041" x-morph="Gr,A,,,,,AMP,"\w*
-\w πεντήκοντα|lemma="πεντήκοντα" strong="G40040" x-morph="Gr,A,,,,,PNE,"\w*
+\w πεντήκοντα|lemma="πεντήκοντα" strong="G40040" x-morph="Gr,A,,,,,,,,,"\w*
 \w διήνυσαν|lemma="διανύω" strong="G12740" x-morph="Gr,V,IAA3,,P,"\w*
 \w εἰς|lemma="εἰς" strong="G15190" x-morph="Gr,P,,,,,,,,,"\w*
 \w τὸν|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,AMS,"\w*
@@ -11048,7 +11048,7 @@
 \w τῷ|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,DMS,"\w*
 \w τόπῳ|lemma="τόπος" strong="G51170" x-morph="Gr,N,,,,,DMS,"\w*
 \w πύργος|lemma="πύργος" strong="G44440" x-morph="Gr,N,,,,,NMS,"\w*
-\w πεντήκοντα|lemma="πεντήκοντα" strong="G40040" x-morph="Gr,A,,,,,PNE,"\w*
+\w πεντήκοντα|lemma="πεντήκοντα" strong="G40040" x-morph="Gr,A,,,,,,,,,"\w*
 \w πήχεων|lemma="πῆχυς" strong="G40830" x-morph="Gr,N,,,,,GMS,"\w*
 \w πλήρης|lemma="πλήρης" strong="G41340" x-morph="Gr,A,,,,,NMS,"\w*
 \w σποδοῦ|lemma="σποδός" strong="G47000" x-morph="Gr,N,,,,,GMS,"\w*

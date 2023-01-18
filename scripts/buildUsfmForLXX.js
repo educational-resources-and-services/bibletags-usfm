@@ -213,10 +213,42 @@ const getBookNum = bookId => (
         ].map(str => str.replace('-', '') || ',')
 
         let morph = `Gr,${morphItems.join('')}`
-        if(/[/\\()|+*]/.test(oldMorph)) {  // indicates indeclinable
+
+        if(/[/\\()|+*#]|(?:TRI-|TES-|PEN-|KAT-|TRE-|SAB-|SAD-|SAM-|LAB-|NOU-|TET-|GIM-|DEL-|OUA-|ZAI|ALF|HQ|IWQ|XAF|MHM|AIN|FH|KWF|RHS|SEN|QAU)$|\n/.test(oldMorph)) {  // indicates indeclinable
           morph = `Gr,${morphItems[0]},,,,,,,,`
           presumedIndeclinable[contentPieces[idx2]] = presumedIndeclinable[contentPieces[idx2]] || []
           presumedIndeclinable[contentPieces[idx2]].push(loc)
+        } else if(morph === `Gr,N,,,,,S,,,`) {
+          morph = `Gr,N,,,,,,,S,`
+        } else if(morph === `Gr,N,,,,,P,,,`) {
+          morph = `Gr,N,,,,,,,P,`
+        } else if(morph === `Gr,A,,,,,P,,,`) {
+          morph = `Gr,A,,,,,,,P,`
+        } else if(morph === `Gr,N,,,,,S,F,`) {
+          morph = `Gr,N,,,,,,FS,`
+        } else if(morph === `Gr,N,,,,,S,M,`) {
+          morph = `Gr,N,,,,,,MS,`
+        } else if(morph === `Gr,N,,,,,S,N,`) {
+          morph = `Gr,N,,,,,,NS,`
+        } else if(morph === `Gr,A,,,,,NSM,`) {  // why was this wrong?
+          morph = `Gr,N,,,,,NMS,`
+        } else if(morph === `Gr,A,,,,,B,,,`) {
+          morph = `Gr,A,,,,,,,,,`
+        } else if(morph === `Gr,N,,,,,ANA,`) {  // why was this wrong?
+          morph = `Gr,A,,,,,ANS,`
+        } else if(morph === `Gr,V,PEM,MNP,`) {  // why was this wrong?
+          morph = `Gr,V,PEM,NMP,`
+        } else if(morph === `Gr,V,PAM,MNS,`) {  // why was this wrong?
+          morph = `Gr,V,PAM,NMS,`
+        } else if(morph === `Gr,V,IEMN,,F,`) {  // why was this wrong?
+          morph = `Gr,V,IEM,NF,,`
+        } else if(
+          (![',','N','D','G','A','V'].includes(morphItems[5]))
+          || (![',','S','P'].includes(morphItems[7]))
+          || (![',','M','F','N'].includes(morphItems[6]))
+          || (![',','C','S','D','I'].includes(morphItems[8]))
+        ) {
+          console.log(`BAD:`, morph, (oldMorph.slice(0,2) === 'N-' || oldMorph.slice(0,2) === 'A-' || oldMorph.slice(0,1) === 'R'), oldMorph, contentPieces[idx2], loc)
         }
 
         const newStrongs = getStrongs(strongs)
