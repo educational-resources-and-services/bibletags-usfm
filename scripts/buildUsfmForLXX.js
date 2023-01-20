@@ -70,7 +70,7 @@ const apochaphaBookInfo = [
   {
     abbr: "WIS",
     name: "Wisdom of Solomon",
-    num: "72",
+    num: "71",
   },
   {
     abbr: "SIR",
