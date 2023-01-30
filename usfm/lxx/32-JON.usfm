@@ -136,7 +136,7 @@
 \w ἀπ’|lemma="ἀπό" strong="G05750" x-morph="Gr,P,,,,,,,,,"\w*
 \w αὐτῶν|lemma="αὐτός" strong="G08460" x-morph="Gr,RR,,,,GMP,"\w*
 \w Ιωνας|lemma="Ἰωνᾶς" strong="G24950" x-morph="Gr,N,,,,,NMS,"\w*
-\w δὲ|lemma="δέ" strong="G11610" x-morph="Gr,T,,,,,,,,,"\w*
+\w δὲ|lemma="δέ" strong="G11610" x-morph="Gr,CC,,,,,,,,"\w*
 \w κατέβη|lemma="καταβαίνω" strong="G25970" x-morph="Gr,V,IAA3,,S,"\w*
 \w εἰς|lemma="εἰς" strong="G15190" x-morph="Gr,P,,,,,,,,,"\w*
 \w τὴν|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,AFS,"\w*
@@ -556,7 +556,7 @@
 \w ἐξ|lemma="ἐκ" strong="G15370" x-morph="Gr,P,,,,,,,,,"\w*
 \w ὀφθαλμῶν|lemma="ὀφθαλμός" strong="G37880" x-morph="Gr,N,,,,,GMP,"\w*
 \w σου|lemma="σύ" strong="G47710" x-morph="Gr,RR,,,,G,S,"\w*
-\w ἆρα|lemma="ἆρα" strong="G06870" x-morph="Gr,T,,,,,,,,,"\w*
+\w ἆρα|lemma="ἆρα" strong="G06870" x-morph="Gr,CS,,,,,,,,"\w*
 \w προσθήσω|lemma="προστίθημι" strong="G43690" x-morph="Gr,V,IFA1,,S,"\w*
 \w τοῦ|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,GNS,"\w*
 \w ἐπιβλέψαι|lemma="ἐπιβλέπω" strong="G19140" x-morph="Gr,V,NAA,,,,,"\w*
@@ -645,7 +645,7 @@
 \p
 \v 10
 \w ἐγὼ|lemma="ἐγώ" strong="G14730" x-morph="Gr,RR,,,,N,S,"\w*
-\w δὲ|lemma="δέ" strong="G11610" x-morph="Gr,T,,,,,,,,,"\w*
+\w δὲ|lemma="δέ" strong="G11610" x-morph="Gr,CC,,,,,,,,"\w*
 \w μετὰ|lemma="μετά" strong="G33260" x-morph="Gr,P,,,,,,,,,"\w*
 \w φωνῆς|lemma="φωνή" strong="G54560" x-morph="Gr,N,,,,,GFS,"\w*
 \w αἰνέσεως|lemma="αἴνεσις" strong="G01330" x-morph="Gr,N,,,,,GFS,"\w*
@@ -728,7 +728,7 @@
 \w ἐλάλησεν|lemma="λαλέω" strong="G29800" x-morph="Gr,V,IAA3,,S,"\w*
 \w κύριος|lemma="κύριος" strong="G29620" x-morph="Gr,N,,,,,NMS,"\w*
 \w ἡ|lemma="ὁ" strong="G35880" x-morph="Gr,RR,,,,NFS,"\w*
-\w δὲ|lemma="δέ" strong="G11610" x-morph="Gr,T,,,,,,,,,"\w*
+\w δὲ|lemma="δέ" strong="G11610" x-morph="Gr,CC,,,,,,,,"\w*
 \w Νινευη|lemma="Νινευη" strong="G60097" x-morph="Gr,N,,,,,NFS,"\w*
 \w ἦν|lemma="εἰμί" strong="G15100" x-morph="Gr,V,IIA3,,S,"\w*
 \w πόλις|lemma="πόλις" strong="G41720" x-morph="Gr,N,,,,,NFS,"\w*
@@ -1216,7 +1216,7 @@
 \p
 \v 11
 \w ἐγὼ|lemma="ἐγώ" strong="G14730" x-morph="Gr,RR,,,,N,S,"\w*
-\w δὲ|lemma="δέ" strong="G11610" x-morph="Gr,T,,,,,,,,,"\w*
+\w δὲ|lemma="δέ" strong="G11610" x-morph="Gr,CC,,,,,,,,"\w*
 \w οὐ|lemma="οὐ" strong="G37560" x-morph="Gr,D,,,,,,,,,"\w*
 \w φείσομαι|lemma="φείδομαι" strong="G53390" x-morph="Gr,V,IFM1,,S,"\w*
 \w ὑπὲρ|lemma="ὑπέρ" strong="G52280" x-morph="Gr,P,,,,,,,,,"\w*
