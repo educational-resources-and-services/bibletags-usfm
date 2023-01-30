@@ -956,10 +956,10 @@
 \v 31
 \w πῶς|lemma="πῶς" strong="G44590" x-morph="Gr,D,,,,,,,,,"\w*
 \w διώξεται|lemma="διώκω" strong="G13770" x-morph="Gr,V,IFM3,,S,"\w*
-\w εἷς|lemma="εἷς" strong="G15200" x-morph="Gr,A,,,,,NMS,"\w*
-\w χιλίους|lemma="χίλιοι" strong="G55070" x-morph="Gr,A,,,,,AMP,"\w*
+\w εἷς|lemma="εἷς" strong="G15200" x-morph="Gr,EN,,,,NMS,"\w*
+\w χιλίους|lemma="χίλιοι" strong="G55070" x-morph="Gr,EN,,,,AMP,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
-\w δύο|lemma="δύο" strong="G14170" x-morph="Gr,A,,,,,,,,,"\w*
+\w δύο|lemma="δύο" strong="G14170" x-morph="Gr,EN,,,,,,,,"\w*
 \w μετακινήσουσιν|lemma="μετακινέω" strong="G33340" x-morph="Gr,V,IFA3,,P,"\w*
 \w μυριάδας|lemma="μυριάς" strong="G34610" x-morph="Gr,N,,,,,AFP,"\w*
 \w εἰ|lemma="εἰ" strong="G14870" x-morph="Gr,C,,,,,,,,,"\w*
@@ -1394,7 +1394,7 @@
 \w ὅτι|lemma="ὅτι" strong="G37540" x-morph="Gr,C,,,,,,,,,"\w*
 \w στεῖρα|lemma="στεῖρα" strong="G47230" x-morph="Gr,N,,,,,NFS,"\w*
 \w ἔτεκεν|lemma="τίκτω" strong="G50880" x-morph="Gr,V,IAA3,,S,"\w*
-\w ἑπτά|lemma="ἑπτά" strong="G20330" x-morph="Gr,A,,,,,,,,,"\w*
+\w ἑπτά|lemma="ἑπτά" strong="G20330" x-morph="Gr,EN,,,,,,,,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
 \w ἡ|lemma="ὁ" strong="G35880" x-morph="Gr,EA,,,,NFS,"\w*
 \w πολλὴ|lemma="πολύς" strong="G41830" x-morph="Gr,A,,,,,NFS,"\w*
@@ -1569,7 +1569,7 @@
 \w ἐξέστην|lemma="ἀνθίστημι" strong="G04360" x-morph="Gr,V,IAA1,,S,"\w*
 \w ἐν|lemma="ἐν" strong="G17220" x-morph="Gr,P,,,,,,,,,"\w*
 \w μέσῳ|lemma="μέσος" strong="G33190" x-morph="Gr,A,,,,,DMS,"\w*
-\w δύο|lemma="δύο" strong="G14170" x-morph="Gr,A,,,,,,,,,"\w*
+\w δύο|lemma="δύο" strong="G14170" x-morph="Gr,EN,,,,,,,,"\w*
 \w ζῴων|lemma="ζῷον" strong="G22260" x-morph="Gr,N,,,,,GNP,"\w*
 \w γνωσθήσῃ|lemma="γινώσκω" strong="G10970" x-morph="Gr,V,IFP2,,S,"\w*
 \w ἐν|lemma="ἐν" strong="G17220" x-morph="Gr,P,,,,,,,,,"\w*
@@ -2883,7 +2883,7 @@
 \v 1
 \w ὕμνος|lemma="ὕμνος" strong="G52150" x-morph="Gr,N,,,,,NMS,"\w*
 \w τῶν|lemma="ὁ" strong="G35880" x-morph="Gr,EA,,,,GMP,"\w*
-\w τριῶν|lemma="τρεῖς" strong="G51400" x-morph="Gr,A,,,,,GMP,"\w*
+\w τριῶν|lemma="τρεῖς" strong="G51400" x-morph="Gr,EN,,,,GMP,"\w*
 \w παίδων|lemma="παῖς" strong="G38160" x-morph="Gr,N,,,,,GMP,"\w*
 
 \p
