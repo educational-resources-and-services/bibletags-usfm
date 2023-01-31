@@ -1081,7 +1081,7 @@
 \w ἀγαθοῖς|lemma="ἀγαθός" strong="G00180" x-morph="Gr,A,,,,,DMP,"\w*
 \w αὐτοῦ|lemma="αὐτός" strong="G08460" x-morph="Gr,RR,,,,GMS,"\w*
 \w ἐπ’|lemma="ἐπί" strong="G19090" x-morph="Gr,P,,,,,,,,,"\w*
-\w ἐσχάτων|lemma="ἔσχατος" strong="G20780" x-morph="Gr,A,,,,,GFP,"\w*
+\w ἐσχάτων|lemma="ἔσχατος" strong="G20780" x-morph="Gr,EO,,,,GFP,"\w*
 \w τῶν|lemma="ὁ" strong="G35880" x-morph="Gr,EA,,,,GFP,"\w*
 \w ἡμερῶν|lemma="ἡμέρα" strong="G22500" x-morph="Gr,N,,,,,GFP,"\w*
 
@@ -1879,7 +1879,7 @@
 \w τῇ|lemma="ὁ" strong="G35880" x-morph="Gr,EA,,,,DFS,"\w*
 \w ἡμέρᾳ|lemma="ἡμέρα" strong="G22500" x-morph="Gr,N,,,,,DFS,"\w*
 \w τῇ|lemma="ὁ" strong="G35880" x-morph="Gr,EA,,,,DFS,"\w*
-\w τρίτῃ|lemma="τρίτος" strong="G51540" x-morph="Gr,A,,,,,DFS,"\w*
+\w τρίτῃ|lemma="τρίτος" strong="G51540" x-morph="Gr,EO,,,,DFS,"\w*
 \w ἀναστησόμεθα|lemma="ἀνθίστημι" strong="G04360" x-morph="Gr,V,IFM1,,P,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
 \w ζησόμεθα|lemma="ζάω" strong="G21980" x-morph="Gr,V,IFM1,,P,"\w*

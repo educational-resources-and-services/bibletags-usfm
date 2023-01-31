@@ -577,7 +577,7 @@
 \w ἄβυσσος|lemma="ἄβυσσος" strong="G00120" x-morph="Gr,N,,,,,NFS,"\w*
 \w ἐκύκλωσέν|lemma="κυκλόω" strong="G29440" x-morph="Gr,V,IAA3,,S,"\w*
 \w με|lemma="ἐγώ" strong="G14730" x-morph="Gr,RR,,,,A,S,"\w*
-\w ἐσχάτη|lemma="ἔσχατος" strong="G20780" x-morph="Gr,A,,,,,NFS,"\w*
+\w ἐσχάτη|lemma="ἔσχατος" strong="G20780" x-morph="Gr,EO,,,,NFS,"\w*
 \w ἔδυ|lemma="δυω" strong="G14265" x-morph="Gr,V,IAA3,,S,"\w*
 \w ἡ|lemma="ὁ" strong="G35880" x-morph="Gr,EA,,,,NFS,"\w*
 \w κεφαλή|lemma="κεφαλή" strong="G27760" x-morph="Gr,N,,,,,NFS,"\w*
@@ -686,7 +686,7 @@
 \w πρὸς|lemma="πρός" strong="G43140" x-morph="Gr,P,,,,,,,,,"\w*
 \w Ιωναν|lemma="Ἰωνᾶς" strong="G24950" x-morph="Gr,N,,,,,AMS,"\w*
 \w ἐκ|lemma="ἐκ" strong="G15370" x-morph="Gr,P,,,,,,,,,"\w*
-\w δευτέρου|lemma="δεύτερος" strong="G12080" x-morph="Gr,A,,,,,GMS,"\w*
+\w δευτέρου|lemma="δεύτερος" strong="G12080" x-morph="Gr,EO,,,,GMS,"\w*
 \w λέγων|lemma="λέγω" strong="G30040" x-morph="Gr,V,PPA,NMS,"\w*
 
 \p
