@@ -22,7 +22,7 @@
 \v 2
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
 \w τῶν|lemma="ὁ" strong="G35880" x-morph="Gr,EA,,,,GMP,"\w*
-\w ἄλλων|lemma="ἄλλος" strong="G02430" x-morph="Gr,RR,,,,GMP,"\w*
+\w ἄλλων|lemma="ἄλλος" strong="G02430" x-morph="Gr,RI,,,,GMP,"\w*
 \w τῶν|lemma="ὁ" strong="G35880" x-morph="Gr,EA,,,,GMP,"\w*
 \w κατ’|lemma="κατά" strong="G25960" x-morph="Gr,P,,,,,,,,,"\w*
 \w αὐτοὺς|lemma="αὐτός" strong="G08460" x-morph="Gr,RP,,,,AMP,"\w*
@@ -104,7 +104,7 @@
 \v 10
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
 \w τῶν|lemma="ὁ" strong="G35880" x-morph="Gr,EA,,,,GNP,"\w*
-\w ἄλλων|lemma="ἄλλος" strong="G02430" x-morph="Gr,RR,,,,GNP,"\w*
+\w ἄλλων|lemma="ἄλλος" strong="G02430" x-morph="Gr,RI,,,,GNP,"\w*
 \w πατρίων|lemma="πάτριος" strong="G60710" x-morph="Gr,A,,,,,GNP,"\w*
 \w βιβλίων|lemma="βιβλίον" strong="G09750" x-morph="Gr,N,,,,,GNP,"\w*
 \w ἀνάγνωσιν|lemma="ἀνάγνωσις" strong="G03200" x-morph="Gr,N,,,,,AFS,"\w*
@@ -5880,7 +5880,7 @@
 \w ψυχῆς|lemma="ψυχή" strong="G55900" x-morph="Gr,N,,,,,GFS,"\w*
 \w αὐτοῦ|lemma="αὐτός" strong="G08460" x-morph="Gr,RP,,,,GMS,"\w*
 \w συνάγει|lemma="συνάγω" strong="G48630" x-morph="Gr,V,IPA3,,S,"\w*
-\w ἄλλοις|lemma="ἄλλος" strong="G02430" x-morph="Gr,RR,,,,DMP,"\w*
+\w ἄλλοις|lemma="ἄλλος" strong="G02430" x-morph="Gr,RI,,,,DMP,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
 \w ἐν|lemma="ἐν" strong="G17220" x-morph="Gr,P,,,,,,,,,"\w*
 \w τοῖς|lemma="ὁ" strong="G35880" x-morph="Gr,EA,,,,DNP,"\w*
