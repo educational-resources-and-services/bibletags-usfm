@@ -853,7 +853,7 @@
 \w ὑψηλῷ|lemma="ὑψηλός" strong="G53080" x-morph="Gr,A,,,,,DMS,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
 \w ἐποίησας|lemma="ποιέω" strong="G41600" x-morph="Gr,V,IAA2,,S,"\w*
-\w σεαυτῷ|lemma="σεαυτοῦ" strong="G45720" x-morph="Gr,RR,,,,DMS,"\w*
+\w σεαυτῷ|lemma="σεαυτοῦ" strong="G45720" x-morph="Gr,RE,,,,DMS,"\w*
 \w ὄνομα|lemma="ὄνομα" strong="G36860" x-morph="Gr,N,,,,,ANS,"\w*
 \w ὡς|lemma="ὡς" strong="G56130" x-morph="Gr,D,,,,,,,,,"\w*
 \w ἡ|lemma="ὁ" strong="G35880" x-morph="Gr,EA,,,,NFS,"\w*
@@ -2754,7 +2754,7 @@
 \w λυπηθήσεται|lemma="λυπέω" strong="G30760" x-morph="Gr,V,IFP3,,S,"\w*
 \w ἐπὶ|lemma="ἐπί" strong="G19090" x-morph="Gr,P,,,,,,,,,"\w*
 \w τῇ|lemma="ὁ" strong="G35880" x-morph="Gr,EA,,,,DFS,"\w*
-\w ἑαυτῆς|lemma="ἑαυτοῦ" strong="G14380" x-morph="Gr,RR,,,,GFS,"\w*
+\w ἑαυτῆς|lemma="ἑαυτοῦ" strong="G14380" x-morph="Gr,RE,,,,GFS,"\w*
 \w ἐρημίᾳ|lemma="ἐρημία" strong="G20470" x-morph="Gr,N,,,,,DFS,"\w*
 
 \p

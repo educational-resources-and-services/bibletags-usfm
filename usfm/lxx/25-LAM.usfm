@@ -149,7 +149,7 @@
 \w αὐτὴ|lemma="αὐτός" strong="G08460" x-morph="Gr,RP,,,,NFS,"\w*
 \w πικραινομένη|lemma="πικραίνω" strong="G40870" x-morph="Gr,V,PPM,NFS,"\w*
 \w ἐν|lemma="ἐν" strong="G17220" x-morph="Gr,P,,,,,,,,,"\w*
-\w ἑαυτῇ|lemma="ἑαυτοῦ" strong="G14380" x-morph="Gr,RR,,,,DFS,"\w*
+\w ἑαυτῇ|lemma="ἑαυτοῦ" strong="G14380" x-morph="Gr,RE,,,,DFS,"\w*
 
 \p
 \v 6
@@ -1228,7 +1228,7 @@
 \w μὴ|lemma="μή" strong="G33610" x-morph="Gr,D,,,,,,,,,"\w*
 \w δῷς|lemma="δίδωμι" strong="G13250" x-morph="Gr,V,SAA2,,S,"\w*
 \w ἔκνηψιν|lemma="ἔκνηψις" strong="G66519" x-morph="Gr,N,,,,,AFS,"\w*
-\w σεαυτῇ|lemma="σεαυτοῦ" strong="G45720" x-morph="Gr,RR,,,,DFS,"\w*
+\w σεαυτῇ|lemma="σεαυτοῦ" strong="G45720" x-morph="Gr,RE,,,,DFS,"\w*
 \w μὴ|lemma="μή" strong="G33610" x-morph="Gr,D,,,,,,,,,"\w*
 \w σιωπήσαιτο|lemma="σιωπάω" strong="G46230" x-morph="Gr,V,OAM3,,S,"\w*
 \w θύγατερ|lemma="θυγάτηρ" strong="G23640" x-morph="Gr,N,,,,,VFS,"\w*
@@ -1650,7 +1650,7 @@
 \w ὅτι|lemma="ὅτι" strong="G37540" x-morph="Gr,C,,,,,,,,,"\w*
 \w ἦρεν|lemma="αἴρω" strong="G01420" x-morph="Gr,V,IAA3,,S,"\w*
 \w ἐφ’|lemma="ἐπί" strong="G19090" x-morph="Gr,P,,,,,,,,,"\w*
-\w ἑαυτῷ|lemma="ἑαυτοῦ" strong="G14380" x-morph="Gr,RR,,,,DMS,"\w*
+\w ἑαυτῷ|lemma="ἑαυτοῦ" strong="G14380" x-morph="Gr,RE,,,,DMS,"\w*
 
 \p
 \v 30
@@ -1817,7 +1817,7 @@
 \v 44
 \w ἐπεσκέπασας|lemma="ἐπισκεπάζω" strong="G66522" x-morph="Gr,V,IAA2,,S,"\w*
 \w νεφέλην|lemma="νεφέλη" strong="G35070" x-morph="Gr,N,,,,,AFS,"\w*
-\w σεαυτῷ|lemma="σεαυτοῦ" strong="G45720" x-morph="Gr,RR,,,,DMS,"\w*
+\w σεαυτῷ|lemma="σεαυτοῦ" strong="G45720" x-morph="Gr,RE,,,,DMS,"\w*
 \w εἵνεκεν|lemma="εἵνεκεν" strong="G60222" x-morph="Gr,D,,,,,,,,,"\w*
 \w προσευχῆς|lemma="προσευχή" strong="G43350" x-morph="Gr,N,,,,,GFS,"\w*
 
