@@ -1459,7 +1459,7 @@
 \w ἠλάττωσας|lemma="ἐλαττόω" strong="G16420" x-morph="Gr,V,IAA2,,S,"\w*
 \w αὐτὸν|lemma="αὐτός" strong="G08460" x-morph="Gr,RP,,,,AMS,"\w*
 \w βραχύ|lemma="βραχύς" strong="G10240" x-morph="Gr,A,,,,,ANS,"\w*
-\w τι|lemma="τις" strong="G51000" x-morph="Gr,RR,,,,ANS,"\w*
+\w τι|lemma="τις" strong="G51000" x-morph="Gr,RI,,,,ANS,"\w*
 \w παρ’|lemma="παρά" strong="G38440" x-morph="Gr,P,,,,,,,,,"\w*
 \w ἀγγέλους|lemma="ἄγγελος" strong="G00320" x-morph="Gr,N,,,,,AMP,"\w*
 \w δόξῃ|lemma="δόξα" strong="G13910" x-morph="Gr,N,,,,,DFS,"\w*
@@ -7035,7 +7035,7 @@
 \w ναῷ|lemma="ναός" strong="G34850" x-morph="Gr,N,,,,,DMS,"\w*
 \w αὐτοῦ|lemma="αὐτός" strong="G08460" x-morph="Gr,RP,,,,GMS,"\w*
 \w πᾶς|lemma="πᾶς" strong="G39560" x-morph="Gr,A,,,,,NMS,"\w*
-\w τις|lemma="τις" strong="G51000" x-morph="Gr,RR,,,,NMS,"\w*
+\w τις|lemma="τις" strong="G51000" x-morph="Gr,RI,,,,NMS,"\w*
 \w λέγει|lemma="λέγω" strong="G30040" x-morph="Gr,V,IPA3,,S,"\w*
 \w δόξαν|lemma="δόξα" strong="G13910" x-morph="Gr,N,,,,,AFS,"\w*
 
@@ -25191,7 +25191,7 @@
 \v 12
 \w μὴ|lemma="μή" strong="G33610" x-morph="Gr,D,,,,,,,,,"\w*
 \w διηγήσεταί|lemma="διηγέομαι" strong="G13340" x-morph="Gr,V,IFM3,,S,"\w*
-\w τις|lemma="τις" strong="G51000" x-morph="Gr,RR,,,,NMS,"\w*
+\w τις|lemma="τις" strong="G51000" x-morph="Gr,RI,,,,NMS,"\w*
 \w ἐν|lemma="ἐν" strong="G17220" x-morph="Gr,P,,,,,,,,,"\w*
 \w τάφῳ|lemma="τάφος" strong="G50280" x-morph="Gr,N,,,,,DMS,"\w*
 \w τὸ|lemma="ὁ" strong="G35880" x-morph="Gr,EA,,,,ANS,"\w*

@@ -6583,7 +6583,7 @@
 \w ὅσοι|lemma="ὅσος" strong="G37450" x-morph="Gr,A,,,,,NMP,"\w*
 \w ἐὰν|lemma="ἐάν" strong="G14370" x-morph="Gr,C,,,,,,,,,"\w*
 \w παραβῶσίν|lemma="παραβαίνω" strong="G38450" x-morph="Gr,V,SAA3,,P,"\w*
-\w τι|lemma="τις" strong="G51000" x-morph="Gr,RR,,,,ANS,"\w*
+\w τι|lemma="τις" strong="G51000" x-morph="Gr,RI,,,,ANS,"\w*
 \w τῶν|lemma="ὁ" strong="G35880" x-morph="Gr,EA,,,,GNP,"\w*
 \w προειρημένων|lemma="προσφέρω" strong="G43740" x-morph="Gr,V,PEM,GNP,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
@@ -7540,7 +7540,7 @@
 \w μηδένα|lemma="μηδείς" strong="G33670" x-morph="Gr,A,,,,,AMS,"\w*
 \w ἔχειν|lemma="ἔχω" strong="G21920" x-morph="Gr,V,NPA,,,,,"\w*
 \w ἐπιβαλεῖν|lemma="ἐπιβάλλω" strong="G19110" x-morph="Gr,V,NAA,,,,,"\w*
-\w τι|lemma="τις" strong="G51000" x-morph="Gr,RR,,,,ANS,"\w*
+\w τι|lemma="τις" strong="G51000" x-morph="Gr,RI,,,,ANS,"\w*
 \w τούτοις|lemma="οὗτος" strong="G37780" x-morph="Gr,RR,,,,DMP,"\w*
 
 \p
@@ -8789,7 +8789,7 @@
 \w νῦν|lemma="νῦν" strong="G35680" x-morph="Gr,D,,,,,,,,,"\w*
 \w κατὰ|lemma="κατά" strong="G25960" x-morph="Gr,P,,,,,,,,,"\w*
 \w πόσον|lemma="πόσος" strong="G42140" x-morph="Gr,A,,,,,NNS,"\w*
-\w τι|lemma="τις" strong="G51000" x-morph="Gr,RR,,,,NNS,"\w*
+\w τι|lemma="τις" strong="G51000" x-morph="Gr,RI,,,,NNS,"\w*
 \w ἐγενήθη|lemma="γίνομαι" strong="G10960" x-morph="Gr,V,IAP3,,S,"\w*
 \w ἡμῖν|lemma="ἐγώ" strong="G14730" x-morph="Gr,RP,,,,D,P,"\w*
 \w ἔλεος|lemma="ἔλεος" strong="G16560" x-morph="Gr,N,,,,,NNS,"\w*
