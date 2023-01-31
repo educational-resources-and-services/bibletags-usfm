@@ -93,7 +93,7 @@
 \w τῷ|lemma="ὁ" strong="G35880" x-morph="Gr,EA,,,,DMS,"\w*
 \w Δανιηλ|lemma="Δανιήλ" strong="G11580" x-morph="Gr,N,,,,,DMS,"\w*
 \w διὰ|lemma="διά" strong="G12230" x-morph="Gr,P,,,,,,,,,"\w*
-\w τί|lemma="τίς" strong="G51010" x-morph="Gr,RR,,,,ANS,"\w*
+\w τί|lemma="τίς" strong="G51010" x-morph="Gr,RT,,,,ANS,"\w*
 \w οὐ|lemma="οὐ" strong="G37560" x-morph="Gr,D,,,,,,,,,"\w*
 \w προσκυνεῖς|lemma="προσκυνέω" strong="G43520" x-morph="Gr,V,IPA2,,S,"\w*
 \w τῷ|lemma="ὁ" strong="G35880" x-morph="Gr,EA,,,,DMS,"\w*
@@ -485,7 +485,7 @@
 \w ταῦτα|lemma="οὗτος" strong="G37780" x-morph="Gr,RR,,,,NNP,"\w*
 \w τὰ|lemma="ὁ" strong="G35880" x-morph="Gr,EA,,,,NNP,"\w*
 \w ἴχνη|lemma="ἴχνος" strong="G24870" x-morph="Gr,N,,,,,NNP,"\w*
-\w τίνος|lemma="τίς" strong="G51010" x-morph="Gr,RR,,,,GNS,"\w*
+\w τίνος|lemma="τίς" strong="G51010" x-morph="Gr,RT,,,,GNS,"\w*
 \w ἐστί|lemma="εἰμί" strong="G15100" x-morph="Gr,V,IPA3,,S,"\w*
 
 \p

@@ -362,7 +362,7 @@
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
 \w ἐπυνθάνετο|lemma="πυνθάνομαι" strong="G44410" x-morph="Gr,V,IIM3,,S,"\w*
 \w διὰ|lemma="διά" strong="G12230" x-morph="Gr,P,,,,,,,,,"\w*
-\w τίνα|lemma="τίς" strong="G51010" x-morph="Gr,RR,,,,AFS,"\w*
+\w τίνα|lemma="τίς" strong="G51010" x-morph="Gr,RT,,,,AFS,"\w*
 \w αἰτίαν|lemma="αἰτία" strong="G01560" x-morph="Gr,N,,,,,AFS,"\w*
 \w εἰσερχόμενον|lemma="εἰσέρχομαι" strong="G15250" x-morph="Gr,V,PPM,AMS,"\w*
 \w αὐτὸν|lemma="αὐτός" strong="G08460" x-morph="Gr,RP,,,,AMS,"\w*
@@ -2386,18 +2386,18 @@
 
 \p
 \v 3
-\w τίς|lemma="τίς" strong="G51010" x-morph="Gr,RR,,,,NMS,"\w*
+\w τίς|lemma="τίς" strong="G51010" x-morph="Gr,RT,,,,NMS,"\w*
 \w νομὸς|lemma="νόμος" strong="G35510" x-morph="Gr,N,,,,,NMS,"\w*
 \w ἢ|lemma="ἤ" strong="G22280" x-morph="Gr,C,,,,,,,,,"\w*
 \w πόλις|lemma="πόλις" strong="G41720" x-morph="Gr,N,,,,,NFS,"\w*
 \w ἢ|lemma="ἤ" strong="G22280" x-morph="Gr,C,,,,,,,,,"\w*
-\w τίς|lemma="τίς" strong="G51010" x-morph="Gr,RR,,,,NMS,"\w*
+\w τίς|lemma="τίς" strong="G51010" x-morph="Gr,RT,,,,NMS,"\w*
 \w τὸ|lemma="ὁ" strong="G35880" x-morph="Gr,EA,,,,ANS,"\w*
 \w σύνολον|lemma="σύνολος" strong="G65239" x-morph="Gr,A,,,,,ANS,"\w*
 \w οἰκητὸς|lemma="οἰκητός" strong="G61272" x-morph="Gr,A,,,,,NMS,"\w*
 \w τόπος|lemma="τόπος" strong="G51170" x-morph="Gr,N,,,,,NMS,"\w*
 \w ἢ|lemma="ἤ" strong="G22280" x-morph="Gr,C,,,,,,,,,"\w*
-\w τίνες|lemma="τίς" strong="G51010" x-morph="Gr,RR,,,,NFP,"\w*
+\w τίνες|lemma="τίς" strong="G51010" x-morph="Gr,RT,,,,NFP,"\w*
 \w ἀγυιαὶ|lemma="ἀγυιά" strong="G68321" x-morph="Gr,N,,,,,NFP,"\w*
 \w κοπετοῦ|lemma="κοπετός" strong="G28700" x-morph="Gr,N,,,,,GMS,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
@@ -3352,7 +3352,7 @@
 \w πικρᾶς|lemma="πικρός" strong="G40890" x-morph="Gr,A,,,,,GFS,"\w*
 \w ἀπειλῆς|lemma="ἀπειλή" strong="G05470" x-morph="Gr,N,,,,,GFS,"\w*
 \w ἐπυνθάνετο|lemma="πυνθάνομαι" strong="G44410" x-morph="Gr,V,IIM3,,S,"\w*
-\w τίνος|lemma="τίς" strong="G51010" x-morph="Gr,RR,,,,GFS,"\w*
+\w τίνος|lemma="τίς" strong="G51010" x-morph="Gr,RT,,,,GFS,"\w*
 \w ἕνεκεν|lemma="ἕνεκα" strong="G17520" x-morph="Gr,P,,,,,,,,,"\w*
 \w αἰτίας|lemma="αἰτία" strong="G01560" x-morph="Gr,N,,,,,GFS,"\w*
 \w εἰάθησαν|lemma="ἐάω" strong="G14390" x-morph="Gr,V,IAP3,,P,"\w*
@@ -3571,7 +3571,7 @@
 \w ἀγνωσίᾳ|lemma="ἀγνωσία" strong="G00560" x-morph="Gr,N,,,,,DFS,"\w*
 \w κεκρατημένος|lemma="κρατέω" strong="G29020" x-morph="Gr,V,PEM,NMS,"\w*
 \w ἐπυνθάνετο|lemma="πυνθάνομαι" strong="G44410" x-morph="Gr,V,IIM3,,S,"\w*
-\w τί|lemma="τίς" strong="G51010" x-morph="Gr,RR,,,,NNS,"\w*
+\w τί|lemma="τίς" strong="G51010" x-morph="Gr,RT,,,,NNS,"\w*
 \w τὸ|lemma="ὁ" strong="G35880" x-morph="Gr,EA,,,,NNS,"\w*
 \w πρᾶγμα|lemma="πρᾶγμα" strong="G42290" x-morph="Gr,N,,,,,NNS,"\w*
 \w ἐφ’|lemma="ἐπί" strong="G19090" x-morph="Gr,P,,,,,,,,,"\w*
@@ -3830,7 +3830,7 @@
 \v 40
 \w βασιλεῦ|lemma="βασιλεύς" strong="G09350" x-morph="Gr,N,,,,,VMS,"\w*
 \w μέχρι|lemma="μέχρι" strong="G33600" x-morph="Gr,P,,,,,,,,,"\w*
-\w τίνος|lemma="τίς" strong="G51010" x-morph="Gr,RR,,,,GNS,"\w*
+\w τίνος|lemma="τίς" strong="G51010" x-morph="Gr,RT,,,,GNS,"\w*
 \w ὡς|lemma="ὡς" strong="G56130" x-morph="Gr,D,,,,,,,,,"\w*
 \w ἀλόγους|lemma="ἄλογος" strong="G02490" x-morph="Gr,A,,,,,AMP,"\w*
 \w ἡμᾶς|lemma="ἐγώ" strong="G14730" x-morph="Gr,RP,,,,A,P,"\w*
@@ -4753,7 +4753,7 @@
 
 \p
 \v 25
-\w τίς|lemma="τίς" strong="G51010" x-morph="Gr,RR,,,,NMS,"\w*
+\w τίς|lemma="τίς" strong="G51010" x-morph="Gr,RT,,,,NMS,"\w*
 \w τοὺς|lemma="ὁ" strong="G35880" x-morph="Gr,EA,,,,AMP,"\w*
 \w κρατήσαντας|lemma="κρατέω" strong="G29020" x-morph="Gr,V,PAA,AMP,"\w*
 \w ἡμῶν|lemma="ἐγώ" strong="G14730" x-morph="Gr,RP,,,,G,P,"\w*
@@ -4773,7 +4773,7 @@
 
 \p
 \v 26
-\w τίς|lemma="τίς" strong="G51010" x-morph="Gr,RR,,,,NMS,"\w*
+\w τίς|lemma="τίς" strong="G51010" x-morph="Gr,RT,,,,NMS,"\w*
 \w τοὺς|lemma="ὁ" strong="G35880" x-morph="Gr,EA,,,,AMP,"\w*
 \w ἐξ|lemma="ἐκ" strong="G15370" x-morph="Gr,P,,,,,,,,,"\w*
 \w ἀρχῆς|lemma="ἀρχή" strong="G07460" x-morph="Gr,N,,,,,GFS,"\w*
