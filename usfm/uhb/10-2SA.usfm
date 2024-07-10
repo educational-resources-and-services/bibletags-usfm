@@ -331,7 +331,7 @@
 \w וִ⁠יהוֹנָתָ֗ן|lemma="יְהוֹנָתָן" strong="c:H30830" x-morph="He,C:Np" x-id="101pW"\w*
 \w הַ⁠נֶּאֱהָבִ֤ים|lemma="אָהַב" strong="d:H01570" x-morph="He,Td:VNrmpa" x-id="10bHl"\w*
 \w וְ⁠הַ⁠נְּעִימִם֙|lemma="נָעִים" strong="c:d:H52731" x-morph="He,C:Td:Aampa" x-id="10szg"\w*
-\w בְּ⁠חַיֵּי⁠הֶ֔ם|lemma="חַי" strong="b:H24165" x-morph="He,R:Ncmpc:Sp3mp" x-id="10KAx"\w*
+\w בְּ⁠חַיֵּי⁠הֶ֔ם|lemma="חַיִּים" strong="b:H24165" x-morph="He,R:Ncmpc:Sp3mp" x-id="10KAx"\w*
 \w וּ⁠בְ⁠מוֹתָ֖⁠ם|lemma="מָוֶת" strong="c:b:H41940" x-morph="He,C:R:Ncmsc:Sp3mp" x-id="10OE5"\w*
 \w לֹ֣א|lemma="לֹא" strong="H38080" x-morph="He,Tn" x-id="10kRK"\w*
 \w נִפְרָ֑דוּ|lemma="פָּרַד" strong="H65040" x-morph="He,VNp3cp" x-id="10CF6"\w*
@@ -6200,7 +6200,7 @@
 \w אֲדֹנִ֣⁠י|lemma="אָדוֹן" strong="H01130" x-morph="He,Ncmsc:Sp1cs" x-id="10fcg"\w*
 \w הַ⁠מֶּ֗לֶךְ|lemma="מֶלֶךְ" strong="d:H44280" x-morph="He,Td:Ncmsa" x-id="10VMj"\w*
 \w אִם|lemma="אִם" strong="H05181" x-morph="He,C" x-id="10hQx"\w*־\w לְ⁠מָ֨וֶת֙|lemma="מָוֶת" strong="l:H41940" x-morph="He,R:Ncmsa" x-id="10Xqm"\w*
-\w אִם|lemma="אִם" strong="H05181" x-morph="He,C" x-id="105dE"\w*־\w לְ⁠חַיִּ֔ים|lemma="חַי" strong="l:H24165" x-morph="He,R:Ncmpa" x-id="10TbO"\w*
+\w אִם|lemma="אִם" strong="H05181" x-morph="He,C" x-id="105dE"\w*־\w לְ⁠חַיִּ֔ים|lemma="חַיִּים" strong="l:H24165" x-morph="He,R:Ncmpa" x-id="10TbO"\w*
 \w כִּי|lemma="כִּי" strong="H35881" x-morph="He,C" x-id="1047w"\w*־\w שָׁ֖ם|lemma="שָׁם" strong="H80330" x-morph="He,D" x-id="10eDg"\w*
 \w יִהְיֶ֥ה|lemma="הָיָה" strong="H19610" x-morph="He,Vqi3ms" x-id="10dKM"\w*
 \w עַבְדֶּֽ⁠ךָ|lemma="עֶבֶד" strong="H56500" x-morph="He,Ncmsc:Sp2ms" x-id="10WfI"\w*׃
@@ -7646,7 +7646,7 @@
 \w וְ⁠אַבְשָׁלֹ֣ם|lemma="אֲבִישָׁלוֹם" strong="c:H00530" x-morph="He,C:Np" x-id="10OQm"\w*
 \w לָקַ֗ח|lemma="לָקַח" strong="H39470" x-morph="He,Vqp3ms" x-id="10EmN"\w*
 \w וַ⁠יַּצֶּב|lemma="נָצַב" strong="c:H53240" x-morph="He,C:Vhw3ms" x-id="10LLi"\w*־\w ל֤⁠וֹ|lemma="" strong="l" x-morph="He,R:Sp3ms" x-id="10TsY"\w*
-\w בְ⁠חַיָּי⁠ו֙|lemma="חַי" strong="b:H24165" x-morph="He,R:Ncmsc:Sp3ms" x-id="10Y3u"\w*
+\w בְ⁠חַיָּי⁠ו֙|lemma="חַיִּים" strong="b:H24165" x-morph="He,R:Ncmsc:Sp3ms" x-id="10Y3u"\w*
 \w אֶת|lemma="אֵת" strong="H08530" x-morph="He,To" x-id="10H4B"\w*־\w מַצֶּ֨בֶת֙|lemma="מַצֶּבֶת" strong="H46780" x-morph="He,Ncfsa" x-id="10lmH"\w*
 \w אֲשֶׁ֣ר|lemma="אֲשֶׁר" strong="H08341" x-morph="He,Tr" x-id="10y5l"\w*
 \w בְּ⁠עֵֽמֶק|lemma="עֵמֶק" strong="b:H60100" x-morph="He,R:Ncmsc" x-id="10iWk"\w*־\w הַ⁠מֶּ֔לֶךְ|lemma="מֶלֶךְ" strong="d:H44280" x-morph="He,Td:Ncmsa" x-id="10AsR"\w*
@@ -7667,7 +7667,7 @@
 \w עַ֖ד|lemma="עַד" strong="H57040" x-morph="He,R" x-id="10hKz"\w*
 \w הַ⁠יּ֥וֹם|lemma="יוֹם" strong="d:H31170" x-morph="He,Td:Ncmsa" x-id="10T4v"\w*
 \w הַ⁠זֶּֽה|lemma="זֶה" strong="d:H20880" x-morph="He,Td:Pdxms" x-id="104Hp"\w*׃ס
-\zApparatusJson {"words":[{"w":"ב⁠חי⁠ו","id":"10fUI","lemma":"חַי","strong":"b:H24165","morph":"He,R:Ncmsc:Sp3ms"}],"ancient":[],"critical":["Q","K:1-4,+1,6-29"]}\zApparatusJson*
+\zApparatusJson {"words":[{"w":"ב⁠חי⁠ו","id":"10fUI","lemma":"חַיִּים","strong":"b:H24165","morph":"He,R:Ncmsc:Sp3ms"}],"ancient":[],"critical":["Q","K:1-4,+1,6-29"]}\zApparatusJson*
 
 \v 19
 \w וַ⁠אֲחִימַ֤עַץ|lemma="אֲחִימַעַץ" strong="c:H02900" x-morph="He,C:Np" x-id="103tn"\w*
@@ -8495,7 +8495,7 @@
 \w כַּ⁠מָּ֗ה|lemma="מָה" strong="k:H41000" x-morph="He,R:Ti" x-id="1001v"\w*
 \w יְמֵי֙|lemma="יוֹם" strong="H31170" x-morph="He,Ncmpc" x-id="10gD4"\w*
 \w שְׁנֵ֣י|lemma="שָׁנָה" strong="H81410" x-morph="He,Acmdc" x-id="10wKn"\w*
-\w חַיַּ֔⁠י|lemma="חַי" strong="H24165" x-morph="He,Ncmpc:Sp1cs" x-id="10NAP"\w*
+\w חַיַּ֔⁠י|lemma="חַיִּים" strong="H24165" x-morph="He,Ncmpc:Sp1cs" x-id="10NAP"\w*
 \w כִּי|lemma="כִּי" strong="H35881" x-morph="He,C" x-id="10mdr"\w*־\w אֶעֱלֶ֥ה|lemma="עָלָה" strong="H59270" x-morph="He,Vqi1cs" x-id="10fQJ"\w*
 \w אֶת|lemma="אֵת" strong="H08540" x-morph="He,R" x-id="10K5R"\w*־\w הַ⁠מֶּ֖לֶךְ|lemma="מֶלֶךְ" strong="d:H44280" x-morph="He,Td:Ncmsa" x-id="10J08"\w*
 \w יְרוּשָׁלִָֽם|lemma="יְרוּשָׁלִַ͏ם" strong="H33890" x-morph="He,Np" x-id="10KSF"\w*׃
