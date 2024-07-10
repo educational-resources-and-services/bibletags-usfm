@@ -4920,7 +4920,7 @@
 \w τῇ|lemma="ὁ" strong="G35880" x-morph="Gr,EA,,,,DFS,"\w*
 \w γῇ|lemma="γῆ" strong="G10930" x-morph="Gr,N,,,,,DFS,"\w*
 \w αὐτοῦ|lemma="αὐτός" strong="G08460" x-morph="Gr,RP,,,,GMS,"\w*
-\w δεήθητι|lemma="δέομαι" strong="G11890" x-morph="Gr,V,MAP2,,S,"\w*
+\w δεήθητι|lemma="δέω" strong="G12100" x-morph="Gr,V,MAP2,,S,"\w*
 \w περὶ|lemma="περί" strong="G40120" x-morph="Gr,P,,,,,,,,,"\w*
 \w τῶν|lemma="ὁ" strong="G35880" x-morph="Gr,EA,,,,GFP,"\w*
 \w ἁμαρτιῶν|lemma="ἁμαρτία" strong="G02660" x-morph="Gr,N,,,,,GFP,"\w*
@@ -5268,7 +5268,7 @@
 \w θεῶν|lemma="θεός" strong="G23160" x-morph="Gr,N,,,,,GMP,"\w*
 \w τοῦ|lemma="ὁ" strong="G35880" x-morph="Gr,EA,,,,GMS,"\w*
 \w μεγάλου|lemma="μέγας" strong="G31730" x-morph="Gr,A,,,,,GMS,"\w*
-\w ἐδεήθην|lemma="δέομαι" strong="G11890" x-morph="Gr,V,IAP1,,S,"\w*
+\w ἐδεήθην|lemma="δέω" strong="G12100" x-morph="Gr,V,IAP1,,S,"\w*
 
 \p
 \v 37
@@ -5347,7 +5347,7 @@
 \w τοῦ|lemma="ὁ" strong="G35880" x-morph="Gr,EA,,,,GMS,"\w*
 \w οὐρανοῦ|lemma="οὐρανός" strong="G37720" x-morph="Gr,N,,,,,GMS,"\w*
 \w καὶ|lemma="καί" strong="G25320" x-morph="Gr,C,,,,,,,,,"\w*
-\w ἐδεήθην|lemma="δέομαι" strong="G11890" x-morph="Gr,V,IAP1,,S,"\w*
+\w ἐδεήθην|lemma="δέω" strong="G12100" x-morph="Gr,V,IAP1,,S,"\w*
 \w περὶ|lemma="περί" strong="G40120" x-morph="Gr,P,,,,,,,,,"\w*
 \w τῶν|lemma="ὁ" strong="G35880" x-morph="Gr,EA,,,,GFP,"\w*
 \w ἀγνοιῶν|lemma="ἄγνοια" strong="G00520" x-morph="Gr,N,,,,,GFP,"\w*
